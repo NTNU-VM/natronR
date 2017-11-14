@@ -11,7 +11,7 @@ NB: does not work yet - package under developement
 ```r
 install.packages("devtools")
 devtools::install_github("NTNU-VM/natronbatchupload")
-library(invasim)
+library(natronbatchupload)
 
 ```
 
