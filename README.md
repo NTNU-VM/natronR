@@ -20,6 +20,7 @@ library(natronbatchupload)
 Package structure, workflow and namespace logic
 
 ## example (taken from NOFA import - must be revritten to fit NaTron)
+NB: in this example, functions are simply put in .R files and sourced from github. Here, our intention is to build this as an r-package. Documentation and maintainance becomes simpler (I think...). 
 
 ```r
 require(dplyr)
