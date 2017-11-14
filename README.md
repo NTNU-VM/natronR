@@ -1,12 +1,19 @@
 # NaTron batch upload
 
-Collection of function to batch upload data to (NaTron)[https://wiki.vm.ntnu.no/display/INH/NaTron]. 
+Collection of function to batch upload data to (NaTron)[https://wiki.vm.ntnu.no/display/INH/NaTron]. Distributed as an R-package
 
 Imports of large structured tables through R interface. Please note, always know what you are doing (at least as far as possible). Always do test import to a sandbox and check the integrety of the data carefully before pushing to the production database.
 
 ## Installation
 
-See devtools documentation on ?install_bitbucket
+NB: does not work yet - package under developement
+
+```r
+install.packages("devtools")
+devtools::install_github("NTNU-VM/natronbatchupload")
+library(invasim)
+
+```
 
 ## Package organization and namespace
 
