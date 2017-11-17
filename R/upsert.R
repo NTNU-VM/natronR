@@ -27,6 +27,7 @@ f_upsert_event <- function(conn,event_data){
                value = event_data, row.names = FALSE)
 
   # UPSERT event table
+  # some extra comments.....
   dbSendQuery(conn,"INSERT INTO nofa.event(
               \"eventRemarks\", \"recordedBy\", \"referenceID\", \"projectID\", \"impRef\",
               \"samplingTaxaRange\", \"dateStart\", \"dateEnd\", \"samplingEffort\",
