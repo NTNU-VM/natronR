@@ -13,6 +13,7 @@
 #'
 #' f_upsert_event(conn,event_data)
 #'
+#'
 #' @import dplyr
 #' @import dbplyr
 #' @import RPostgreSQL
