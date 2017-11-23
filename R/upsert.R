@@ -1,17 +1,17 @@
-# UPSERT functions
+# UPSERT event
 
 # takes as input an R object exactly formated to the database table
 # ([tablename]_data, and an RPostgreSQL connetion object with write
 # permissions (conn).
 
-#' Upsert events ... must be revritten
+#' Upserts event data into natron database.
 #'
-#' @param con database connection object
-#' @param event_data connetion object with write permissions (conn)
-#' @return push and upsert data to database
+#' @param con Database connection object with write permissions.
+#' @param event_data Event data to be upserted.
+#' @return Pushes and upserts data to database.
 #' @examples
 #'
-#' f_upsert_event(conn,event_data)
+#' To follow.
 #'
 #'
 #' @import dplyr
@@ -77,99 +77,3 @@ f_upsert_event <- function(conn,event_data){
   dbSendQuery(conn,"DROP TABLE IF EXISTS temp_event_import;")
 }# UPSERT functions
 
-# takes as input an R object exactly formated to the database table
-# ([tablename]_data, and an RPostgreSQL connetion object with write
-# permissions (conn).
-
-
-# function UPSERT occurrences----
-f_upsert_occurrence <- function(conn,occurrence_data){
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_occurrence_import;")
-  dbWriteTable(conn, "temp_occurrence_import", append = TRUE,
-               value = occurrence_data, row.names = FALSE)
-  # update or insert occurrence table
-  dbSendQuery(conn,"INSERT INTO nofa.occurrence(
-              \"establishmentRemarks\", \"occurrenceRemarks\", \"verifiedDate\",
-              \"verifiedBy\", \"impRef\", \"organismQuantity\", \"organismQuantityType\",
-              \"individualCount\", \"occurrenceStatus\", \"establishmentMeans\",
-              \"spawningCondition\", \"spawningLocation\", sex, \"lifeStage\", \"reproductiveCondition\",
-              \"recordNumber\", \"eventID\", \"occurrenceID\", \"fieldNumber\", modified,
-              \"taxonID\", \"ecotypeID\", \"populationTrend\")
-              SELECT
-              \"establishmentRemarks\", \"occurrenceRemarks\", CAST(\"verifiedDate\" AS date),
-              \"verifiedBy\", \"impRef\", CAST(\"organismQuantity\" AS numeric),
-              \"organismQuantityType\", CAST(\"individualCount\" AS numeric),
-              \"occurrenceStatus\", \"establishmentMeans\",
-              \"spawningCondition\", \"spawningLocation\", sex, \"lifeStage\",
-              \"reproductiveCondition\", \"recordNumber\",
-              CAST(\"eventID\" AS uuid), CAST(\"occurrenceID\" AS uuid),
-              \"fieldNumber\", CAST(modified AS DATE),
-              \"taxonID\", CAST(\"ecotypeID\" AS integer), \"populationTrend\"
-              FROM temporary.temp_occurrence_import
-              ON CONFLICT (\"occurrenceID\") DO UPDATE SET
-              \"establishmentRemarks\" = EXCLUDED.\"establishmentRemarks\",
-              \"occurrenceRemarks\" = EXCLUDED.\"occurrenceRemarks\",
-              \"verifiedDate\" = EXCLUDED.\"verifiedDate\",
-              \"verifiedBy\" = EXCLUDED.\"verifiedBy\",
-              \"impRef\" = EXCLUDED.\"impRef\",
-              \"organismQuantity\" = EXCLUDED.\"organismQuantity\",
-              \"individualCount\" = EXCLUDED.\"individualCount\",
-              \"occurrenceStatus\" = EXCLUDED.\"occurrenceStatus\",
-              \"establishmentMeans\" = EXCLUDED.\"establishmentMeans\",
-              \"spawningCondition\" = EXCLUDED.\"spawningCondition\",
-              \"spawningLocation\" = EXCLUDED.\"spawningLocation\",
-              \"sex\" = EXCLUDED.\"sex\",
-              \"lifeStage\" = EXCLUDED.\"lifeStage\",
-              \"reproductiveCondition\" = EXCLUDED.\"reproductiveCondition\",
-              \"recordNumber\" = EXCLUDED.\"recordNumber\",
-              \"eventID\" = EXCLUDED.\"eventID\",
-              \"fieldNumber\" = EXCLUDED.\"fieldNumber\",
-              \"modified\" = EXCLUDED.\"modified\",
-              \"taxonID\" = EXCLUDED.\"taxonID\",
-              \"ecotypeID\" = EXCLUDED.\"ecotypeID\",
-              \"populationTrend\" = EXCLUDED.\"populationTrend\"
-              ;")
-
-
-  # Drop temporary tables
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_occurrence_import;")
-}
-
-
-
-# function UPSERT m_dataset----
-f_upsert_m_dataset <- function(conn,m_dataset_data){
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_m_dataset_data_import;")
-  dbWriteTable(conn, "temp_m_dataset_data_import", append = TRUE,
-               value = m_dataset_data, row.names = FALSE)
-  # update or insert m_dataset_data table
-  dbSendQuery(conn,"INSERT INTO nofa.m_dataset(
-              \"datasetID\", \"datasetName\", \"institutionCode\",
-              \"rightsHolder\", \"accessRights\", \"license\", \"informationWithheld\",
-              \"dataGeneralizations\", \"bibliographicCitation\", \"datasetComment\",
-              \"ownerInstitutionCode\")
-              SELECT
-              \"datasetID\", \"datasetName\",
-              \"institutionCode\", \"rightsHolder\",
-              \"accessRights\",
-              \"license\", \"informationWithheld\",
-              \"dataGeneralizations\", \"bibliographicCitation\",
-              \"datasetComment\", \"ownerInstitutionCode\"
-              FROM temporary.temp_m_dataset_data_import
-              ON CONFLICT (\"datasetID\") DO UPDATE SET
-              \"datasetName\" = EXCLUDED.\"datasetName\",
-              \"institutionCode\" = EXCLUDED.\"institutionCode\",
-              \"rightsHolder\" = EXCLUDED.\"rightsHolder\",
-              \"accessRights\" = EXCLUDED.\"accessRights\",
-              \"license\" = EXCLUDED.\"license\",
-              \"informationWithheld\" = EXCLUDED.\"informationWithheld\",
-              \"dataGeneralizations\" = EXCLUDED.\"dataGeneralizations\",
-              \"bibliographicCitation\" = EXCLUDED.\"bibliographicCitation\",
-              \"datasetComment\" = EXCLUDED.\"datasetComment\",
-              \"ownerInstitutionCode\" = EXCLUDED.\"ownerInstitutionCode\"
-              ;")
-
-
-  # Drop temporary tables
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_m_dataset_data_import;")
-}
