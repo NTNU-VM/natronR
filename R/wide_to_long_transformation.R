@@ -2,14 +2,30 @@
 
 # Transposing dummy flat data to become long format
 
+# This script takes a wide dataset as it typically looks originally
+# (after some standardisation of column names). The rows are event and species are
+# in seperate columns. It creates UUID per event and then transposes the data.
+# UUIDs for locations are not made here. Insted a unique locations name (globally or at least Natron unique)
+# and matches it to existing location names in the database.
 
 
 # get example data - standardised, flat and wide data
 library(readxl)
-flat_data_dummy_std <- read_excel("flat_data_dummy_std.xlsx",
+wide_data <- read_excel("flat_data_dummy_std.xlsx",
                                   sheet = "Sheet1")
-names(flat_data_dummy_std)
+names(wide_data)
 
+
+# craetinf EventIDs
+ug <- uuid.gen()
+myLength <- nrow(wide_data)
+uuids <- character(myLength)
+for(i in 1:myLength){
+  uuids[i] <- ug()
+}
+any(duplicated(uuids))
+
+wide_data$eventID <- uuids
 
 
 
@@ -18,24 +34,25 @@ names(flat_data_dummy_std)
 # the resulting long format will become very long indeed.
 
 library(reshape2)
-flat_data_dummy_std_long <- melt(flat_data_dummy_std,
-                                 id.vars = c(1:5, 67:71),
-                                 measure.vars = c(6:70),
-                                 variable.name = "scientificName")
+long_data <- melt(wide_data,
+                      id.vars = c(1:5, 67:72),
+                      measure.vars = c(6:70),
+                      variable.name = "scientificName",
+                      value.name = "organismQuantity")
 
 
-dim(flat_data_dummy_std_long) # very long - 91k rows
+dim(long_data) # very long - 91k rows
 
 # I remove the zeros -  although thats perhaps the wrong thing to do, this is just a test
-flat_data_dummy_std_long$value <- as.numeric(flat_data_dummy_std_long$value)
-flat_data_dummy_std_long_X <- filter(flat_data_dummy_std_long,
-                                     value>0 &
-                                       !is.na(value))
+long_data$organismQuantity <- as.numeric(long_data$organismQuantity)
+long_data <- filter(long_data,
+                       organismQuantity>0 &
+                       !is.na(organismQuantity))
 
-head(flat_data_dummy_std_long_X)
-
-
-dim(flat_data_dummy_std_long_X) # 14761 rows
+head(long_data)
 
 
-write.csv(flat_data_dummy_std_long_X, file = "flat_data_dummy_std_long.csv", row.names = FALSE)
+dim(long_data) # 14761 rows
+
+
+write.csv(long_data, file = "flat_data_dummy_std_long.csv", row.names = FALSE)
