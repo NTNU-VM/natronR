@@ -43,6 +43,7 @@
 #require(RPostgreSQL)
 library(dbplyr)
 library(dplyr)
+library(dplR)   # uuid.gen()
 library(postGIStools)
 library(lubridate)
 library(sp)
@@ -65,7 +66,7 @@ library(RPostgreSQL)
 # creating db connection object
 
 pg_drv <- "PostgreSQL"
-pg_db <- "natron"
+pg_db <- "natron_sandbox"
 pg_user <- "AndersK"
 pg_host <- "vm-srv-zootron.vm.ntnu.no"
 
@@ -94,6 +95,7 @@ Connectionstuff <- get_postgis_query(con,connectivity)
 
 
 # dummy data:
+library(readr)
 flatt_data <- read_csv("flat_data_dummy_std_long.csv")
 
 f_structure_and_map <- function(flatt_data,conn) {
@@ -117,22 +119,39 @@ tableinfo <- dbGetQuery(con,
 
 fk_info <- dbGetQuery(con,                                              # what does this do?
                       "SELECT
-                      tc.constraint_name, tc.table_name, kcu.column_name,
-                      ccu.table_name AS foreign_table_name,                   # not needed?
-                      ccu.column_name AS foreign_column_name                  # not needed?
+
+                      tc.constraint_name, ccu.constraint_name, kcu.constraint_name, tc.table_name, kcu.column_name,
+
+                      ccu.table_name AS foreign_table_name,
+
+                      ccu.column_name AS foreign_column_name, constraint_type
+
                       FROM
+
                       information_schema.table_constraints AS tc
-                      JOIN information_schema.key_column_usage AS kcu
-                      ON tc.constraint_name = kcu.constraint_name
-                      left JOIN information_schema.constraint_column_usage AS ccu
-                      ON ccu.constraint_name = tc.constraint_name
-                      WHERE constraint_type = 'FOREIGN KEY' AND
-                      tc.table_name='Occurrences' OR
-                      tc.table_name='Events' OR
-                      tc.table_name='Locations'
+
+                      JOIN information_schema.key_column_usage AS kcu ON tc.constraint_name = kcu.constraint_name
+
+                      left JOIN information_schema.constraint_column_usage AS ccu ON ccu.constraint_name = tc.constraint_name
+
+                      where constraint_type = 'FOREIGN KEY' AND
+
+                      (tc.table_name='Occurrences' OR
+
+                        tc.table_name='Events' OR
+
+                        tc.table_name='Locations')
+
                       ;")
 
 
+# Get location table for matching and retrieving locationIDs
+Natron_location <- dbGetQuery(con,
+                             "SELECT
+                               \"locationID\", \"locality\", \"verbatimLocality\",\"stationNumber\"
+                             FROM
+                               data.\"Locations\"
+                             ;")
 
 
 #-----------------------------------------------###
@@ -143,8 +162,37 @@ loc_db_terms <- tableinfo$column_name[tableinfo$table_name=="Locations"]
 loc_terms <- names(flatt_data)[names(flatt_data) %in% loc_db_terms]
 loc_data_temp <- flatt_data[loc_terms]
 
-# searching database for preexisting locations
-# ????
+# test: changing the second row so that it has a match in Natron
+loc_data_temp[2,c("locality", "verbatimLocality", "stationNumber")]  <-
+Natron_location[1,c("locality", "verbatimLocality", "stationNumber") ]
+
+
+# marking rows with existing locations. Using as unique location a combination of three columns
+loc_data_temp$remove <- ifelse(paste(loc_data_temp$locality,
+                                         loc_data_temp$verbatimLocality,
+                                         loc_data_temp$stationNumber) %in%
+                                     paste(Natron_location$locality,
+                                           Natron_location$verbatimLocality,
+                                           Natron_location$stationNumber), 1,0)
+
+# after checking, I remove the existing locations
+loc_data <- loc_data_temp %>%
+            filter(remove == 0) %>%
+            select(-remove)
+
+
+# adding UUID to new locations:
+ug <- uuid.gen()
+myLength <- nrow(loc_data)
+uuids <- character(myLength)
+for(i in 1:myLength){
+  uuids[i] <- ug()
+}
+
+
+
+#any(duplicated(uuids))   # alway the case that it's FALSE
+loc_data$locationID <- uuids
 
 
 

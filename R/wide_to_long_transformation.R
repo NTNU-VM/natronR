@@ -61,4 +61,4 @@ head(long_data)
 dim(long_data) # 14761 rows
 
 
-write.csv(long_data, file = "flat_data_dummy_std_long.csv", row.names = FALSE)
+# write.csv(long_data, file = "flat_data_dummy_std_long.csv", row.names = FALSE)

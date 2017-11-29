@@ -8,10 +8,12 @@ names(dat)
 library(dplyr)
 require(dplR)
 
+
+
 # Location Table
 locationTable_X <- select(dat,
                           -scientificName,
-                          -value,
+                          -organismQuantity,
                           -eventDate)
 locationTable <- locationTable_X[!duplicated(locationTable_X$locality),]
 
@@ -69,10 +71,14 @@ dim(eventTable)
 head(eventTable)
 
 
+
+
+
+
 # Occurence Table
 occurenceTable <- select(dat,
                          scientificName,
-                         value,
+                         organismQuantity,
                          tempEventID)
 
 # add link to eventTable (multiple occurences per event)
