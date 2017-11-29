@@ -11,11 +11,17 @@
 
 # get example data - standardised, flat and wide data
 library(readxl)
+library(dplyr)
+require(dplR)
+
+
+
+
 wide_data <- read_excel("flat_data_dummy_std.xlsx",
                                   sheet = "Sheet1")
 names(wide_data)
 
-
+#
 # craetinf EventIDs
 ug <- uuid.gen()
 myLength <- nrow(wide_data)
