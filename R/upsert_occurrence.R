@@ -31,46 +31,52 @@ f_upsert_occurrence <- function(conn,occurrence_data){
   dbWriteTable(conn, "temp_occurrence_import", append = TRUE,
                value = occurrence_data, row.names = FALSE)
   # update or insert occurrence table
-  dbSendQuery(conn,"INSERT INTO nofa.occurrence(
-              \"establishmentRemarks\", \"occurrenceRemarks\", \"verifiedDate\",
-              \"verifiedBy\", \"impRef\", \"organismQuantity\", \"organismQuantityType\",
-              \"individualCount\", \"occurrenceStatus\", \"establishmentMeans\",
-              \"spawningCondition\", \"spawningLocation\", sex, \"lifeStage\", \"reproductiveCondition\",
-              \"recordNumber\", \"eventID\", \"occurrenceID\", \"fieldNumber\", modified,
-              \"taxonID\", \"ecotypeID\", \"populationTrend\")
+  dbSendQuery(conn,"INSERT INTO data.\"Occurrences\"(
+              \"occurrenceID\", \"previousOccurrenceID\", \"occurrenceStatus\",
+              \"eventID\", \"catalogNumber\", \"recordNumber\", \"taxonID\",
+              \"typeStatus\", \"identificationQualifier\", preparations,
+              \"storingObjectID\", \"basisOfRecord\", \"identifiedBy\", year,
+              age, \"lifeStage\", \"occurrenceCondition\", sex, \"organismQuantityType\",
+              \"organismQuantity\", \"estimatedIndividualCount\", \"individualCount\",
+              \"modifiedBy\", \"registrationDate\", \"isProof\", \"proofDate\",
+              \"accessRights\", \"publishDate\", \"occurrenceRemarks\", \"preparationBy\",
+              \"preparationYear\", habitat,\"organismName\", modified, \"toDelete\")
               SELECT
-              \"establishmentRemarks\", \"occurrenceRemarks\", CAST(\"verifiedDate\" AS date),
-              \"verifiedBy\", \"impRef\", CAST(\"organismQuantity\" AS numeric),
-              \"organismQuantityType\", CAST(\"individualCount\" AS numeric),
-              \"occurrenceStatus\", \"establishmentMeans\",
-              \"spawningCondition\", \"spawningLocation\", sex, \"lifeStage\",
-              \"reproductiveCondition\", \"recordNumber\",
-              CAST(\"eventID\" AS uuid), CAST(\"occurrenceID\" AS uuid),
-              \"fieldNumber\", CAST(modified AS DATE),
-              \"taxonID\", CAST(\"ecotypeID\" AS integer), \"populationTrend\"
-              FROM temporary.temp_occurrence_import
+              CAST(\"occurrenceID\" AS uuid), CAST(\"previousOccurrenceID\" AS uuid),
+              \"occurrenceStatus\", CAST(\"eventID\" AS uuid), \"catalogNumber\",
+              CAST(\"recordNumber\" AS integer), CAST(\"taxonID\" AS uuid), \"typeStatus\",
+              \"identificationQualifier\", preparations, CAST(\"storingObjectID\" AS uuid),
+              \"basisOfRecord\", \"identifiedBy\",  CAST(year AS integer), CAST(age AS integer),
+              \"lifeStage\", \"occurrenceCondition\", sex, \"organismQuantityType\", \"organismQuantity\",
+              CAST(\"estimatedIndividualCount\" AS integer), CAST(\"individualCount\" AS integer),
+              \"modifiedBy\", CAST(\"registrationDate\" AS date), CAST(\"isProof\" AS integer),
+              CAST(\"proofDate\" AS date), \"accessRights\", CAST(\"publishDate\" AS date),
+              CAST(\"occurrenceRemarks\" AS text), \"preparationBy\", CAST(\"preparationYear\" AS integer),
+              habitat, \"organismName\", CAST(\"modified\" AS timestamp without time zone),
+              CAST(\"toDelete\" AS integer)
+              FROM data.temp_occurrence_import
               ON CONFLICT (\"occurrenceID\") DO UPDATE SET
-              \"establishmentRemarks\" = EXCLUDED.\"establishmentRemarks\",
-              \"occurrenceRemarks\" = EXCLUDED.\"occurrenceRemarks\",
-              \"verifiedDate\" = EXCLUDED.\"verifiedDate\",
-              \"verifiedBy\" = EXCLUDED.\"verifiedBy\",
-              \"impRef\" = EXCLUDED.\"impRef\",
+              \"previousOccurrenceID\" = EXCLUDED.\"previousOccurrenceID\",
+              \"occurrenceStatus\" = EXCLUDED.\"occurrenceStatus\", \"eventID\" = EXCLUDED.\"eventID\",
+              \"catalogNumber\" = EXCLUDED.\"catalogNumber\", \"recordNumber\" = EXCLUDED.\"recordNumber\",
+              \"taxonID\" = EXCLUDED.\"taxonID\", \"typeStatus\" = EXCLUDED.\"typeStatus\",
+              \"identificationQualifier\" = EXCLUDED.\"identificationQualifier\",
+              preparations = EXCLUDED.preparations, \"storingObjectID\" = EXCLUDED.\"storingObjectID\",
+              \"basisOfRecord\" = EXCLUDED.\"basisOfRecord\", \"identifiedBy\" = EXCLUDED.\"identifiedBy\",
+              year = EXCLUDED.year, age = EXCLUDED.age, \"lifeStage\" = EXCLUDED.\"lifeStage\",
+              \"occurrenceCondition\" = EXCLUDED.\"occurrenceCondition\", sex = EXCLUDED.sex,
+              \"organismQuantityType\" = EXCLUDED.\"organismQuantityType\",
               \"organismQuantity\" = EXCLUDED.\"organismQuantity\",
-              \"individualCount\" = EXCLUDED.\"individualCount\",
-              \"occurrenceStatus\" = EXCLUDED.\"occurrenceStatus\",
-              \"establishmentMeans\" = EXCLUDED.\"establishmentMeans\",
-              \"spawningCondition\" = EXCLUDED.\"spawningCondition\",
-              \"spawningLocation\" = EXCLUDED.\"spawningLocation\",
-              \"sex\" = EXCLUDED.\"sex\",
-              \"lifeStage\" = EXCLUDED.\"lifeStage\",
-              \"reproductiveCondition\" = EXCLUDED.\"reproductiveCondition\",
-              \"recordNumber\" = EXCLUDED.\"recordNumber\",
-              \"eventID\" = EXCLUDED.\"eventID\",
-              \"fieldNumber\" = EXCLUDED.\"fieldNumber\",
-              \"modified\" = EXCLUDED.\"modified\",
-              \"taxonID\" = EXCLUDED.\"taxonID\",
-              \"ecotypeID\" = EXCLUDED.\"ecotypeID\",
-              \"populationTrend\" = EXCLUDED.\"populationTrend\"
+              \"estimatedIndividualCount\" = EXCLUDED.\"estimatedIndividualCount\",
+              \"individualCount\" = EXCLUDED.\"individualCount\", \"modifiedBy\" = EXCLUDED.\"modifiedBy\",
+              \"registrationDate\" = EXCLUDED.\"registrationDate\", \"isProof\" = EXCLUDED.\"isProof\",
+              \"proofDate\" = EXCLUDED.\"proofDate\", \"accessRights\" = EXCLUDED.\"accessRights\",
+              \"publishDate\" = EXCLUDED.\"publishDate\",
+              \"occurrenceRemarks\" = EXCLUDED.\"occurrenceRemarks\",
+              \"preparationBy\" = EXCLUDED.\"preparationBy\",
+              \"preparationYear\" = EXCLUDED.\"preparationYear\", habitat = EXCLUDED.habitat,
+              \"organismName\" = EXCLUDED.\"organismName\", \"modified\" = EXCLUDED.\"modified\",
+              \"toDelete\" = EXCLUDED.\"toDelete\"
               ;")
 
 
