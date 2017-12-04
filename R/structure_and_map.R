@@ -85,12 +85,6 @@ con<-dbConnect(pg_drv,
 
 
 
-# A test:
-connectivity <- paste(
-  'SELECT * from data."Events" limit 100',
-  sep=" ")
-Connectionstuff <- get_postgis_query(con,connectivity)
-
 
 
 
@@ -119,29 +113,17 @@ tableinfo <- dbGetQuery(con,
 
 fk_info <- dbGetQuery(con,                                              # what does this do?
                       "SELECT
-
                       tc.constraint_name, ccu.constraint_name, kcu.constraint_name, tc.table_name, kcu.column_name,
-
                       ccu.table_name AS foreign_table_name,
-
                       ccu.column_name AS foreign_column_name, constraint_type
-
                       FROM
-
                       information_schema.table_constraints AS tc
-
                       JOIN information_schema.key_column_usage AS kcu ON tc.constraint_name = kcu.constraint_name
-
                       left JOIN information_schema.constraint_column_usage AS ccu ON ccu.constraint_name = tc.constraint_name
-
                       where constraint_type = 'FOREIGN KEY' AND
-
                       (tc.table_name='Occurrences' OR
-
                         tc.table_name='Events' OR
-
                         tc.table_name='Locations')
-
                       ;")
 
 
@@ -157,13 +139,66 @@ Natron_location <- dbGetQuery(con,
 #-----------------------------------------------###
 # structure and map location  table -----------####
 #-----------------------------------------------###
+
+
+
 # select terms for location table table
 loc_db_terms <- tableinfo$column_name[tableinfo$table_name=="Locations"]
 loc_terms <- names(flatt_data)[names(flatt_data) %in% loc_db_terms]
 loc_data_temp <- flatt_data[loc_terms]
 
+# remove repeated locations
+loc_data_temp2 <- loc_data_temp[!duplicated(loc_data_temp$decimalLongitude),]
+
+
+dupl_locations <- dbGetQuery(con,
+                             "SELECT
+                              \"locationName\", \"decimalLatitude\", \"decimalLongitude\",
+                                \"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",
+                                  \"riverName\", \"catchmentName\"
+                             FROM
+                                public.location_view
+                             WHERE
+                                ST_dwithin(st_geomfromtext('POINT(10 63)', 4326),
+                               \"localityGeom\",((10000 * 180.0) / pi()) / 6378137.0)
+                                                            ;")
+ord <- colnames(dupl_locations)
+dupl_locations$newLocality <- ""
+dupl_locations2 <- dupl_locations[,c("newLocality", ord)]
+dupl_locations3 <- dupl_locations2[-c(1:nrow(dupl_locations2)),]
+rm(dupl_locations, dupl_locations2)
+
+for(HEY in 1:nrow(loc_data_temp2)){
+    temp_sql[HEY] <-  paste("SELECT",
+                      "\"locationName\",\"decimalLatitude\", \"decimalLongitude\"," ,
+                       "\"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",",
+                        "\"riverName\", \"catchmentName\"",
+                     "FROM",
+                     "public.location_view",
+                     "WHERE",
+                     "ST_dwithin(st_geomfromtext('POINT(",
+                   loc_data_temp2$decimalLatitude[HEY], loc_data_temp2$decimalLongitude[HEY],
+                   ")', 4326),",
+                   "\"localityGeom\",((10000 * 180.0) / pi()) / 6378137.0);",
+                                      sep = " ")
+}
+
+
+for(HEY in 1:nrow(loc_data_temp2)){
+    temp <- dbGetQuery(con, temp_sql[HEY])
+    temp$newLocality <- loc_data_temp2[1, "locality"]
+    temp <- temp[,c("newLocality", ord)]
+    locality_check <- rbind(dupl_locations3, temp)
+}
+
+
+
+
+
+
+
 # test: changing the second row so that it has a match in Natron
-loc_data_temp[2,c("locality", "verbatimLocality", "stationNumber")]  <-
+loc_data_temp2[2,c("locality", "verbatimLocality", "stationNumber")]  <-
 Natron_location[1,c("locality", "verbatimLocality", "stationNumber") ]
 
 
