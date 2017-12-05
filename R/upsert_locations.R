@@ -4,10 +4,10 @@
 # ([tablename]_data, and an RPostgreSQL connetion object with write
 # permissions (conn).
 
-#' Upserts metadata into Natron database
+#' Upserts location into Natron database
 #'
 #' @param con Database connection object with write permissions
-#' @param m_dataset_data Metadata to be upserted.
+#' @param locations Location to be upserted.
 #' @return Pushes and upserts data to database
 #' @examples
 #'
