@@ -33,10 +33,10 @@ f_upsert_event <- function(conn,event_data){
               \"eventID\", \"dataSchemaID\", \"collectionID\", \"NaTron_datasetID\", \"locationID\",
               \"samplingProtocolID\", \"samplingEffort\", \"eventDate\", \"dateQualifier\",
               \"samplingDuration\", \"sampleNumber\", \"recordedBy\", \"sampleSizeUnit\",
-              \"sampleSizeValue\", \"fieldNumber\", \"eventRemarks\", \"zootronEventRef_txt\",
-              \"modifiedBy\", modified,\"minimumDistanceAboveSurfaceInMeters\",
+              \"sampleSizeValue\", \"fieldNumber\", \"eventRemarks\",
+              \"minimumDistanceAboveSurfaceInMeters\",
               \"maximumDistanceAboveSurfaceInMeters\", \"roundNumber\", \"seasonNumber\",
-              \"periodNumber\",\"toDelete\", experiment
+              \"periodNumber\", experiment
   )
               SELECT  CAST(\"eventID\" AS uuid), CAST(\"dataSchemaID\" AS uuid),
               CAST(\"collectionID\" AS uuid),
@@ -48,15 +48,11 @@ f_upsert_event <- function(conn,event_data){
               CAST(\"recordedBy\" AS character varying), CAST(\"sampleSizeUnit\" AS character varying),
               CAST(\"sampleSizeValue\" AS numeric), CAST(\"fieldNumber\" AS character varying),
               CAST(\"eventRemarks\" AS text),
-              CAST(\"zootronEventRef_txt\" AS character varying),
-              CAST(\"modifiedBy\" AS character varying),
-              CAST(modified AS timestamp without time zone),
               CAST(\"minimumDistanceAboveSurfaceInMeters\" AS numeric),
               CAST(\"maximumDistanceAboveSurfaceInMeters\" AS numeric),
               CAST(\"roundNumber\" AS character varying),
               CAST(\"seasonNumber\" AS character varying),
               CAST(\"periodNumber\" AS character varying),
-              CAST(\"toDelete\" AS integer),
               CAST(\"experiment\" AS character varying)
               FROM temp.temp_event_import
               ON CONFLICT (\"eventID\") DO UPDATE SET
@@ -75,15 +71,11 @@ f_upsert_event <- function(conn,event_data){
               \"sampleSizeValue\" = EXCLUDED.\"sampleSizeValue\",
               \"fieldNumber\" = EXCLUDED.\"fieldNumber\",
               \"eventRemarks\" = EXCLUDED.\"eventRemarks\",
-              \"zootronEventRef_txt\" = EXCLUDED.\"zootronEventRef_txt\",
-              \"modifiedBy\" = EXCLUDED.\"modifiedBy\",
-              modified = EXCLUDED.modified,
               \"minimumDistanceAboveSurfaceInMeters\" = EXCLUDED.\"minimumDistanceAboveSurfaceInMeters\",
               \"maximumDistanceAboveSurfaceInMeters\" = EXCLUDED.\"maximumDistanceAboveSurfaceInMeters\",
               \"roundNumber\" = EXCLUDED.\"roundNumber\",
               \"seasonNumber\" = EXCLUDED.\"seasonNumber\",
-              \"periodNumber\" = EXCLUDED.\"periodNumber\",
-              \"toDelete\"= EXCLUDED.\"toDelete\",
+              \"periodNumber\" = EXCLUDED.\"periodNumber\",,
               experiment= EXCLUDED.experiment
               ;")
   # Drop temporary tables

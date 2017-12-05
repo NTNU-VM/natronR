@@ -32,31 +32,29 @@ f_upsert_occurrence <- function(conn,occurrence_data){
                value = occurrence_data, row.names = FALSE)
   # update or insert occurrence table
   dbSendQuery(conn,"INSERT INTO data.\"Occurrences\"(
-              \"occurrenceID\", \"previousOccurrenceID\", \"occurrenceStatus\",
+              \"occurrenceID\", \"occurrenceStatus\",
               \"eventID\", \"catalogNumber\", \"recordNumber\", \"taxonID\",
               \"typeStatus\", \"identificationQualifier\", preparations,
               \"storingObjectID\", \"basisOfRecord\", \"identifiedBy\", year,
               age, \"lifeStage\", \"occurrenceCondition\", sex, \"organismQuantityType\",
               \"organismQuantity\", \"estimatedIndividualCount\", \"individualCount\",
-              \"modifiedBy\", \"registrationDate\", \"isProof\", \"proofDate\",
+              \"registrationDate\", \"isProof\", \"proofDate\",
               \"accessRights\", \"publishDate\", \"occurrenceRemarks\", \"preparationBy\",
-              \"preparationYear\", habitat,\"organismName\", modified, \"toDelete\")
+              \"preparationYear\", habitat,\"organismName\")
               SELECT
-              CAST(\"occurrenceID\" AS uuid), CAST(\"previousOccurrenceID\" AS uuid),
+              CAST(\"occurrenceID\" AS uuid),
               \"occurrenceStatus\", CAST(\"eventID\" AS uuid), \"catalogNumber\",
               CAST(\"recordNumber\" AS integer), CAST(\"taxonID\" AS uuid), \"typeStatus\",
               \"identificationQualifier\", preparations, CAST(\"storingObjectID\" AS uuid),
               \"basisOfRecord\", \"identifiedBy\",  CAST(year AS integer), CAST(age AS integer),
               \"lifeStage\", \"occurrenceCondition\", sex, \"organismQuantityType\", \"organismQuantity\",
               CAST(\"estimatedIndividualCount\" AS integer), CAST(\"individualCount\" AS integer),
-              \"modifiedBy\", CAST(\"registrationDate\" AS date), CAST(\"isProof\" AS integer),
+              CAST(\"registrationDate\" AS date), CAST(\"isProof\" AS integer),
               CAST(\"proofDate\" AS date), \"accessRights\", CAST(\"publishDate\" AS date),
               CAST(\"occurrenceRemarks\" AS text), \"preparationBy\", CAST(\"preparationYear\" AS integer),
-              habitat, \"organismName\", CAST(\"modified\" AS timestamp without time zone),
-              CAST(\"toDelete\" AS integer)
+              habitat, \"organismName\"
               FROM data.temp_occurrence_import
               ON CONFLICT (\"occurrenceID\") DO UPDATE SET
-              \"previousOccurrenceID\" = EXCLUDED.\"previousOccurrenceID\",
               \"occurrenceStatus\" = EXCLUDED.\"occurrenceStatus\", \"eventID\" = EXCLUDED.\"eventID\",
               \"catalogNumber\" = EXCLUDED.\"catalogNumber\", \"recordNumber\" = EXCLUDED.\"recordNumber\",
               \"taxonID\" = EXCLUDED.\"taxonID\", \"typeStatus\" = EXCLUDED.\"typeStatus\",
@@ -68,15 +66,14 @@ f_upsert_occurrence <- function(conn,occurrence_data){
               \"organismQuantityType\" = EXCLUDED.\"organismQuantityType\",
               \"organismQuantity\" = EXCLUDED.\"organismQuantity\",
               \"estimatedIndividualCount\" = EXCLUDED.\"estimatedIndividualCount\",
-              \"individualCount\" = EXCLUDED.\"individualCount\", \"modifiedBy\" = EXCLUDED.\"modifiedBy\",
+              \"individualCount\" = EXCLUDED.\"individualCount\",
               \"registrationDate\" = EXCLUDED.\"registrationDate\", \"isProof\" = EXCLUDED.\"isProof\",
               \"proofDate\" = EXCLUDED.\"proofDate\", \"accessRights\" = EXCLUDED.\"accessRights\",
               \"publishDate\" = EXCLUDED.\"publishDate\",
               \"occurrenceRemarks\" = EXCLUDED.\"occurrenceRemarks\",
               \"preparationBy\" = EXCLUDED.\"preparationBy\",
               \"preparationYear\" = EXCLUDED.\"preparationYear\", habitat = EXCLUDED.habitat,
-              \"organismName\" = EXCLUDED.\"organismName\", \"modified\" = EXCLUDED.\"modified\",
-              \"toDelete\" = EXCLUDED.\"toDelete\"
+              \"organismName\" = EXCLUDED.\"organismName\"
               ;")
 
 
