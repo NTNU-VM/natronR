@@ -36,7 +36,7 @@
 
 
 
-# ----------------------------------------------#
+# thsi # ----------------------------------------------#
 # Packages ----------------------------------####
 # ----------------------------------------------#
 
@@ -92,8 +92,6 @@ con<-dbConnect(pg_drv,
 library(readr)
 flatt_data <- read_csv("flat_data_dummy_std_long.csv")
 
-f_structure_and_map <- function(flatt_data,conn) {
-  require(tidyverse)
 
 
 
@@ -130,71 +128,23 @@ fk_info <- dbGetQuery(con,                                              # what d
 # Get location table for matching and retrieving locationIDs
 Natron_location <- dbGetQuery(con,
                              "SELECT
-                               \"locationID\", \"locality\", \"verbatimLocality\",\"stationNumber\"
+                               \"locationID\", \"verbatimLocality\", \"locality\", \"verbatimLocality\",\"stationNumber\"
                              FROM
                                data.\"Locations\"
                              ;")
 
+Natron_location_full <- dbGetQuery(con,
+                              "SELECT
+                               *
+                             FROM
+                               public.location_view
+                              LIMIT 10
+                             ;")
 
 #-----------------------------------------------###
 # structure and map location  table -----------####
 #-----------------------------------------------###
-
-
-
-# select terms for location table table
-loc_db_terms <- tableinfo$column_name[tableinfo$table_name=="Locations"]
-loc_terms <- names(flatt_data)[names(flatt_data) %in% loc_db_terms]
-loc_data_temp <- flatt_data[loc_terms]
-
-# remove repeated locations
-loc_data_temp2 <- loc_data_temp[!duplicated(loc_data_temp$decimalLongitude),]
-
-
-dupl_locations <- dbGetQuery(con,
-                             "SELECT
-                              \"locationName\", \"decimalLatitude\", \"decimalLongitude\",
-                                \"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",
-                                  \"riverName\", \"catchmentName\"
-                             FROM
-                                public.location_view
-                             WHERE
-                                ST_dwithin(st_geomfromtext('POINT(10 63)', 4326),
-                               \"localityGeom\",((10000 * 180.0) / pi()) / 6378137.0)
-                                                            ;")
-ord <- colnames(dupl_locations)
-dupl_locations$newLocality <- ""
-dupl_locations2 <- dupl_locations[,c("newLocality", ord)]
-dupl_locations3 <- dupl_locations2[-c(1:nrow(dupl_locations2)),]
-rm(dupl_locations, dupl_locations2)
-
-for(HEY in 1:nrow(loc_data_temp2)){
-    temp_sql[HEY] <-  paste("SELECT",
-                      "\"locationName\",\"decimalLatitude\", \"decimalLongitude\"," ,
-                       "\"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",",
-                        "\"riverName\", \"catchmentName\"",
-                     "FROM",
-                     "public.location_view",
-                     "WHERE",
-                     "ST_dwithin(st_geomfromtext('POINT(",
-                   loc_data_temp2$decimalLatitude[HEY], loc_data_temp2$decimalLongitude[HEY],
-                   ")', 4326),",
-                   "\"localityGeom\",((10000 * 180.0) / pi()) / 6378137.0);",
-                                      sep = " ")
-}
-
-
-for(HEY in 1:nrow(loc_data_temp2)){
-    temp <- dbGetQuery(con, temp_sql[HEY])
-    temp$newLocality <- loc_data_temp2[1, "locality"]
-    temp <- temp[,c("newLocality", ord)]
-    locality_check <- rbind(dupl_locations3, temp)
-}
-
-
-
-
-
+# this code is mooved to the locality_check script. Bits and peaces still remains here
 
 
 # test: changing the second row so that it has a match in Natron
@@ -234,6 +184,8 @@ loc_data$locationID <- uuids
 #-----------------------------------------------###
 # structure and map m_dataset table -----------####
 #-----------------------------------------------###
+f_structure_and_map <- function(flatt_data,conn) {
+  require(tidyverse)
 
 
 
