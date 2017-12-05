@@ -26,38 +26,38 @@
 
 
 # function UPSERT m_dataset----
-f_upsert_m_dataset <- function(conn,m_dataset_data){
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_m_dataset_data_import;")
-  dbWriteTable(conn, "temp_m_dataset_data_import", append = TRUE,
-               value = m_dataset_data, row.names = FALSE)
+f_upsert_location <- function(conn,location_data){
+  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_location_import;")
+  dbWriteTable(conn, "temp_location_import", append = TRUE,
+               value = location_data, row.names = FALSE)
   # update or insert m_dataset_data table
-  dbSendQuery(conn,"INSERT INTO nofa.m_dataset(
-              \"datasetID\", \"datasetName\", \"institutionCode\",
-              \"rightsHolder\", \"accessRights\", \"license\", \"informationWithheld\",
-              \"dataGeneralizations\", \"bibliographicCitation\", \"datasetComment\",
-              \"ownerInstitutionCode\")
+  dbSendQuery(conn,"INSERT INTO data.\"Locations\"(
+              \"locationID\", locality,
+              \"verbatimLocality\", \"stationNumber\", \"verbatimCoordinates\",
+              \"coordinateUncertaintyInMeters\", \"geodeticDatum\", \"decimalLatitude\",
+              \"decimalLongitude\", \"locationRemarks\",
+              \"siteNumber\")
               SELECT
-              \"datasetID\", \"datasetName\",
-              \"institutionCode\", \"rightsHolder\",
-              \"accessRights\",
-              \"license\", \"informationWithheld\",
-              \"dataGeneralizations\", \"bibliographicCitation\",
-              \"datasetComment\", \"ownerInstitutionCode\"
-              FROM temporary.temp_m_dataset_data_import
-              ON CONFLICT (\"datasetID\") DO UPDATE SET
-              \"datasetName\" = EXCLUDED.\"datasetName\",
-              \"institutionCode\" = EXCLUDED.\"institutionCode\",
-              \"rightsHolder\" = EXCLUDED.\"rightsHolder\",
-              \"accessRights\" = EXCLUDED.\"accessRights\",
-              \"license\" = EXCLUDED.\"license\",
-              \"informationWithheld\" = EXCLUDED.\"informationWithheld\",
-              \"dataGeneralizations\" = EXCLUDED.\"dataGeneralizations\",
-              \"bibliographicCitation\" = EXCLUDED.\"bibliographicCitation\",
-              \"datasetComment\" = EXCLUDED.\"datasetComment\",
-              \"ownerInstitutionCode\" = EXCLUDED.\"ownerInstitutionCode\"
+              CAST(\"locationID\" AS uuid), locality, \"verbatimLocality\", \"stationNumber\",
+              \"verbatimCoordinates\",
+              \"geodeticDatum\",
+              CAST(\"decimalLatitude\" AS numeric), CAST(\"decimalLongitude\" AS numeric),
+              CAST(\"locationRemarks\" AS text),
+              \"siteNumber\"
+              FROM data.temp_location_import
+              ON CONFLICT (\"locationID\") DO UPDATE SET
+              \"locality\" = EXCLUDED.\"locality\",
+              \"verbatimLocality\" = EXCLUDED.\"verbatimLocality\",
+              \"stationNumber\" = EXCLUDED.\"stationNumber\",
+              \"verbatimCoordinates\" = EXCLUDED.\"verbatimCoordinates\",
+              \"geodeticDatum\" = EXCLUDED.\"geodeticDatum\",
+              \"decimalLatitude\" = EXCLUDED.\"decimalLatitude\",
+              \"decimalLongitude\" = EXCLUDED.\"decimalLongitude\",
+              \"locationRemarks\" = EXCLUDED.\"locationRemarks\",
+              \"siteNumber\" = EXCLUDED.\"siteNumber\",
               ;")
 
 
   # Drop temporary tables
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_m_dataset_data_import;")
+  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_location_import;")
 }
