@@ -144,7 +144,7 @@ Natron_location_full <- dbGetQuery(con,
 #-----------------------------------------------###
 # structure and map location  table -----------####
 #-----------------------------------------------###
-# this code is mooved to the locality_check script. Bits and peaces still remains here
+# this code is moved to the locality_check script. Bits and peaces still remains here
 
 
 # test: changing the second row so that it has a match in Natron
@@ -218,7 +218,7 @@ m_dataset_data[is_character] <- lapply(m_dataset_data[,is_character], as.charact
   # select terms for event table
 event_db_terms <- tableinfo$column_name[tableinfo$table_name=="Events"]
 event_terms <- names(flatt_data)[names(flatt_data) %in% event_db_terms]
-event_terms[3] <- "locality"
+event_terms[length(event_terms)+1] <- "locality"
 event_data_temp <- flatt_data[event_terms]
 
 # create empty dataframe with all event table terms
