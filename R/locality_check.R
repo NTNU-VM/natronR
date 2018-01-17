@@ -15,13 +15,136 @@
 # The user then is asked to manully check if not some of these localities can be reused. If so, the
 # user must copy-paste the locationID from the existing NaTron locality
 
-# LIBRARY
-library(RPostgreSQL)   # dbConnect
-library(readr)         # read_csv
-library(dplyr)         # bind_rows
+
+
+
+
+
+
+
+#-----------------------------------------------###
+# Function starts                   -----------####
+#-----------------------------------------------###
+
+location_check <- function(data,conn,radius) {
+require (dplyr,RPostgreSQL)
+# -----------------------------------------------#
+# Get db table info---------------------------####
+# -----------------------------------------------#
+
+natron_tableinfo <- dbGetQuery(con,
+                        "select table_name,column_name,data_type
+                        from information_schema.columns
+                        where table_name =  'Locations'
+                        ;")
+
+# -----------------------------------------------#
+# Make locations lable         ---------------####
+# -----------------------------------------------#
+
+# subset local data to match terms used in Natron:
+local_terms <- names(data)[names(data) %in% natron_tableinfo$column_name]
+local_data_temp <- data[local_terms]
+
+# subset only unique locations
+local_data_temp_unique <- local_data_temp[!duplicated(paste0(local_data_temp$decimalLongitude, local_data_temp$decimalLatitude)),]
+
+# standardising the dataset to look exactly like Natron.
+# - create empty dataframe of similar dimensions
+local_data_temp_blank <- data.frame(matrix(ncol = length(natron_tableinfo$column_name), nrow = 0),stringsAsFactors=FALSE)
+
+# - paste natron column names in correct order
+colnames(local_data_temp_blank) <- natron_tableinfo$column_name
+
+# rowbind local data to the blank data frame
+local_data_temp_filled <- bind_rows(local_data_temp_blank, local_data_temp_unique)
+
+
+
+# Scan the Natron db for pre-existing localities:
+
+#  - First just get some localities near Trondheim
+dupl_locations <- dbGetQuery(con,
+                               "SELECT
+                              \"locationName\", \"locationID\",\"decimalLatitude\", \"decimalLongitude\",
+                                \"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",
+                                  \"riverName\", \"catchmentName\"
+                             FROM
+                                public.location_view
+                             WHERE
+                                ST_dwithin(st_geomfromtext('POINT(10 63)', 4326),
+                               \"localityGeom\",((10000 * 180.0) / pi()) / 6378137.0)
+                                                            ;")
+
+# add some more columns were we can put the names and coordinates of our own localities
+ord <- colnames(dupl_locations)
+dupl_locations$newLocality <- ""
+dupl_locations$newLat      <- ""
+dupl_locations$newLong     <- ""
+new <- c("newLocality", "newLat", "newLong")
+
+
+
+dupl_locations2 <- dupl_locations[,c(new, ord)]                     # put new columns first
+dupl_locations3 <- dupl_locations2[-c(1:nrow(dupl_locations2)),]    # DELETE all rows
+#rm(dupl_locations, dupl_locations2)                                 # clean up
+
+# This for-loop to produces SQL query sentences for each locality, filtering by a chosen geographic radius
+temp_sql <- ""
+for(HEY in 1:nrow(local_data_temp_filled)){
+  temp_sql[HEY] <-  paste("SELECT",
+                          "\"locationName\",\"locationID\", \"decimalLatitude\", \"decimalLongitude\"," ,
+                          "\"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",",
+                          "\"riverName\", \"catchmentName\"",
+                          "FROM",
+                          "public.location_view",
+                          "WHERE",
+                          "ST_dwithin(st_geomfromtext('POINT(",
+                          local_data_temp_filled$decimalLatitude[HEY], local_data_temp_filled$decimalLongitude[HEY],
+                          ")', 4326),",
+                          "\"localityGeom\",((", radius, " * 180.0) / pi()) / 6378137.0);",
+                          sep = " ")
+}
+
+
+
+
+# Combining all positive macthes into one dataframe
+locality_check <- dupl_locations3
+
+for(HEY in 1:nrow(local_data_temp_filled)){
+  temp <- ""
+  temp <- dbGetQuery(con, temp_sql[HEY])
+
+  if(dim(temp)[1] !=0) {
+    temp2 <- temp;
+    temp2$newLocality <- rep(local_data_temp_filled[HEY, "locality"], times=nrow(temp2));
+    temp2$newLat <- rep(local_data_temp_filled[HEY, "decimalLatitude"], times=nrow(temp2));
+    temp2$newLong <- rep(local_data_temp_filled[HEY, "decimalLongitude"], times=nrow(temp2));
+    temp2 <- temp2[,c(new, ord)];
+    locality_check <- rbind(locality_check, temp2);
+    rm(temp2)}
+
+
+}
+locality_check <<- locality_check
+location_table_no_UUIDs <<- local_data_temp_filled
+return(cat(
+  length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron.\n",
+  paste(nrow(local_data_temp_filled)-length(unique(locality_check$newLocality)),
+        "of your locations had no existing locations within a", radius, "m radius.")))
+
+}
+# END FUNCTION
+
+# data:       a flattend, long and standardised dataset that you wish to import into NaTron
+# con:        a connection object with natron
+# radius:     the radius in meters in which to search for preexisting localitites in naTron
+
+
+# Example:
 
 # creating db connection object
-
 pg_drv <- "PostgreSQL"
 pg_db <- "natron_sandbox"
 pg_user <- "AndersK"
@@ -34,175 +157,80 @@ con<-dbConnect(pg_drv,
                password=rstudioapi::askForPassword("Please enter your psw"))
 
 
-
-# -----------------------------------------------#
-# Get dummy data   ---------------------------####
-# -----------------------------------------------#
-
+# Get dummy data ->
 flatt_data <- read_csv("flat_data_dummy_std_long.csv")
 
+# and run it (with a unrealisticly large scan radius of 8000 m to ensure we get some hits) ->
+location_check(data = flatt_data, con = con, radius = 8000)
+# END example
 
-# -----------------------------------------------#
-# Get db table info---------------------------####
-# -----------------------------------------------#
 
-tableinfo <- dbGetQuery(con,
-                        "select table_name,column_name,data_type
-                        from information_schema.columns
-                        where table_name =  'Locations'
-                        ;")
 
-# -----------------------------------------------#
-# Get db NaTron locations table---------------####
-# -----------------------------------------------#
-Natron_location <- dbGetQuery(con,
-                              "SELECT
-                               \"locationID\", \"verbatimLocality\", \"locality\", \"verbatimLocality\",\"stationNumber\"
-                             FROM
-                               data.\"Locations\"
-                             ;")
-# this is not used further I don't think...
 
-# -----------------------------------------------#
-# Make locations lable         ---------------####
-# -----------------------------------------------#
-loc_db_terms <- tableinfo$column_name[tableinfo$table_name=="Locations"]
-loc_terms <- names(flatt_data)[names(flatt_data) %in% loc_db_terms]
-loc_data_temp <- flatt_data[loc_terms]
 
-# remove repeated locations
-loc_data_temp2 <- loc_data_temp[!duplicated(paste0(loc_data_temp$decimalLongitude, loc_data_temp$decimalLatitude)),]
-
-# create empty dataframe with all location table terms
-loc_data_temp3 <- data.frame(matrix(ncol = length(loc_db_terms), nrow = 0),stringsAsFactors=FALSE)
-colnames(loc_data_temp3) <- loc_db_terms
-# rowbind location data to the empty data.frame
-# in order to create location table identical to the one in NaTron
-loc_data_temp4 <- bind_rows(loc_data_temp3, loc_data_temp2)
-
+# After manualy checking 'locality_check' table for possible reuse of NaTron locations,
+# you may choose reuse some locations, but not all.
+# The next function lets you remove newLocations from the 'locations_check table if you think
+# they should be imported into Natron. The newLocations not removed will not be upserted to NaTron,
+# insted we will get the locationIDs from the altermnative locations and use them in the event table.
 
 
 #-----------------------------------------------###
 # Function starts                   -----------####
 #-----------------------------------------------###
 
-#location_check <- function(flatt_data,conn) {
-#  require(tidyverse)
 
+get_new_loc <- function(locality_check, location_table_no_UUIDs, locations_to_import){
+                    require(dplR)
+  # Split the locations table into 'new' and 'pre-existing'
+  locality_check2 <- subset(locality_check, !(locality_check$newLocality %in% unique(locality_check$newLocality)[locations_to_import]));
+                     new_localities  <- subset(location_table_no_UUIDs, !(location_table_no_UUIDs$locality %in% locality_check2$newLocality));
+                     preexisting_localities    <- subset(location_table_no_UUIDs, !(location_table_no_UUIDs$locality %in% new_localities$locality));
 
-# Creating an empty dataframe to go into the for-loop below.
-# First just get some localities near Trondheim
-dupl_locations <- dbGetQuery(con,
-                               "SELECT
-                              \"locationName\", \"locationID\",\"decimalLatitude\", \"decimalLongitude\",
-                                \"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",
-                                  \"riverName\", \"catchmentName\"
-                             FROM
-                                public.location_view
-                             WHERE
-                                ST_dwithin(st_geomfromtext('POINT(10 63)', 4326),
-                               \"localityGeom\",((10000 * 180.0) / pi()) / 6378137.0)
-                                                            ;")
-# I would have verbatimLocality here as well, but it doesn't exist in public.location_view
+  # create UUID as locationIDs for the new localities
+                    # adding UUID to new locations:
+                    ug <- uuid.gen();
+                    myLength <- nrow(new_localities);
+                    uuids <- character(myLength);
+                    for(i in 1:myLength){
+                      uuids[i] <- ug()};
+                    new_localities$locationID <- as.numeric(new_localities$locationID);
+                    new_localities$locationID <- uuids;
+                    new_localities <<- new_localities;
 
-ord <- colnames(dupl_locations)
-dupl_locations$newLocality <- ""
-dupl_locations$newLat      <- ""
-dupl_locations$newLong     <- ""
-new <- c("newLocality", "newLat", "newLong")
+  # get locationIDs for the chosen pre-existing localities. We get them from Natron
+                    preexisting_localities$locationID <- locality_check$locationID[match(preexisting_localities$locality, locality_check$newLocality)];
+                    preexisting_localities <<- preexisting_localities
 
-dupl_locations2 <- dupl_locations[,c(new, ord)]                     # put new columns first
-dupl_locations3 <- dupl_locations2[-c(1:nrow(dupl_locations2)),]    # DELETE all rows
-rm(dupl_locations, dupl_locations2)                                 # clean up
-
-# A for-loop to produce SQL query sentences for each locality, filtering by a geographic radius
-temp_sql <- ""
-for(HEY in 1:nrow(loc_data_temp2)){
-  temp_sql[HEY] <-  paste("SELECT",
-                          "\"locationName\",\"locationID\", \"decimalLatitude\", \"decimalLongitude\"," ,
-                          "\"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",",
-                          "\"riverName\", \"catchmentName\"",
-                          "FROM",
-                          "public.location_view",
-                          "WHERE",
-                          "ST_dwithin(st_geomfromtext('POINT(",
-                          loc_data_temp2$decimalLatitude[HEY], loc_data_temp2$decimalLongitude[HEY],
-                          ")', 4326),",
-                          "\"localityGeom\",((8000 * 180.0) / pi()) / 6378137.0);",
-                          sep = " ")
-}
-# the radius should be reduced to maybe 100, here it's 8000 which gives 20 hits
-
-
-
-# Combining all positive macthes into one dataframe
-temp <- ""
-locality_check <- dupl_locations3
-
-for(HEY in 1:nrow(loc_data_temp2)){
-  temp <- ""
-  temp <- dbGetQuery(con, temp_sql[HEY])
-
-  if(dim(temp)[1] !=0) {
-    temp2 <- temp;
-    temp2$newLocality <- rep(loc_data_temp2[HEY, "locality"], times=nrow(temp2));
-    temp2$newLat <- rep(loc_data_temp2[HEY, "decimalLatitude"], times=nrow(temp2));
-    temp2$newLong <- rep(loc_data_temp2[HEY, "decimalLongitude"], times=nrow(temp2));
-    temp2 <- temp2[,c(new, ord)];
-    locality_check <- rbind(locality_check, temp2);
-    rm(temp2)}
-
+  return(cat(
+    "************************************************************\n
+The 'new_localities' dataframe is ready to be upserted\ninto Natron using the location_upsert function.\n
+The 'preexisting_localities' dataframe is used un the event_upsert function to\n get the correct locationIDs into the event table\n
+    *************************************************************"))
 
 }
 
-return(cat(
-  length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron.\n",
-  paste(nrow(loc_data_temp2)-length(unique(locality_check$newLocality)),
-        "of your locations had no existing locations within a XX m radius.")))
-
-
-
-# END FUNCTION
-
-# After manualy checking 'locality_check' table for possible reuse of NaTron locations,
-# you may choose resue some locations, but not all.
-# The next function lets you remove newLocations from the 'locations_check table if you think
-# they should be imported into Natron. The newLocations not removed will not be upserted to NaTron,
-# insted we will get the locationIDs from the altermnative locations and use them in the event table.
-
-
-paste(unique(locality_check$newLocality))   # show all the localitites in your dataset that have possible matches in Natron
-newLocalitySub <- c(1:5, 8:20)     # example numbers, locations 6 and 7 are preexisting
-# the newLocalitySub argument is a vector of the newLocations that you want to import to NaTron
+# locality_check:             output from location_check
+# location_table_no_UUIDs:    output from location_check
+# locations_to_import:        a vector of the newLocations that you want to import to NaTron
 # (i.e. those that do not have any pre-existing locations in NaTron that could've been reused)
-# indexed by the numerical order
-# (i.e. the order they appear after entering unique(locality_check$newLocality))
-
-
-get_new_loc <- function(x, y){
-                    locality_check2 <- subset(x, !(x$newLocality %in% unique(x$newLocality)[newLocalitySub]));
-                    locationTable_forNatron  <<- subset(y, !(y$locality %in% locality_check2$newLocality));
-                    preexisting_locations    <<- subset(y, !(y$locality %in% locationTable_forNatron$locality));
-                                        }
-
-
-# x = locality_check or dataframe of localities with possible matchen in Natron
-# y = loc_data_temp4 or dataframe of all unique localities in the new dataset
 
 
 
-# NEW FUNCTION
-get_new_locations(x = locality_check,
-                  y = loc_data_temp4)
+
+# Example:
+
+
+# show all the localitites in your dataset that have possible matches in Natron
+paste(unique(locality_check$newLocality))
+
+# create a vector with the positions of the localities THAT ARE NEW (i.e. NOT pre-existing in NaTron)
+newLocalitySub <- c(1:5, 8:20)     # example numbers, locations 6 and 7 are preexisting
+
+get_new_loc(locality_check = locality_check,
+            location_table_no_UUIDs = location_table_no_UUIDs,
+            locations_to_import = newLocalitySub)
 
 
 
-function(temp_location_table){
-locationTable <- subset(loc_data_temp4, !(loc_data_temp4$locality %in% locality_check$newLocality))
-# create UUIDS for these
 
-# for a subset of the others, we get the UUIDs from NaTron
-
-}
-
-#}
