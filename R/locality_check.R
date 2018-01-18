@@ -27,7 +27,8 @@
 #-----------------------------------------------###
 
 location_check <- function(data,conn,radius) {
-require (dplyr,RPostgreSQL)
+require (dplyr)
+  require(RPostgreSQL)
 # -----------------------------------------------#
 # Get db table info---------------------------####
 # -----------------------------------------------#
@@ -127,7 +128,7 @@ for(HEY in 1:nrow(local_data_temp_filled)){
 
 
 }
-locality_check <<- locality_check
+if(dim(locality_check)[1] !=0) locality_check <<- locality_check   # only return the data frame if it has rows
 location_table_no_UUIDs <<- local_data_temp_filled
 return(cat(
   length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron.\n",
@@ -136,6 +137,7 @@ return(cat(
 
 }
 # END FUNCTION
+
 
 # data:       a flattend, long and standardised dataset that you wish to import into NaTron
 # con:        a connection object with natron
@@ -150,6 +152,7 @@ pg_db <- "natron_sandbox"
 pg_user <- "AndersK"
 pg_host <- "vm-srv-zootron.vm.ntnu.no"
 
+library(RPostgreSQL)
 con<-dbConnect(pg_drv,
                host=pg_host,
                dbname=pg_db,
@@ -158,10 +161,11 @@ con<-dbConnect(pg_drv,
 
 
 # Get dummy data ->
+library(readr)
 flatt_data <- read_csv("flat_data_dummy_std_long.csv")
 
 # and run it (with a unrealisticly large scan radius of 8000 m to ensure we get some hits) ->
-location_check(data = flatt_data, con = con, radius = 8000)
+location_check(data = flatt_data, con = con, radius = 0)
 # END example
 
 
@@ -180,12 +184,23 @@ location_check(data = flatt_data, con = con, radius = 8000)
 #-----------------------------------------------###
 
 
-get_new_loc <- function(locality_check, location_table_no_UUIDs, locations_to_import){
+get_new_loc <- function(locality_check = NA, location_table_no_UUIDs, locations_to_import = NA){
                     require(dplR)
+
   # Split the locations table into 'new' and 'pre-existing'
+  if(missing(locality_check)) {
+            new_localities <- location_table_no_UUIDs}
+
+  else{
   locality_check2 <- subset(locality_check, !(locality_check$newLocality %in% unique(locality_check$newLocality)[locations_to_import]));
                      new_localities  <- subset(location_table_no_UUIDs, !(location_table_no_UUIDs$locality %in% locality_check2$newLocality));
                      preexisting_localities    <- subset(location_table_no_UUIDs, !(location_table_no_UUIDs$locality %in% new_localities$locality));
+
+
+                      # get locationIDs for the chosen pre-existing localities. We get them from Natron
+                     preexisting_localities$locationID <- locality_check$locationID[match(preexisting_localities$locality, locality_check$newLocality)];
+                     preexisting_localities <<- preexisting_localities
+                     }
 
   # create UUID as locationIDs for the new localities
                     # adding UUID to new locations:
@@ -196,16 +211,14 @@ get_new_loc <- function(locality_check, location_table_no_UUIDs, locations_to_im
                       uuids[i] <- ug()};
                     new_localities$locationID <- as.numeric(new_localities$locationID);
                     new_localities$locationID <- uuids;
-                    new_localities <<- new_localities;
+                    new_localities <<- new_localities
 
-  # get locationIDs for the chosen pre-existing localities. We get them from Natron
-                    preexisting_localities$locationID <- locality_check$locationID[match(preexisting_localities$locality, locality_check$newLocality)];
-                    preexisting_localities <<- preexisting_localities
+
 
   return(cat(
     "************************************************************\n
 The 'new_localities' dataframe is ready to be upserted\ninto Natron using the location_upsert function.\n
-The 'preexisting_localities' dataframe is used un the event_upsert function to\n get the correct locationIDs into the event table\n
+If you hade any, then a dataframe with the 'preexisting_localities'\nis created which can be used un the event_upsert function to\n get the correct locationIDs into the event table\n
     *************************************************************"))
 
 }
@@ -230,7 +243,5 @@ newLocalitySub <- c(1:5, 8:20)     # example numbers, locations 6 and 7 are pree
 get_new_loc(locality_check = locality_check,
             location_table_no_UUIDs = location_table_no_UUIDs,
             locations_to_import = newLocalitySub)
-
-
 
 
