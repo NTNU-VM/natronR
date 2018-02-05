@@ -165,7 +165,7 @@ library(readr)
 flatt_data <- read_csv("flat_data_dummy_std_long.csv")
 
 # and run it (with a unrealisticly large scan radius of 8000 m to ensure we get some hits) ->
-location_check(data = flatt_data, con = con, radius = 0)
+location_check(data = flatt_data, con = con, radius = 8000)
 # END example
 
 
