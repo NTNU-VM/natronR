@@ -67,14 +67,13 @@ library(RPostgreSQL)
 
 pg_drv <- "PostgreSQL"
 pg_db <- "natron_sandbox"
-pg_user <- "AndersK"
 pg_host <- "vm-srv-zootron.vm.ntnu.no"
 
 con<-dbConnect(pg_drv,
                host=pg_host,
                dbname=pg_db,
-               user=pg_user,
-               password=rstudioapi::askForPassword("Please enter your psw"))
+               user=rstudioapi::askForPassword("Please enter your username"),
+               password=rstudioapi::askForPassword("Please enter password"))
 
 
 
@@ -128,7 +127,7 @@ fk_info <- dbGetQuery(con,                                              # what d
 # Get location table for matching and retrieving locationIDs
 Natron_location <- dbGetQuery(con,
                              "SELECT
-                               \"locationID\", \"verbatimLocality\", \"locality\", \"verbatimLocality\",\"stationNumber\"
+                               \"locationID\", \"verbatimLocality\", \"locality\",\"stationNumber\"
                              FROM
                                data.\"Locations\"
                              ;")
@@ -140,45 +139,6 @@ Natron_location_full <- dbGetQuery(con,
                                public.location_view
                               LIMIT 10
                              ;")
-
-#-----------------------------------------------###
-# structure and map location  table -----------####
-#-----------------------------------------------###
-# this code is moved to the locality_check script. Bits and peaces still remains here
-
-
-# test: changing the second row so that it has a match in Natron
-loc_data_temp2[2,c("locality", "verbatimLocality", "stationNumber")]  <-
-Natron_location[1,c("locality", "verbatimLocality", "stationNumber") ]
-
-
-# marking rows with existing locations. Using as unique location a combination of three columns
-loc_data_temp$remove <- ifelse(paste(loc_data_temp$locality,
-                                         loc_data_temp$verbatimLocality,
-                                         loc_data_temp$stationNumber) %in%
-                                     paste(Natron_location$locality,
-                                           Natron_location$verbatimLocality,
-                                           Natron_location$stationNumber), 1,0)
-
-# after checking, I remove the existing locations
-loc_data <- loc_data_temp %>%
-            filter(remove == 0) %>%
-            select(-remove)
-
-
-# adding UUID to new locations:
-ug <- uuid.gen()
-myLength <- nrow(loc_data)
-uuids <- character(myLength)
-for(i in 1:myLength){
-  uuids[i] <- ug()
-}
-
-
-
-#any(duplicated(uuids))   # alway the case that it's FALSE
-loc_data$locationID <- uuids
-
 
 
 #-----------------------------------------------###
