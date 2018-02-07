@@ -107,23 +107,6 @@ tableinfo <- dbGetQuery(con,
                         table_name = 'Locations'
                         ;")
 
-
-fk_info <- dbGetQuery(con,                                              # what does this do?
-                      "SELECT
-                      tc.constraint_name, ccu.constraint_name, kcu.constraint_name, tc.table_name, kcu.column_name,
-                      ccu.table_name AS foreign_table_name,
-                      ccu.column_name AS foreign_column_name, constraint_type
-                      FROM
-                      information_schema.table_constraints AS tc
-                      JOIN information_schema.key_column_usage AS kcu ON tc.constraint_name = kcu.constraint_name
-                      left JOIN information_schema.constraint_column_usage AS ccu ON ccu.constraint_name = tc.constraint_name
-                      where constraint_type = 'FOREIGN KEY' AND
-                      (tc.table_name='Occurrences' OR
-                        tc.table_name='Events' OR
-                        tc.table_name='Locations')
-                      ;")
-
-
 # Get location table for matching and retrieving locationIDs
 Natron_location <- dbGetQuery(con,
                              "SELECT
@@ -141,34 +124,6 @@ Natron_location_full <- dbGetQuery(con,
                              ;")
 
 
-#-----------------------------------------------###
-# structure and map m_dataset table -----------####
-#-----------------------------------------------###
-f_structure_and_map <- function(flatt_data,conn) {
-  require(tidyverse)
-
-
-
-  # select terms for event table (NB! no need to select distinct in this case)
-m_dataset_db_terms <- tableinfo$column_name[tableinfo$table_name=="m_dataset"]
-m_dataset_terms <- names(flatt_data)[names(flatt_data) %in% m_dataset_db_terms]
-m_dataset_data_temp <- flatt_data[m_dataset_terms]
-
-
-  # create empty dataframe with all event table terms
-m_dataset_data <- data.frame(matrix(ncol = length(m_dataset_db_terms), nrow = 0),stringsAsFactors=FALSE)
-colnames(m_dataset_data) <- m_dataset_db_terms
-
-  # rowbind event data from import to the empty data.frame
-# in order to create generic event table for import
-m_dataset_data <- bind_rows(m_dataset_data,m_dataset_data_temp)
-  # NOTE! Empty columns turns out as bolean (logical data type).
-# Need to convert these to character before db import
-is_character <- as.character(lapply(m_dataset_data,mode))=="logical"
-m_dataset_data[is_character] <- lapply(m_dataset_data[,is_character], as.character)
-
-
-
 
 
 #--------------------------------------------------#
@@ -176,6 +131,9 @@ m_dataset_data[is_character] <- lapply(m_dataset_data[,is_character], as.charact
 #--------------------------------------------------#
 
   # select terms for event table
+f_structure_and_map_event <- function(flatt_data,conn) {
+  require(tidyverse)
+
 event_db_terms <- tableinfo$column_name[tableinfo$table_name=="Events"]
 event_terms <- names(flatt_data)[names(flatt_data) %in% event_db_terms]
 event_terms[length(event_terms)+1] <- "locality"
@@ -194,6 +152,10 @@ event_data <- bind_rows(event_data,event_data_temp)
 # Need to convert these to character before db import
 is_character <- as.character(lapply(event_data,mode))=="logical"
 event_data[is_character] <- lapply(event_data[,is_character], as.character)
+
+# Import location uuids
+event_data_locations <- Natron_location %>%
+  filter(locality %in% event_data$locality)
 
 # set modified data if not given
 event_data$modified <- as.character(event_data$modified)
