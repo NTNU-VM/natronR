@@ -130,10 +130,11 @@ for(HEY in 1:nrow(local_data_temp_filled)){
 }
 if(dim(locality_check)[1] !=0) locality_check <<- locality_check   # only return the data frame if it has rows
 location_table_no_UUIDs <<- local_data_temp_filled
-return(cat(
+print(cat(
   length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron.\n",
   paste(nrow(local_data_temp_filled)-length(unique(locality_check$newLocality)),
         "of your locations had no existing locations within a", radius, "m radius.")))
+return(list(locality_check = locality_check,location_table_no_UUIDs = location_table_no_UUIDs))
 
 }
 # END FUNCTION
@@ -149,14 +150,13 @@ return(cat(
 # creating db connection object
 pg_drv <- "PostgreSQL"
 pg_db <- "natron_sandbox"
-pg_user <- "AndersK"
 pg_host <- "vm-srv-zootron.vm.ntnu.no"
 
 library(RPostgreSQL)
 con<-dbConnect(pg_drv,
                host=pg_host,
                dbname=pg_db,
-               user=pg_user,
+               user=rstudioapi::askForPassword("Please enter your username"),
                password=rstudioapi::askForPassword("Please enter your psw"))
 
 
@@ -165,7 +165,7 @@ library(readr)
 flatt_data <- read_csv("flat_data_dummy_std_long.csv")
 
 # and run it (with a unrealisticly large scan radius of 8000 m to ensure we get some hits) ->
-location_check(data = flatt_data, con = con, radius = 8000)
+check_test <- location_check(data = flatt_data, con = con, radius = 8000)
 # END example
 
 
