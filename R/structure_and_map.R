@@ -131,8 +131,16 @@ Natron_location_full <- dbGetQuery(con,
 #--------------------------------------------------#
 
   # select terms for event table
-f_structure_and_map_event <- function(flatt_data,conn) {
+f_structure_and_map_event <- function(flatt_data,conn,radius = 8000,locations_to_import=NA) {
   require(tidyverse)
+
+  # First, find locationID for localities
+  event_locality_check <- location_check(flatt_data,conn,radius)
+  location_table <- get_new_loc(event_locality_check$locality_check,
+                                event_locality_check$location_table_no_UUIDs,
+                                locations_to_import)
+
+
 
 event_db_terms <- tableinfo$column_name[tableinfo$table_name=="Events"]
 event_terms <- names(flatt_data)[names(flatt_data) %in% event_db_terms]
@@ -162,6 +170,12 @@ event_data$modified <- as.character(event_data$modified)
 event_data$modified <- ifelse(is.na(event_data$modified),
                               as.character(Sys.Date()),
                               event_data$modified)
+
+location_to_locality <- location_table$all_localities %>%
+  select(locationID,locality)
+
+return(event_data)
+}
 
 
 
