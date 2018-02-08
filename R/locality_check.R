@@ -212,7 +212,7 @@ get_new_loc <- function(locality_check = NA, location_table_no_UUIDs, locations_
                     new_localities$locationID <- as.numeric(new_localities$locationID);
                     new_localities$locationID <- uuids;
                     new_localities <<- new_localities
-
+#
 
 
   return(cat(
