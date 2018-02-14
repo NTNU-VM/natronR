@@ -3,182 +3,49 @@
 # Structure and map                          ####
 # ----------------------------------------------#
 
-
-
-
-# Function takes inn a flattended datatable with
-# both terms/colums corresponding exactly to the
-# database columns and datatypes and returns
-# a list of dataframes for each database table ready to use with
-# the ????.R script
-
-
-# Issues:
-# Currently works only against the event and the occurrence table
-
-# TODO! in order to support flat-structure output
-# Select distinct on everything else than occurrences
-
-
-
-
-
-# INPUT:
-# 1. standarized and checked data.frame (may be flattended)
-# 2. db connection with read permission
-
+#' Function takes inn a flattended datatable with both terms/colums corresponding exactly to the database columns and datatypes and returns an occurrence dataframe ready to be upserted.
+#' @param flatt_data Flatenned data to be structured
+#' @param conn DB connection with access permission, can easily be produced using natron_connect script
+#' @param location_table location table for flattened data (needs to be run through location_check and get_new_loc).
 
 # OUTPUT:
-# list with event and occurrence tables as dataframes
+# Occurrence dataframe in formatted to be upserted to Natron.
 
-
-
-
-
-
-# thsi # ----------------------------------------------#
-# Packages ----------------------------------####
-# ----------------------------------------------#
-
-#require(RPostgreSQL)
-library(dbplyr)
-library(dplyr)
-library(dplR)   # uuid.gen()
-library(postGIStools)
-library(lubridate)
-library(sp)
-library(mapview)
-library(RPostgreSQL)
-
-
-
-
-# ----------------------------------------------#
-# DB conncetions ----------------------------####
-# ----------------------------------------------#
-#............................................................................
-# Create db connection object.
-# Remember: Don't ever store your password in scripts etc. The following
-# works if working through Rstudio.
-#...........................................................................
-
-
-# creating db connection object
-
-pg_drv <- "PostgreSQL"
-pg_db <- "natron_sandbox"
-pg_host <- "vm-srv-zootron.vm.ntnu.no"
-
-con<-dbConnect(pg_drv,
-               host=pg_host,
-               dbname=pg_db,
-               user=rstudioapi::askForPassword("Please enter your username"),
-               password=rstudioapi::askForPassword("Please enter password"))
-
-
-
-#con <- src_postgres(host="vm-srv-zootron.vm.ntnu.no",
-#                    dbname="natron_sandbox",                                                  # SANDBOX
-#                    user=rstudioapi::askForPassword("Please enter your user"),
-#                    password=rstudioapi::askForPassword("Please enter your psw"))
-
-
+# library(dbplyr)
+# library(dplyr)
+# library(dplR)   # uuid.gen()
+# library(postGIStools)
+# library(lubridate)
+# library(sp)
+# library(RPostgreSQL)
+# library(tidyverse)
 
 
 
 
 # dummy data:
-library(readr)
-newLocalitySub <- c(1:5, 8:20)
-flatt_data <- read_csv("flat_data_dummy_std_long.csv")
-location_check_flatt_data <- location_check(flatt_data,con,8000)
-location_check_flatt_data <- get_new_loc(location_check_flatt_data$possible_matches, location_check_flatt_data$no_matches, newLocalitySub)
-location_table <- location_check_flatt_data$all_locations
 
-# -----------------------------------------------#
-# Get db table info---------------------------####
-# -----------------------------------------------#
+# newLocalitySub <- c(1:5, 8:20)
+# library(readr)
+# flatt_data <- read_csv("flat_data_dummy_std_long.csv")
+# location_check_flatt_data <- location_check(flatt_data,con,8000)
+# location_check_flatt_data <- get_new_loc(location_check_flatt_data$possible_matches, location_check_flatt_data$no_matches, newLocalitySub)
+# location_table <- location_check_flatt_data$all_locations
 
-tableinfo <- dbGetQuery(con,
-                        "select table_name,column_name,data_type
+#-------------------------------------------------#
+# structure and map occurrence table ----------####
+#-------------------------------------------------#
+
+f_structure_and_map_occurrence <- function(flatt_data,conn, location_table) {
+
+  tableinfo <- dbGetQuery(con,
+                          "select table_name,column_name,data_type
                         from information_schema.columns
                         where table_name = 'Events' OR
                         table_name = 'Occurrences' OR
                         table_name = 'Locations'
                         ;")
 
-# Get location table for matching and retrieving locationIDs
-Natron_location <- dbGetQuery(con,
-                             "SELECT
-                               \"locationID\", \"verbatimLocality\", \"locality\",\"stationNumber\"
-                             FROM
-                               data.\"Locations\"
-                             ;")
-
-Natron_location_full <- dbGetQuery(con,
-                              "SELECT
-                               *
-                             FROM
-                               public.location_view
-                              LIMIT 10
-                             ;")
-
-
-
-
-#--------------------------------------------------#
-# structure and map event table ----------------####
-#--------------------------------------------------#
-
-# flatt data        : Flat data to be mapped as event data
-# conn              : Connection to be used to database
-# location_updated  : Location table with updated UUIDs (has been run through locality_check functions)
-
-f_structure_and_map_event <- function(flatt_data,conn, location_table) {
-  require(tidyverse)
-
-  # select terms for event table
-
-  event_db_terms <- tableinfo$column_name[tableinfo$table_name=="Events"]
-  event_terms <- names(flatt_data)[names(flatt_data) %in% event_db_terms]
-  event_terms[length(event_terms)+1] <- "locality"
-  event_data_temp <- flatt_data[event_terms]
-
-
-  # create empty dataframe with all event table terms
-  event_data <- data.frame(matrix(ncol = length(event_db_terms), nrow = 0),stringsAsFactors=FALSE)
-  colnames(event_data) <- event_db_terms
-
-
-  # rowbind event data from import to the empty data.frame
-  # in order to create generic event table for import
-  event_data <- bind_rows(event_data,event_data_temp)
-  event_data$locationID <- location_table$locationID[match(event_data$locality,location_table$locality)]
-
-  # NOTE! Empty columns turns out as bolean (logical data type).
-  # Need to convert these to character before db import
-  is_character <- as.character(lapply(event_data,mode))=="logical"
-  event_data[is_character] <- lapply(event_data[,is_character], as.character)
-
-  # set modified data if not given
-  event_data$modified <- as.character(event_data$modified)
-  event_data$modified <- ifelse(is.na(event_data$modified),
-                                as.character(Sys.Date()),
-                                event_data$modified)
-  # remove locality column
-  event_data <- event_data[,-27]
-
-
-  return(event_data)
-}
-
-
-
-#-------------------------------------------------#
-# structure and map occurrence table ----------####
-#-------------------------------------------------#
-
-f_structure_and_map_event <- function(flatt_data,conn, location_table) {
 
    # select terms for occurrence table
   occurrence_db_terms <- tableinfo$column_name[tableinfo$table_name=="Occurrences"]
