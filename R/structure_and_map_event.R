@@ -3,19 +3,13 @@
 # Structure and map                          ####
 # ----------------------------------------------#
 
-# Function takes inn a flattened datatable with
-# both terms/colums corresponding exactly to the
-# database columns and datatypes and returns
-# an event dataframe ready to be upserted.
+#' Function takes inn a flattended datatable with both terms/colums corresponding exactly to the database columns and datatypes and returns an event dataframe ready to be upserted.
+#' @param flatt_data Flatenned data to be structured
+#' @param conn DB connection with access permission, can easily be produced using natron_connect script
+#' @param location_table location table for flattened data (needs to be run through location_check and get_new_loc).
+#' @return Event data that is ready to be upserted to Natron.
 
-
-# INPUT:
-# 1. Flatenned data
-# 2. DB connection with access permission
-# 3. Updated location table for flattened data (needs to be run through location_check and get_new_loc).
-
-# OUTPUT:
-# Event dataframe in formatted to be upserted to Natron.
+#' @export
 
 
 # Packages required (will be in dependencies later)

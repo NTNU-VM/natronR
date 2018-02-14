@@ -7,9 +7,9 @@
 #' @param flatt_data Flatenned data to be structured
 #' @param conn DB connection with access permission, can easily be produced using natron_connect script
 #' @param location_table location table for flattened data (needs to be run through location_check and get_new_loc).
+#' @return Occurrence data that is ready to be upserted to Natron.
 
-# OUTPUT:
-# Occurrence dataframe in formatted to be upserted to Natron.
+#' @export
 
 # library(dbplyr)
 # library(dplyr)
