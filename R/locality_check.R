@@ -132,11 +132,11 @@ for(HEY in 1:nrow(local_data_temp_filled)){
 }
 if(dim(locality_check)[1] !=0) locality_check <- locality_check   # only return the data frame if it has rows
 location_table_no_UUIDs <- local_data_temp_filled
-print(cat(
+print(paste(
   length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron.\n",
   paste(nrow(local_data_temp_filled)-length(unique(locality_check$newLocality)),
         "of your locations had no existing locations within a", radius, "m radius.")))
-return(list(locality_check = locality_check,location_table_no_UUIDs = location_table_no_UUIDs))
+return(list(possible_matches = locality_check,no_matches = location_table_no_UUIDs))
 
 }
 # END FUNCTION
@@ -164,20 +164,27 @@ flatt_data <- read_csv("flat_data_dummy_std_long.csv")
 # and run it (with a unrealisticly large scan radius of 8000 m to ensure we get some hits) ->
 check_test <- location_check(data = flatt_data, con = con, radius = 8000)
 # END example
-
+check_test$possible_matches
 
 
 
 
 # After manualy checking 'locality_check' table for possible reuse of NaTron locations,
 # you may choose reuse some locations, but not all.
-# The next function lets you remove newLocations from the 'locations_check table if you think
-# they should be imported into Natron. The newLocations not removed will not be upserted to NaTron,
-# insted we will get the locationIDs from the altermnative locations and use them in the event table.
+
+#************************************#
+# GET NEW LOCATIONS                 ####
+#************************************#
+
+
+
+# The next function lets you remove newLocations from the 'possible_matches' table if you think
+# the new locations should be imported into Natron instead of matched with existing ones.
+# The newLocations not removed will not be upserted to NaTron, instead we will get the locationIDs from the altermnative locations and use them in the event table.
 
 # locality_check:             output from location_check - List of localities with pre-matching locality already in database
 # location_table_no_UUIDs:    output from location_check - List of new localities
-# locations_to_import:        a vector of the localities which have a match in Natron but you still want to import (i.e. new localities, but there is an existing locality within the pre-specified radius)
+# matched_localities_toimport:        a vector of the localities which have a match in Natron but you still want to import (i.e. new localities, but there is an existing locality within the pre-specified radius)
 
 
 #-----------------------------------------------###
@@ -185,38 +192,38 @@ check_test <- location_check(data = flatt_data, con = con, radius = 8000)
 #-----------------------------------------------###
 
 
-get_new_loc <- function(locality_check = NA, location_table_no_UUIDs, locations_to_import = NA){
+get_new_loc <- function(matched_localities = NA, new_localities, matched_localities_toimport = NA){
                     require(dplR)
 
   # Split the locations table into 'new' and 'pre-existing'
-  if(missing(locality_check)) {
-            new_localities <- location_table_no_UUIDs}
-
-  else{
-  locality_check2 <- subset(locality_check, !(locality_check$newLocality %in% unique(locality_check$newLocality)[locations_to_import]));
-                     new_localities  <- subset(location_table_no_UUIDs, !(location_table_no_UUIDs$locality %in% locality_check2$newLocality));
-                     preexisting_localities    <- subset(location_table_no_UUIDs, !(location_table_no_UUIDs$locality %in% new_localities$locality));
+  if(missing(matched_localities)) {
+            new_localities <- new_localities
+  }else{
+    # produces all localities that are matched and should not be imported as new
+  locality_check2 <- subset(matched_localities, !(matched_localities$newLocality %in% unique(matched_localities$newLocality)[matched_localities_toimport]))
+  # gets rid of any possible matched localities in new_localities
+  new_localities2  <- subset(new_localities, !(new_localities$locality %in% locality_check2$newLocality))
+  #
+  preexisting_localities    <- subset(new_localities, !(new_localities$locality %in% new_localities2$locality))
 
 
                       # get locationIDs for the chosen pre-existing localities. We get them from Natron
-                     preexisting_localities$locationID <- locality_check$locationID[match(preexisting_localities$locality, locality_check$newLocality)];
-                     preexisting_localities <- preexisting_localities
-                     }
+  preexisting_localities$locationID <- matched_localities$locationID[match(preexisting_localities$locality, matched_localities$newLocality)]
+                       }
 
   # create UUID as locationIDs for the new localities
                     # adding UUID to new locations:
                     ug <- uuid.gen();
-                    myLength <- nrow(new_localities);
+                    myLength <- nrow(new_localities2);
                     uuids <- character(myLength);
                     for(i in 1:myLength){
                       uuids[i] <- ug()};
-                    new_localities$locationID <- as.numeric(new_localities$locationID);
-                    new_localities$locationID <- uuids;
-                    new_localities <- new_localities
+                    new_localities2$locationID <- as.numeric(new_localities2$locationID);
+                    new_localities2$locationID <- uuids;
 
-                    all_localities <- rbind(new_localities,preexisting_localities)
+                    all_localities <- rbind(new_localities2,preexisting_localities)
 
-return(list(preexisting_localities = preexisting_localities,new_localities = new_localities
+return(list(preexisting_localities = preexisting_localities,new_localities = new_localities2
             ,all_localities = all_localities))
 
   print(
@@ -240,8 +247,8 @@ paste(unique(locality_check$newLocality))
 # create a vector with the positions of the localities THAT ARE NEW (i.e. NOT pre-existing in NaTron)
 newLocalitySub <- c(1:5, 8:20)     # example numbers, locations 6 and 7 are preexisting
 
-new_loc_test <- get_new_loc(locality_check = check_test$locality_check,
-            location_table_no_UUIDs = check_test$location_table_no_UUIDs,
-            locations_to_import = newLocalitySub)
+new_loc_test <- get_new_loc(matched_localities = check_test$possible_matches,
+            new_localities = check_test$no_matches,
+            matched_localities_toimport = newLocalitySub)
 new_loc_test$preexisting_localities
 new_loc_test$new_localities
