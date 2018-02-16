@@ -13,6 +13,9 @@ location_check(data, conn, radius)
 
 \item{flatt_data}{A flattened, long and standardised dataset that you wish to import into NaTron}
 }
+\value{
+A list with 2 data frames. possible_matches shows all those which have a match within the radius set by the function. no_matches holds those without a match.
+}
 \description{
 This function takes as input a standardised flat and long (as opposed to wide formated) dataset and makes the locations table for it. It then scans the existing  NaTron locations table and returns a list of pre-existing localities that lie within 1000 m radius of the give coordinates. The user then is asked to manully check if not some of these localities can be reused. If so, the user must copy-paste the locationID from the existing NaTron locality
 }

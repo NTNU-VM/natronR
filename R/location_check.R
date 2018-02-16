@@ -11,6 +11,9 @@
 #' @param flatt_data A flattened, long and standardised dataset that you wish to import into NaTron
 #' @param conn  A connection object with natron (can be easily generated with the natron_connect script)
 #' @param radius The radius in meters in which to search for preexisting localitites in naTron
+#'
+#' @return A list with 2 data frames. possible_matches shows all those which have a match within the radius set by the function. no_matches holds those without a match.
+#' @export
 
 
 
