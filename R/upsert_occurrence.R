@@ -4,7 +4,8 @@
 # ([tablename]_data, and an RPostgreSQL connetion object with write
 # permissions (conn).
 
-#' Upsert occurrence into Natron database.
+#' @title Occurrence upsert
+#' @description Upsert occurrence into Natron database.
 #'
 #' @param con Database connection object with write permissions.
 #' @param occurrence_data Occurrence data to be upserted.

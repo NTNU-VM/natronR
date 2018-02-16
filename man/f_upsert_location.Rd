@@ -2,7 +2,7 @@
 % Please edit documentation in R/upsert_locations.R
 \name{f_upsert_location}
 \alias{f_upsert_location}
-\title{Upserts location into Natron database}
+\title{Location upsert}
 \usage{
 f_upsert_location(conn, location_data)
 }

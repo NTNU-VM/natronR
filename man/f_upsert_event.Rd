@@ -2,7 +2,7 @@
 % Please edit documentation in R/upsert_event.R
 \name{f_upsert_event}
 \alias{f_upsert_event}
-\title{Upserts event data into natron database.}
+\title{Event data upsert}
 \usage{
 f_upsert_event(conn, event_data)
 }

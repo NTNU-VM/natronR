@@ -4,10 +4,12 @@
 # LOCALITY CHECK                 ####
 #************************************#
 
-#' This function is made so one can check if the locations in a dataset ment for publishin in NaTron don't alredy exist in the database. (Often the publisher know if they are pre-existing or not and then he doesn't need this function)
+#' @title Location check
 #'
 #'
-#'    This function takes as input a standardised flat and long (as opposed to wide formated) dataset and makes the locations table for it. It then scans the existing  NaTron locations table and returns a list of pre-existing localities that lie within 1000 m radius of the give coordinates. The user then is asked to manully check if not some of these localities can be reused. If so, the user must copy-paste the locationID from the existing NaTron locality
+#'
+#' @description This function takes as input a standardised flat and long (as opposed to wide formated) dataset and makes the locations table for it. It then scans the existing  NaTron locations table and returns a list of pre-existing localities that lie within a given radius of the coordinates. The user must then manully check if some of these localities can be reused. If so, the user must copy-paste the locationID from the existing NaTron locality
+#'
 #' @param flatt_data A flattened, long and standardised dataset that you wish to import into NaTron
 #' @param conn  A connection object with natron (can be easily generated with the natron_connect script)
 #' @param radius The radius in meters in which to search for preexisting localitites in naTron

@@ -2,7 +2,7 @@
 % Please edit documentation in R/location_check.R
 \name{location_check}
 \alias{location_check}
-\title{This function is made so one can check if the locations in a dataset ment for publishin in NaTron don't alredy exist in the database. (Often the publisher know if they are pre-existing or not and then he doesn't need this function)}
+\title{Location check}
 \usage{
 location_check(data, conn, radius)
 }
@@ -17,5 +17,5 @@ location_check(data, conn, radius)
 A list with 2 data frames. possible_matches shows all those which have a match within the radius set by the function. no_matches holds those without a match.
 }
 \description{
-This function takes as input a standardised flat and long (as opposed to wide formated) dataset and makes the locations table for it. It then scans the existing  NaTron locations table and returns a list of pre-existing localities that lie within 1000 m radius of the give coordinates. The user then is asked to manully check if not some of these localities can be reused. If so, the user must copy-paste the locationID from the existing NaTron locality
+This function takes as input a standardised flat and long (as opposed to wide formated) dataset and makes the locations table for it. It then scans the existing  NaTron locations table and returns a list of pre-existing localities that lie within a given radius of the coordinates. The user must then manully check if some of these localities can be reused. If so, the user must copy-paste the locationID from the existing NaTron locality
 }

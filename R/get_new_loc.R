@@ -6,7 +6,8 @@
 
 
 
-#' This next function lets you remove newLocations from the 'possible_matches' table if you think the new locations should be imported into Natron instead of matched with existing ones. The newLocations not removed will not be upserted to NaTron, instead we will get the locationIDs from the altermnative locations and use them in the event table.
+#' @title Generate new locations
+#' @description  This next function lets you remove newLocations from the 'possible_matches' table if you think the new locations should be imported into Natron instead of matched with existing ones. The newLocations not removed will not be upserted to NaTron, instead we will get the locationIDs from the altermnative locations and use them in the event table.
 
 #' @param matched_localities output from location_check - List of localities with pre-matching locality already in database
 #' @param new_localities output from location_check - List of new localities

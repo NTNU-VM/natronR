@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_new_loc.R
 \name{get_new_loc}
 \alias{get_new_loc}
-\title{This next function lets you remove newLocations from the 'possible_matches' table if you think the new locations should be imported into Natron instead of matched with existing ones. The newLocations not removed will not be upserted to NaTron, instead we will get the locationIDs from the altermnative locations and use them in the event table.}
+\title{Generate new locations}
 \usage{
 get_new_loc(matched_localities = NA, new_localities,
   matched_localities_toimport = NA)
