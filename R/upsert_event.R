@@ -4,8 +4,8 @@
 # ([tablename]_data, and an RPostgreSQL connetion object with write
 # permissions (conn).
 
-#' Upserts event data into natron database.
-#'
+#' @title Event data upsert
+#' @description Upserts event data into natron database.
 #' @param con Database connection object with write permissions.
 #' @param event_data Event data to be upserted.
 #' @return Pushes and upserts data to database.

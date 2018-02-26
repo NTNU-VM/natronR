@@ -4,7 +4,8 @@
 # ([tablename]_data, and an RPostgreSQL connetion object with write
 # permissions (conn).
 
-#' Upserts location into Natron database
+#' @title Location upsert
+#' @description Upserts location into Natron database
 #'
 #' @param con Database connection object with write permissions
 #' @param locations Location to be upserted.

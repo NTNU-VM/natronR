@@ -2,7 +2,7 @@
 % Please edit documentation in R/upsert_occurrence.R
 \name{f_upsert_occurrence}
 \alias{f_upsert_occurrence}
-\title{Upsert occurrence into Natron database.}
+\title{Occurrence upsert}
 \usage{
 f_upsert_occurrence(conn, occurrence_data)
 }
