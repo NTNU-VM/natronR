@@ -51,15 +51,15 @@ get_new_loc <- function(matched_localities = NA, new_localities, matched_localit
                     new_localities2$locationID <- uuids;
 
                     all_localities <- rbind(new_localities2,preexisting_localities)
-
-return(list(preexisting_localities = preexisting_localities,new_localities = new_localities2
-            ,all_localities = all_localities))
-
-  print(
-    "************************************************************\n
+                    print(
+                      "************************************************************\n
 The 'new_localities' dataframe is ready to be upserted\ninto Natron using the location_upsert function.\n
 If you hade any, then a dataframe with the 'preexisting_localities'\nis created which can be used un the event_upsert function to\n get the correct locationIDs into the event table\n
     *************************************************************")
+return(list(preexisting_localities = preexisting_localities,new_localities = new_localities2
+            ,all_localities = all_localities))
+
+
 
 }
 
