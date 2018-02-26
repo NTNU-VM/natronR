@@ -30,7 +30,7 @@ location_check <- function(data,conn,radius) {
 # Get db table info---------------------------####
 # -----------------------------------------------#
 
-natron_tableinfo <- dbGetQuery(con,
+natron_tableinfo <- dbGetQuery(conn,
                         "select table_name,column_name,data_type
                         from information_schema.columns
                         where table_name =  'Locations'
@@ -62,7 +62,7 @@ local_data_temp_filled <- bind_rows(local_data_temp_blank, local_data_temp_uniqu
 # Scan the Natron db for pre-existing localities:
 
 #  - First just get some localities near Trondheim
-dupl_locations <- dbGetQuery(con,
+dupl_locations <- dbGetQuery(conn,
                                "SELECT
                               \"locationName\", \"locationID\",\"decimalLatitude\", \"decimalLongitude\",
                                 \"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",
@@ -112,7 +112,7 @@ locality_check <- dupl_locations3
 
 for(HEY in 1:nrow(local_data_temp_filled)){
   temp <- ""
-  temp <- dbGetQuery(con, temp_sql[HEY])
+  temp <- dbGetQuery(conn, temp_sql[HEY])
 
   if(dim(temp)[1] !=0) {
     temp2 <- temp;
