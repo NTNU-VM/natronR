@@ -1,0 +1,205 @@
+---
+title: "User instructions for natronbatchupload R-package"
+
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+##Purpose of this package
+The natronbatchupload R-package has been developed to ease and standardize the process of uploading data to the NaTRON database. NaTRON is the internal database of NTNU-VM for natural historical data that is not part of the MUSIT system (i.e. datasets that include more than information about objects in our collections). All natural historical data to be preserved should be uploaded to the NaTRON database, and the database have a generalized structure in order to support most datatypes (bothanical, zoological, collection objects, non-biological environmental data, GIS-data). 
+
+This package is built to import location-event data, and is in its current version not designed for large datasets containing repeated measurements (e.g data from dataloggers, biotelemetric studies etc.).
+
+##Workflow when uploading data to NaTRON using natronbatchupload
+###The process of uploading data to NaTRON using natronbatchupload consist of five steps:
+
+- **Restructure your dataset from wide to long format**
+- **Establish connection to NaTRON database**
+- **Check for pre-existing localities in NaTRON**: This step scans the database for locations that is identical or close by locations in the dataset that is to be uploaded. If the location already excists in the database, this step will let you use the location and unique locality ID that already exist in the database.
+- **Upload new localities to NaTRON**: This step upload new locations that is not pre-existing in the NaTRON database. You will not be able to upload event-data that don't have a corresponding location id in the database.
+- **Structure event data**: This step organize your event data table to be compatible and ready to upload to the NaTRON database.
+- **Upload event data to NaTRONn**: This step uploads your structured event data table to the NaTRON database.
+- **Structure occurence data**: This step organize your occurrence data table to be compatible and ready to upload to the NaTRON database.
+- **Upload occurrence data to NaTron**: This step uploads your structured event data table to the NaTRON database.
+
+##1. Restructure your dataset from wide to long format
+First of, you need to ensure that the format of your data set is compatible with the functions in the natronbatchupload R-package. Wide format is widely used when making excel data sheets, and is a data table that contains an object with two or more variables or responses in seperate columns. In a long format these variables or responses is placed in separate rows instead of coulums (see examples below). **Your data need to be in a long format to work with the functions in natronbatchupload (see also the included example file `flat_data_dummy_std_long.csv`.**
+
+
+###*Example of wide data*
+
+| Sampling site     | Alchemilla alpina   | Agrostis cappilaris | Andromeda polifolia |
+| :-------------:   | :-------------:     |:-------------:      | :-----:             |
+| 1                 | 12                  | 6                   | 2                   |
+| 2                 | 3                   | 17                  | 4                   |
+| 3                 | 15                  | 2                   | 6                   |
+
+
+###*Example of long data*
+
+| Sampling site     | Species              | Quantity            |
+| :-------------:   | :-------------:      |:-------------:      |
+| 1                 | Alchemilla alpina    | 12                  |
+| 1                 | Agrostis cappilaris  | 6                   |
+| 1                 | Andromeda polifolia  | 2                   |
+| 2                 | Alchemilla alpina    | 3                   |
+| 2                 | Agrostis cappilaris  | 17                  |
+| 2                 | Andromeda polifolia  | 4                   |
+| 3                 | Alchemilla alpina    | 15                  |
+| 3                 | Agrostis cappilaris  | 2                   |
+| 3                 | Andromeda polifolia  | 6                   |
+
+
+
+
+##2. Establish connection to NaTRON database
+Using the `natron_connect` function make it easy to connect to NaTRON in R. A pop-up window will appear where you are asked for your NaTRON password.
+
+```
+Myconnection <- natron_connect(username)
+Myconnection
+
+``` 
+
+##3. Check for pre-existing localities in Natron:
+
+To prevent to store identical locations in dublicates in the NaTRON database, you are requested to use locations already present in the NaTRON database if possible. For the locality check, your dataset must have a standardisted flat and long format (look at the included example dataset `flat_data_dummy_std_long.csv`). Using the `location_check` function, the package will make a locations table based on your dataset, scan the existing  NaTRON locations table and return a list of pre-existing localities that lie within a given radius of the locations in your dataset.
+
+
+###The `location_check` function have three parameters:
+
+- The `flatt_data` parameter specify the dataset to be checked for pre-existing localities in the NaTRON database.
+- The `conn` parameter specify the NaTRON connection (look at the paragraph "How to connect to NaTRON with R").
+- The `radius` parameter specify the radius (in meters) that will be used to scan for pre-excisting localities in NaTRON (based on coordinates).
+
+
+
+```
+#Load the dataset to be uploaded to NaTRON into R
+library(readr)
+flat_data_dummy_std_long <- read_csv("flat_data_dummy_std_long.csv")
+
+#Run the `location_check` function
+location_check(flatt_data=flat_data_dummy_std_long, conn=Myconnection, radius=8000)
+
+``` 
+
+
+**After running the `location_check` function, you must manully check if some of the localities in the list of pre-existing localities from the NaTRON database can be reused. If so, you must copy-paste the locationID from the pre-existing NaTron locality in the locality list produced by `location_check`.**
+
+
+
+##4. Upload new locations to NaTRON
+The `f_upsert_location` function will let you oppload new locations to the NaTRON database. The format of the data to be uploaded must be at the exact same format as the NaTRON database table (see included example dataset `dummy_locationTable`).
+
+###The `f_upsert_location` function have two parameters:
+
+- The `locations` specify the data table containing locations to be uploaded to NaTRON.
+- The `con` parameter specify connection object with write permissions.
+
+
+
+```
+#Load dataframe with localities to be uploaded to NaTRON
+library(readr)
+My_updated_location_table <- read_csv("dummy_locationTable.csv")
+View(My_updated_location_table)
+
+#Run the f_upsert_location function
+f_upsert_location(locations=My_updated_location_table, con=Myconnection)
+```
+
+##4. Structure event-data
+
+
+The `f_structure_and_map_event` function takes inn a flattended datatable with both terms/colums and data types corresponding exactly to the database and returns an event dataframe ready to be upserted.
+
+###The `f_structure_and_map_event` function have three parameters:
+
+- The `flatt_data` specify the data table to be structured and prepared for upload to NaTRON.
+- The `conn` parameter specify connection object with write permissions.
+- The `location_table` parameter specify the location table for the flattened data.
+
+
+```
+#Load flattened dataset into R.
+library(readr)
+flat_data_dummy_std_long <- read_csv("flat_data_dummy_std_long.csv")
+View(flat_data_dummy_std_long)
+
+#Load the location table (that have been made and uploadet to NaTron in step 3)
+My_updated_location_table <- read_csv("dummy_locationTable.csv")
+View(My_updated_location_table)
+
+#Run the f_structure_and_map_event function
+My_event_data <- f_structure_and_map_event(flatt_data=flat_data_dummy_std_long, conn=Myconnection, location_table=My_uptdated_location_table)
+View(My_event_data)
+```
+
+##6. Upload structured event data to NaTron:
+
+The `f_upsert_event` function uploads your structured event data-frame from step 5.
+
+###The `f_upsert_event` function have two parameters:
+
+- The `event_data` specify the event data frame to be uploaded to NaTRON.
+- The `con` parameter specify connection object with write permissions.
+
+```
+f_upsert_event(event_data=My_event_data, con=Myconnection)
+```
+
+
+##7. Structure occurrence-data
+
+
+The `f_structure_and_map_occurence` function takes inn a flattended datatable with both terms/colums and data types corresponding exactly to the database and returns an occyrence dataframe ready to be upserted.
+
+###The `f_structure_and_map_occurence` function have three parameters:
+
+- The `flatt_data` specify the flattened data table to be structured and prepared for upload to NaTRON.
+- The `conn` parameter specify connection object with write permissions.
+- The `location_table` parameter specify the location table for the flattened data.
+
+
+```
+#Load flattened dataset into R.
+library(readr)
+flat_data_dummy_std_long <- read_csv("flat_data_dummy_std_long.csv")
+View(flat_data_dummy_std_long)
+
+#Load the location table (that have been made and uploadet to NaTRON in step 3)
+My_updated_location_table <- read_csv("dummy_locationTable.csv")
+View(My_updated_location_table)
+
+#Run the f_structure_and_map_event function
+My_occurrence_data <- f_structure_and_map_occurrence(flatt_data=flat_data_dummy_std_long, conn=Myconnection, location_table=My_uptdated_location_table)
+View(My_occurence_data)
+```
+
+##8. Upload structured event data to NaTRON:
+
+The `f_upsert_occurrence` function uploads your structured occurence data-frame from step 7.
+
+###The `f_upsert_occurrence` function have two parameters:
+
+- The `occurrence_data` specify the event data frame to be uploaded to NaTRON.
+- The `con` parameter specify connection object with write permissions.
+
+```
+f_upsert_occurrence(event_data=My_occurrence_data, con=Myconnection)
+```
+
+
