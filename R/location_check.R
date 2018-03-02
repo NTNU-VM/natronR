@@ -126,7 +126,7 @@ for(HEY in 1:nrow(local_data_temp_filled)){
 
 }
 if(dim(locality_check)[1] !=0) locality_check <- locality_check   # only return the data frame if it has rows
-location_table_no_UUIDs <- local_data_temp_filled
+location_table_no_UUIDs <- local_data_temp_filled[!local_data_temp_filled$locality %in% locality_check$newLocality,]
 print(paste(
   length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron.\n",
   paste(nrow(local_data_temp_filled)-length(unique(locality_check$newLocality)),
