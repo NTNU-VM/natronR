@@ -17,8 +17,10 @@
 #' @return A list with 2 data frames. possible_matches shows all those which have a match within the radius set by the function. no_matches holds those without a match.
 #' @export
 
-
-
+# Tes data
+#data <- flat_data_dummy_std_long
+#conn <- natron_connect("samp")
+#radius <- 8000
 
 #-----------------------------------------------###
 # Function starts                   -----------####
