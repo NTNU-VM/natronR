@@ -39,8 +39,7 @@ natron_tableinfo <- dbGetQuery(conn,
                         ;")
 
 # -----------------------------------------------#
-# Make locations lable         ---------------####
-# -----------------------------------------------#
+# Make locations lable         ---------------##### -----------------------------------------------#
 
 # subset local data to match terms used in Natron:
 local_terms <- names(data)[names(data) %in% natron_tableinfo$column_name]
@@ -48,7 +47,6 @@ local_data_temp <- data[local_terms]
 
 # subset only unique locations
 local_data_temp_unique <- local_data_temp[!duplicated(paste0(local_data_temp$decimalLongitude, local_data_temp$decimalLatitude)),]
-
 # standardising the dataset to look exactly like Natron.
 # - create empty dataframe of similar dimensions
 local_data_temp_blank <- data.frame(matrix(ncol = length(natron_tableinfo$column_name), nrow = 0),stringsAsFactors=FALSE)
@@ -58,7 +56,6 @@ colnames(local_data_temp_blank) <- natron_tableinfo$column_name
 
 # rowbind local data to the blank data frame
 local_data_temp_filled <- bind_rows(local_data_temp_blank, local_data_temp_unique)
-
 
 
 # Scan the Natron db for pre-existing localities:
@@ -97,8 +94,8 @@ temp_sql[HEY] <-  paste("SELECT",
 			  "round(((((ST_distance(st_geomfromtext('POINT(",
 			  local_data_temp_filled$decimalLatitude[HEY], local_data_temp_filled$decimalLongitude[HEY],
 			  ")', 4326),",
-			  "\"localityGeom\") * 6378137) * pi()) / 180)/1000)::numeric, 3) as distanceToLocationName_in_kilometer,
-                			  "\"locationID\", \"decimalLatitude\", \"decimalLongitude\"," ,
+			  "\"localityGeom\") * 6378137) * pi()) / 180)/1000)::numeric, 3) as \"distanceToLocationName_in_kilometer\",",
+                	  "\"locationID\", \"decimalLatitude\", \"decimalLongitude\"," ,
                           "\"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",",
                           "\"riverName\", \"catchmentName\"",
                           "FROM",
