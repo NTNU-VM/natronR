@@ -92,8 +92,13 @@ dupl_locations3 <- dupl_locations2[-c(1:nrow(dupl_locations2)),]    # DELETE all
 # This for-loop to produces SQL query sentences for each locality, filtering by a chosen geographic radius
 temp_sql <- ""
 for(HEY in 1:nrow(local_data_temp_filled)){
-  temp_sql[HEY] <-  paste("SELECT",
-                          "\"locationName\",\"locationID\", \"decimalLatitude\", \"decimalLongitude\"," ,
+temp_sql[HEY] <-  paste("SELECT",
+                          "\"locationName\",",
+			  "round(((((ST_distance(st_geomfromtext('POINT(",
+			  local_data_temp_filled$decimalLatitude[HEY], local_data_temp_filled$decimalLongitude[HEY],
+			  ")', 4326),",
+			  "\"localityGeom\") * 6378137) * pi()) / 180)/1000)::numeric, 3) as distanceToLocationName_in_kilometer,
+                			  "\"locationID\", \"decimalLatitude\", \"decimalLongitude\"," ,
                           "\"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",",
                           "\"riverName\", \"catchmentName\"",
                           "FROM",
@@ -102,7 +107,8 @@ for(HEY in 1:nrow(local_data_temp_filled)){
                           "ST_dwithin(st_geomfromtext('POINT(",
                           local_data_temp_filled$decimalLatitude[HEY], local_data_temp_filled$decimalLongitude[HEY],
                           ")', 4326),",
-                          "\"localityGeom\",((", radius, " * 180.0) / pi()) / 6378137.0);",
+                          "\"localityGeom\",((", radius, " * 180.0) / pi()) / 6378137.0)",
+			  "order by \"distanceToLocationName_in_kilometer\";",
                           sep = " ")
 }
 
