@@ -26,9 +26,9 @@
 # dummy data:
 # library(readr)
 # newLocalitySub <- c(1:5, 8:20)
-# flatt_data <- read_csv("flat_data_dummy_std_long.csv")
-# conn <- natron_connect("samp")
-# location_check_flatt_data <- location_check(flatt_data,conn,8000)
+flatt_data <- read_csv("flat_data_dummy_std_long.csv")
+#conn <- natron_connect("samp")
+#location_check_flatt_data <- location_check(flatt_data,conn,8000)
 # location_check_flatt_data <- get_new_loc(location_check_flatt_data$possible_matches, location_check_flatt_data$no_matches, location_check_flatt_data$possible_matches[newLocalitySub,1])
 # location_table <- location_check_flatt_data$location_table
 

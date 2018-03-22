@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 ```
 
 
-##Purpose of this package
+## Purpose of this package
 The natronbatchupload R-package has been developed to ease and standardize the process of uploading data to the NaTRON database. NaTRON is the internal database of NTNU-VM for natural historical data that is not part of the MUSIT system (i.e. datasets that include more than information about objects in our collections). All natural historical data to be preserved should be uploaded to the NaTRON database, and the database have a generalized structure in order to support most datatypes (bothanical, zoological, collection objects, non-biological environmental data, GIS-data). 
 
 This package is built to import location-event data, and is in its current version not designed for large datasets containing repeated measurements (e.g data from dataloggers, biotelemetric studies etc.).
