@@ -18,9 +18,9 @@
 #' @export
 
 # Tes data
-#data <- flat_data_dummy_std_long
-#conn <- natron_connect("samp")
-#radius <- 8000
+data <- flat_data_dummy_std_long
+conn <- natron_connect("samp")
+radius <- 8000
 
 #-----------------------------------------------###
 # Function starts                   -----------####
@@ -78,7 +78,8 @@ ord <- colnames(dupl_locations)
 dupl_locations$newLocality <- ""
 dupl_locations$newLat      <- ""
 dupl_locations$newLong     <- ""
-new <- c("newLocality", "newLat", "newLong")
+dupl_locations$distance_km     <- ""
+new <- c("newLocality", "newLat", "newLong","distance_km")
 
 
 
@@ -94,7 +95,7 @@ temp_sql[HEY] <-  paste("SELECT",
 			  "round(((((ST_distance(st_geomfromtext('POINT(",
 			  local_data_temp_filled$decimalLatitude[HEY], local_data_temp_filled$decimalLongitude[HEY],
 			  ")', 4326),",
-			  "\"localityGeom\") * 6378137) * pi()) / 180)/1000)::numeric, 3) as \"distanceToLocationName_in_kilometer\",",
+			  "\"localityGeom\") * 6378137) * pi()) / 180)/1000)::numeric, 3) as \"distance_km\",",
                 	  "\"locationID\", \"decimalLatitude\", \"decimalLongitude\"," ,
                           "\"locality\", \"country\", \"county\", \"siteNumber\", \"stationNumber\",",
                           "\"riverName\", \"catchmentName\"",
@@ -105,7 +106,7 @@ temp_sql[HEY] <-  paste("SELECT",
                           local_data_temp_filled$decimalLatitude[HEY], local_data_temp_filled$decimalLongitude[HEY],
                           ")', 4326),",
                           "\"localityGeom\",((", radius, " * 180.0) / pi()) / 6378137.0)",
-			  "order by \"distanceToLocationName_in_kilometer\";",
+			  "order by \"distance_km\";",
                           sep = " ")
 }
 
@@ -130,13 +131,14 @@ for(HEY in 1:nrow(local_data_temp_filled)){
 
 
 }
+
 if(dim(locality_check)[1] !=0) locality_check <- locality_check   # only return the data frame if it has rows
-location_table_no_UUIDs <- local_data_temp_filled[!local_data_temp_filled$locality %in% locality_check$newLocality,]
+no_matches <- local_data_temp_filled[!local_data_temp_filled$locality %in% locality_check$newLocality,]
 print(paste(
   length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron.\n",
   paste(nrow(local_data_temp_filled)-length(unique(locality_check$newLocality)),
         "of your locations had no existing locations within a", radius, "m radius.")))
-return(list(possible_matches = locality_check,no_matches = location_table_no_UUIDs))
+return(list(possible_matches = locality_check,no_matches = no_matches))
 
 }
 # END FUNCTION
