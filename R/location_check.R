@@ -18,9 +18,9 @@
 #' @export
 
 # Tes data
-data <- flat_data_dummy_std_long
-conn <- natron_connect("samp")
-radius <- 8000
+#data <- flat_data_dummy_std_long
+#conn <- natron_connect("samp")
+#radius <- 8000
 
 #-----------------------------------------------###
 # Function starts                   -----------####
@@ -93,7 +93,7 @@ for(HEY in 1:nrow(local_data_temp_filled)){
 temp_sql[HEY] <-  paste("SELECT",
                           "\"locationName\",",
 			  "round(((((ST_distance(st_geomfromtext('POINT(",
-			  local_data_temp_filled$decimalLatitude[HEY], local_data_temp_filled$decimalLongitude[HEY],
+			  local_data_temp_filled$decimalLongitude[HEY], local_data_temp_filled$decimalLatitude[HEY],
 			  ")', 4326),",
 			  "\"localityGeom\") * 6378137) * pi()) / 180)/1000)::numeric, 3) as \"distance_km\",",
                 	  "\"locationID\", \"decimalLatitude\", \"decimalLongitude\"," ,
@@ -103,7 +103,7 @@ temp_sql[HEY] <-  paste("SELECT",
                           "public.location_view",
                           "WHERE",
                           "ST_dwithin(st_geomfromtext('POINT(",
-                          local_data_temp_filled$decimalLatitude[HEY], local_data_temp_filled$decimalLongitude[HEY],
+                          local_data_temp_filled$decimalLongitude[HEY], local_data_temp_filled$decimalLatitude[HEY],
                           ")', 4326),",
                           "\"localityGeom\",((", radius, " * 180.0) / pi()) / 6378137.0)",
 			  "order by \"distance_km\";",

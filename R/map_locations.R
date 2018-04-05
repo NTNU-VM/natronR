@@ -1,8 +1,27 @@
-# map_function script, still a mess at the moment
-library(readr)
-flat_data_dummy_std_long <- read_csv("flat_data_dummy_std_long.csv")
-data <- flat_data_dummy_std_long
-names(data)
+
+
+#************************************#
+# MAP LOCATIONS                 ####
+#************************************#
+
+
+
+#' @title Map all locations
+#' @description  Takes all locations from your data and lots them on a map type of your chouce
+
+#' @param data New data you wish to plot
+#' @param zoom Determins how far in you want to zoom on the area. Runs from 1 to 15.
+#' @param  maptype Type of map you want to use. Defaults to "hybrid".
+#' @return Map
+#' @export
+
+#flat_data_dummy_std_long <- read_csv("flat_data_dummy_std_long.csv")
+#data <- flat_data_dummy_std_long
+
+#map_locations(data,8,"hybrid")
+
+map_locations <- function(data, zoom, maptype = "hybrid") {
+
 width <- max(data$decimalLongitude)-min(data$decimalLongitude)
 depth <- max(data$decimalLatitude)-min(data$decimalLatitude)
 
@@ -11,14 +30,11 @@ bottom <- min(data$decimalLatitude)
 right <- max(data$decimalLongitude)
 top <- max(data$decimalLatitude)
 
-box_map <- get_map(location = c(left-width/4,bottom-depth/4,right+width/4,top+depth/4), zoom=5, maptype="hybrid")
+box_map <- get_map(location = c(left-width/4,bottom-depth/4,right+width/4,top+depth/4), zoom=zoom, maptype=maptype)
 d <- data.frame(lat=data$decimalLatitude, lon=data$decimalLongitude)
 
-p <- ggmap(map) + geom_point(data=d, aes(lon,lat))
+p <- ggmap(box_map) + geom_point(data=d, aes(lon,lat),col='red')
+return(p)
+}
 
 
-
-library(ggmap)
-qmap(location = 'norway')
-map <- get_map(location = c(2.77,57.33,29.66,71.36), zoom=5, maptype="hybrid")
-ggmap(map)

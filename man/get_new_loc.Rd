@@ -12,7 +12,7 @@ get_new_loc(matched_localities = NA, new_localities,
 
 \item{new_localities}{output from location_check - List of new localities}
 
-\item{matched_localities_toimport:}{a vector of the localities which have a match in Natron but you still want to import (i.e. new localities, but there is an existing locality within the pre-specified radius)}
+\item{matched_localities_toimport:}{a vector of the localities which have a match in Natron but you still want to import as new (i.e. new localities, but there is an existing locality within the pre-specified radius)}
 }
 \value{
 3 data frames - 1 with localities that did not need changing, 1 with those that did, 1 with all combined
