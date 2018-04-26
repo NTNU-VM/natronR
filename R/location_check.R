@@ -19,7 +19,7 @@
 
 # Tes data
 #data <- flat_data_dummy_std_long
-#conn <- natron_connect("samp")
+#conn <- natron_connect("AndersK")
 #radius <- 8000
 
 #-----------------------------------------------###
@@ -39,7 +39,8 @@ natron_tableinfo <- dbGetQuery(conn,
                         ;")
 
 # -----------------------------------------------#
-# Make locations lable         ---------------##### -----------------------------------------------#
+# Make locations lable         ---------------#####
+# -----------------------------------------------#
 
 # subset local data to match terms used in Natron:
 local_terms <- names(data)[names(data) %in% natron_tableinfo$column_name]
@@ -47,6 +48,7 @@ local_data_temp <- data[local_terms]
 
 # subset only unique locations
 local_data_temp_unique <- local_data_temp[!duplicated(paste0(local_data_temp$decimalLongitude, local_data_temp$decimalLatitude)),]
+
 # standardising the dataset to look exactly like Natron.
 # - create empty dataframe of similar dimensions
 local_data_temp_blank <- data.frame(matrix(ncol = length(natron_tableinfo$column_name), nrow = 0),stringsAsFactors=FALSE)
@@ -129,8 +131,9 @@ for(HEY in 1:nrow(local_data_temp_filled)){
     locality_check <- rbind(locality_check, temp2);
     rm(temp2)}
 
-
 }
+
+if(dim(temp)[1] !=0) {locality_check2 <- local_data_temp_filled[local_data_temp_filled$locality %in% locality_check$newLocality,]}
 
 if(dim(locality_check)[1] !=0) locality_check <- locality_check   # only return the data frame if it has rows
 no_matches <- local_data_temp_filled[!local_data_temp_filled$locality %in% locality_check$newLocality,]
@@ -138,7 +141,7 @@ print(paste(
   length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron.\n",
   paste(nrow(local_data_temp_filled)-length(unique(locality_check$newLocality)),
         "of your locations had no existing locations within a", radius, "m radius.")))
-return(list(possible_matches = locality_check,no_matches = no_matches))
+return(list(possible_matches = locality_check,no_matches = no_matches, possible_matches_technical = locality_check2))
 
 }
 # END FUNCTION
