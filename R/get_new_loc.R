@@ -27,13 +27,14 @@
 #-----------------------------------------------###
 
 
-get_new_loc <- function(matched_localities = NA, new_localities, matched_localities_toimport = NA, matched_localities_technical = NA){
+get_new_loc <- function(matched_localities = NA, new_localities = NA, matched_localities_toimport = NA, matched_localities_technical = NA) {
                     require(dplR)
 
   # Split the locations table into 'new' and 'pre-existing'
   if(missing(matched_localities)) {
             new_localities <- new_localities
-  }else{
+  }
+  else{
   # Add new localities from the matched_localities to import as new localities
   new_localities_matched <- subset(matched_localities_technical, (matched_localities_technical$locality %in% matched_localities_toimport))
 
@@ -42,6 +43,7 @@ get_new_loc <- function(matched_localities = NA, new_localities, matched_localit
 
   # Get locationIDs for the chosen pre-existing localities. We get them from Natron
   preexisting_localities$locationID <- matched_localities$locationID[match(preexisting_localities$newLocality, matched_localities$newLocality)]
+  }
 
   #Combine
   all_new_localities <- rbind(new_localities_matched, new_localities)
@@ -77,10 +79,8 @@ return(
     preexisting_localities = preexisting_localities,
     new_localities = all_new_localities,
     location_table = location_table
-    ))
+  ))
+                    }
 
-
-
-}
 
 

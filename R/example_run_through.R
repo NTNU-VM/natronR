@@ -1,12 +1,15 @@
 # Run through example
 
 require(dplyr)
+require(dbplyr)
+require(dbConnect)
 require(stringr)
 require(tidyr)
 require(RPostgreSQL)
 library(lubridate)
 library(sp)
 library(mapview)
+library(readr)
 
 data <- read_csv("flat_data_dummy_std_long.csv")
 conn <- natron_connect("AndersK")
