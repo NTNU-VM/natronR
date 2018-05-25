@@ -133,9 +133,9 @@ for(HEY in 1:nrow(local_data_temp_filled)){
 
 }
 
-if(dim(temp)[1] !=0) {locality_check2 <- local_data_temp_filled[local_data_temp_filled$locality %in% locality_check$newLocality,]}
+if(dim(locality_check)[1] !=0) {locality_check2 <- local_data_temp_filled[local_data_temp_filled$locality %in% locality_check$newLocality,]}
+   # only return the data frame if it has rows
 
-if(dim(locality_check)[1] !=0) locality_check <- locality_check   # only return the data frame if it has rows
 no_matches <- local_data_temp_filled[!local_data_temp_filled$locality %in% locality_check$newLocality,]
 print(paste(
   length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron.\n",
