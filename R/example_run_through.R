@@ -11,8 +11,13 @@ library(sp)
 library(mapview)
 library(readr)
 
+source("./R/natron_connect.R")
+source("./R/location_check.R")
+source("./R/get_new_loc.R")
+source("./R/upsert_locations.R")
+
 data <- read_csv("flat_data_dummy_std_long.csv")
-conn <- natron_connect("AndersK")
+conn <- natron_connect("samp")
 radius <- 8000
 
 
