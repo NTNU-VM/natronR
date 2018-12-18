@@ -69,8 +69,8 @@ get_new_loc <- function(matched_localities = NA, new_localities = NA, matched_lo
 ************************************************************\n
 The 'new_localities' dataframe is ready to be upserted\n
 into Natron using the location_upsert function.\n
-If you hade any, then a dataframe with the 'preexisting_localities'\n
-is created which is used un the event_upsert function to\n
+If you had any, then a dataframe with the 'preexisting_localities'\n
+is created which is used in the event_upsert function to\n
 get the correct locationIDs into the event table.\n
 *************************************************************
 ")

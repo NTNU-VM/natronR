@@ -137,10 +137,10 @@ if(dim(locality_check)[1] !=0) {locality_check2 <- local_data_temp_filled[local_
    # only return the data frame if it has rows
 
 no_matches <- local_data_temp_filled[!local_data_temp_filled$locality %in% locality_check$newLocality,]
-print(paste(
-  length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron.\n",
+cat(paste(
+  paste(length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron."),
   paste(nrow(local_data_temp_filled)-length(unique(locality_check$newLocality)),
-        "of your locations had no existing locations within a", radius, "m radius.")))
+        "of your locations had no existing locations within a", radius, "m radius."), sep = "\n"))
 return(list(possible_matches = locality_check,no_matches = no_matches, possible_matches_technical = locality_check2))
 
 }
