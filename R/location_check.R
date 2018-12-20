@@ -140,9 +140,49 @@ no_matches <- local_data_temp_filled[!local_data_temp_filled$locality %in% local
 cat(paste(
   paste(length(unique(locality_check$newLocality)), "of your locations have possible matches in NaTron."),
   paste(nrow(local_data_temp_filled)-length(unique(locality_check$newLocality)),
-        "of your locations had no existing locations within a", radius, "m radius."), sep = "\n"))
-return(list(possible_matches = locality_check,no_matches = no_matches, possible_matches_technical = locality_check2))
+        "of your locations had no existing locations within a", radius, "m radius."), "", sep = "\n"))
 
+
+
+
+# Map locations
+#library( leaflet )
+#library( magrittr )
+
+brand_new <- data.frame(lat=no_matches$decimalLatitude,
+                        lon=no_matches$decimalLongitude,
+                        group = "brand_new",
+                        row_number = row.names(no_matches))
+possible_matches <- data.frame(lat=locality_check$newLat,
+                               lon=locality_check$newLong,
+                               group = "possible_matches",
+                               row_number = row.names(locality_check))
+preexisting_locations <- data.frame(lat=locality_check$decimalLatitude,
+                                    lon=locality_check$decimalLongitude,
+                                    group = "preexisting_locations",
+                                    row_number = row.names(locality_check))
+
+coords <- rbind(brand_new, possible_matches, preexisting_locations)
+
+pal <- colorFactor(c("red","blue","orange"), domain = c("brand_new",
+                                                        "possible_matches",
+                                                        "preexisting_locations"))
+
+MyPlot <- leaflet(data = coords) %>% addTiles(group = "OSM",
+                                    options = providerTileOptions(minZoom = 2, maxZoom = 100)) %>%
+  addCircleMarkers( lat = ~lat, lng = ~lon,
+                    color = ~pal(group),
+                    stroke = F,
+                    fillOpacity = 1,
+                    popup = ~as.character(row.names(coords))) %>%
+  addLegend("bottomright",
+            colors = c("blue", "red", "orange"),
+            title = "Locations (click on points to show row numbers)",
+            labels = c("brand new", "possible matches", "preexisting locations"),
+            opacity =1)
+
+print(MyPlot)
+return(list(possible_matches = locality_check,no_matches = no_matches, possible_matches_technical = locality_check2))
 }
 # END FUNCTION
 

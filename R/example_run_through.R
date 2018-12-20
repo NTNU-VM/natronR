@@ -34,6 +34,45 @@ definately_brand_new_localities                <- MyLocationCheck$no_matches
 matched_localities_toimport   <- MyLocationCheck$possible_matches[1:10,1]
  # Comment: with this many dataframes, it could be an idea to have them assigned to the environment automatically in the location_check-function
 
+# check locations on map
+library( leaflet )
+library( magrittr )
+
+brand_new <- data.frame(lat=MyLocationCheck$no_matches$decimalLatitude,
+                   lon=MyLocationCheck$no_matches$decimalLongitude,
+                   group = "brand_new",
+                   row_number = row.names(brand_new))
+possible_matches <- data.frame(lat=MyLocationCheck$possible_matches$newLat,
+                        lon=MyLocationCheck$possible_matches$newLong,
+                        group = "possible_matches",
+                        row_number = row.names(possible_matches))
+preexisting_locations <- data.frame(lat=MyLocationCheck$possible_matches$decimalLatitude,
+                               lon=MyLocationCheck$possible_matches$decimalLongitude,
+                               group = "preexisting_locations",
+                               row_number = row.names(preexisting_locations))
+
+coords <- rbind(brand_new, possible_matches, preexisting_locations)
+
+pal <- colorFactor(c("red","blue","orange"), domain = c("brand_new",
+                                                        "possible_matches",
+                                                        "preexisting_locations"))
+
+leaflet(data = coords) %>% addTiles(group = "OSM",
+  options = providerTileOptions(minZoom = 2, maxZoom = 100)) %>%
+  addCircleMarkers( lat = ~lat, lng = ~lon,
+              color = ~pal(group),
+              stroke = F,
+              fillOpacity = 1,
+              popup = ~as.character(row.names(coords))) %>%
+    addLegend("bottomright",
+            colors = c("blue", "red", "orange"),
+            title = "Locations (click on points to show row numbers)",
+            labels = c("brand new", "possible matches", "preexisting locations"),
+            opacity =1)
+
+
+
+
 MyLocationData <- get_new_loc(matched_localities,
                               definately_brand_new_localities,
                               matched_localities_toimport,
