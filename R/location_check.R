@@ -176,7 +176,7 @@ MyPlot <- leaflet(data = coords) %>% addTiles(group = "OSM",
                     fillOpacity = 1,
                     popup = ~as.character(row.names(coords))) %>%
   addLegend("bottomright",
-            colors = c("blue", "red", "orange"),
+            colors = c("red", "blue", "orange"),
             title = "Locations (click on points to show row numbers)",
             labels = c("brand new", "possible matches", "preexisting locations"),
             opacity =1)
