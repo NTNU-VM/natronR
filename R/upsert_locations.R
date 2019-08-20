@@ -9,6 +9,7 @@
 #'
 #' @param con Database connection object with write permissions
 #' @param locations Location to be upserted.
+#' @family upsert functions
 #' @return Pushes and upserts data to database
 #' @examples
 #'

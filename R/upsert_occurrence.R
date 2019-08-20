@@ -6,7 +6,7 @@
 
 #' @title Occurrence upsert
 #' @description Upsert occurrence into Natron database.
-#'
+#' @family upsert functions
 #' @param con Database connection object with write permissions.
 #' @param occurrence_data Occurrence data to be upserted.
 #' @return Pushes and upserts data to database.

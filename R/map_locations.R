@@ -7,11 +7,11 @@
 
 
 #' @title Map all locations
-#' @description  Takes all locations from your data and lots them on a map type of your chouce
+#' @description  \code{map_locations} takes all locations from your data and plots them on a map type of your choice.
 
 #' @param data New data you wish to plot
 #' @param zoom Determins how far in you want to zoom on the area. Runs from 1 to 15.
-#' @param  maptype Type of map you want to use. Defaults to "hybrid".
+#' @param  maptype Type of map you want to use. Options available are "terrain", "terrain-background", "satellite", "roadmap", "hybrid" (google maps), "terrain", "watercolor", and "toner" (stamen maps). Defaults to "hybrid".
 #' @return Map
 #' @export
 
@@ -30,10 +30,10 @@ bottom <- min(data$decimalLatitude)
 right <- max(data$decimalLongitude)
 top <- max(data$decimalLatitude)
 
-box_map <- get_map(location = c(left-width/4,bottom-depth/4,right+width/4,top+depth/4), zoom=zoom, maptype=maptype)
+box_map <- ggmap::get_map(location = c(left-width/4,bottom-depth/4,right+width/4,top+depth/4), zoom=zoom, maptype=maptype)
 d <- data.frame(lat=data$decimalLatitude, lon=data$decimalLongitude)
 
-p <- ggmap(box_map) + geom_point(data=d, aes(lon,lat),col='red')
+p <- ggmap::ggmap(box_map) + ggplot2::geom_point(data=d, aes(lon,lat),col='red') ## At least I think geom_point takes from ggplot, not ggmap
 return(p)
 }
 

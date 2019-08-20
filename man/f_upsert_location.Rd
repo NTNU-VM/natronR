@@ -23,3 +23,8 @@ Still to come
 
 
 }
+\seealso{
+Other upsert functions: \code{\link{f_upsert_event}},
+  \code{\link{f_upsert_occurrence}}
+}
+\concept{upsert functions}

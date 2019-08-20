@@ -23,3 +23,8 @@ To follow.
 
 
 }
+\seealso{
+Other upsert functions: \code{\link{f_upsert_location}},
+  \code{\link{f_upsert_occurrence}}
+}
+\concept{upsert functions}

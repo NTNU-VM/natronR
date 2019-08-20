@@ -1,0 +1,193 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="418a6571-b6c1-4db0-b90e-8f36bde4c80e/v1.2" system="http://gbif.org" scope="system"
+         xml:lang="eng">
+
+<dataset>
+  <alternateIdentifier>418a6571-b6c1-4db0-b90e-8f36bde4c80e</alternateIdentifier>
+  <alternateIdentifier>http://gbif.vm.ntnu.no/ipt/resource?r=setesdal_veg_data</alternateIdentifier>
+  <title xml:lang="eng">Vegetation data from long term sheep grazing experiment in Setesdal, Norway</title>
+      <creator>
+    <individualName>
+        <givenName>Gunnar</givenName>
+      <surName>Austrheim</surName>
+    </individualName>
+    <organizationName>University Museum, Norwegian University of Science and Technology</organizationName>
+    <positionName>Professor</positionName>
+    <address>
+        <city>Trondheim</city>
+        <country>NO</country>
+    </address>
+    <electronicMailAddress>gunnar.austrheim@ntnu.no</electronicMailAddress>
+      </creator>
+      <creator>
+    <individualName>
+        <givenName>Atle</givenName>
+      <surName>Mysterud</surName>
+    </individualName>
+    <organizationName>University of Oslo</organizationName>
+    <positionName>Professor</positionName>
+    <address>
+        <city>Oslo</city>
+        <country>NO</country>
+    </address>
+    <electronicMailAddress>atle.mysterud@ibv.oiu.no</electronicMailAddress>
+      </creator>
+      <creator>
+    <individualName>
+        <givenName>James David Mervyn</givenName>
+      <surName>Speed</surName>
+    </individualName>
+    <organizationName>University Museum, Norwegian University of Science and Technology</organizationName>
+    <positionName>Researcher</positionName>
+    <address>
+        <city>Trondheim</city>
+        <country>NO</country>
+    </address>
+    <electronicMailAddress>james.speed@ntnu.no</electronicMailAddress>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Anders Lorentzen</givenName>
+      <surName>Kolstad</surName>
+    </individualName>
+    <organizationName>University Museum, Norwegian University of Science and Technology</organizationName>
+    <positionName>PhD student</positionName>
+    <address>
+        <city>Trondheim</city>
+        <country>NO</country>
+    </address>
+    <phone>+47 735 97979</phone>
+    <electronicMailAddress>anders.kolstad@ntnu.no</electronicMailAddress>
+      </metadataProvider>
+      <associatedParty>
+    <individualName>
+        <givenName>Atle</givenName>
+      <surName>Mysterud</surName>
+    </individualName>
+    <organizationName>University of Oslo</organizationName>
+    <positionName>Professor</positionName>
+    <address>
+        <city>Oslo</city>
+        <country>NO</country>
+    </address>
+    <role>user</role>
+      </associatedParty>
+  <pubDate>
+      2016-04-14
+  </pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>Here we present vegetation data (relative frequencies of vascular plants) collected every other year from 2000 until 2012 in association with a sheep grazing experiment in Setesdal, S-Norway.</para>
+  </abstract>
+      <keywordSet>
+            <keyword>Samplingevent</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>herbivory</keyword>
+            <keyword>low alpine</keyword>
+            <keyword>scandinavia</keyword>
+            <keyword>rodent damage</keyword>
+            <keyword>long term</keyword>
+            <keyword>exclosure experiment</keyword>
+        <keywordThesaurus>n/a</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+  </intellectualRights>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Setesdal Vesthei, covering areas in both Sirdal (Vest-Agder county) and Valle municipality (Aust-Agder county). All sites are in the low-alpine zone with only sparse trees and shrubs present. Elevation: 900-1000 m above sea level. Annual precipitation: 1170-1760 mm. Bedrock: Precambrian bedrock. Low nutrient and quite acidic soils. Vegetation is dominated by NARDUS STRICTA (34% cover), other grasses, and mosses (25% cover). Domestic sheep are the most common grazers in this region, following a pasture grazing tradition that goes back to c. 1840. Seep densities vary between 10-50 sheep per km2. Other herbivores include rodents and reindeer.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>7.028</westBoundingCoordinate>
+          <eastBoundingCoordinate>7.279</eastBoundingCoordinate>
+          <northBoundingCoordinate>59.072</northBoundingCoordinate>
+          <southBoundingCoordinate>59.009</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <temporalCoverage>
+              <rangeOfDates>
+                  <beginDate>
+                    <calendarDate>2000-01-01</calendarDate>
+                  </beginDate>
+                <endDate>
+                  <calendarDate>2012-12-31</calendarDate>
+                </endDate>
+              </rangeOfDates>
+          </temporalCoverage>
+          <taxonomicCoverage>
+              <generalTaxonomicCoverage>All vascular plant species</generalTaxonomicCoverage>
+              <taxonomicClassification>
+                  <taxonRankName>kingdom</taxonRankName>
+                <taxonRankValue>Plantae</taxonRankValue>
+              </taxonomicClassification>
+          </taxonomicCoverage>
+  </coverage>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>notPlanned</maintenanceUpdateFrequency>
+  </maintenance>
+
+      <contact>
+    <individualName>
+        <givenName>Anders Lorentzen</givenName>
+      <surName>Kolstad</surName>
+    </individualName>
+    <organizationName>University Museum, Norwegian University of Science and Technology</organizationName>
+    <positionName>PhD student</positionName>
+    <address>
+        <city>Trondheim</city>
+        <country>NO</country>
+    </address>
+    <phone>+47 735 97979</phone>
+    <electronicMailAddress>anders.kolstad@ntnu.no</electronicMailAddress>
+      </contact>
+      <contact>
+    <individualName>
+        <givenName>Gunnar</givenName>
+      <surName>Austrheim</surName>
+    </individualName>
+    <organizationName>University Museum, Norwegian University of Science and Technology</organizationName>
+    <positionName>Professor</positionName>
+    <address>
+        <city>Trondheim</city>
+        <country>NO</country>
+    </address>
+    <electronicMailAddress>gunnar.austrheim@ntnu.no</electronicMailAddress>
+      </contact>
+  <methods>
+        <methodStep>
+          <description>
+            <para>See sampling desciption</para>
+          </description>
+        </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>Vegetation analysis was conducted every other summer from 2000 to 2012.</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>There were 10 sites, each with one pair of plots: the grazed control and a sheep exclusure. Plots were 20*50m and placed &gt;30m apart. Inside each plot, 10 quadrats (0.5*0.5m) were used to calculate species frequencies. 
+
+Relative species frequencies was calculated for each quadrat by noting its presence or absence inside each of sixteen 0.125*0.125 sub-quadrats. As an example, a species found in 15 out of 16 sub-quadrats was recorded as having a relative frequency of 93.75 (= 15/16*100).</para>
+        </samplingDescription>
+      </sampling>
+  </methods>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2016-02-26T02:36:27.311+01:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation>Austrheim G, Mysterud A, Speed J D M (2016): Vegetation data from long term sheep grazing experiment in Setesdal, Norway. v1.2. NTNU University Museum. Dataset/Samplingevent. http://gbif.vm.ntnu.no/ipt/resource?r=setesdal_veg_data&amp;v=1.2</citation>
+          <dc:replaces>418a6571-b6c1-4db0-b90e-8f36bde4c80e/v1.2.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

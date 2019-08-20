@@ -1,0 +1,901 @@
+id	measurementType	measurementValue	measurementUnit	measurementDeterminedDate	measurementMethod	measurementRemarks
+f22d233c-c884-493b-9ae9-49637fcc0c56	Sheep feces	NA	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+e0784bd0-e67b-4b1c-8a51-f93dfa82817f	Sheep feces	12	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+615ac471-d986-4a15-b4ee-e2dfb7736e82	Sheep feces	NA	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+5b89b86a-daf2-4bbe-a548-63395dcc7183	Sheep feces	23	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+fed7d169-221a-4422-998f-bbf013541334	Sheep feces	NA	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+4ef42286-a983-43b7-b40a-0e3d1f4a4fcb	Sheep feces	1	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+2244f234-e07b-4f8a-8a0d-b3c4cea9f330	Sheep feces	NA	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+29a876c4-b1d7-4f58-87ae-cf60f21dd459	Sheep feces	1	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+31975b49-3c12-4b1c-b113-784a0686e355	Sheep feces	NA	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+3a773dfc-7ae7-47ab-8dfe-c0744c5b62fa	Sheep feces	3	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+6aa10196-8680-46a1-9bd6-3b3fc07d0517	Sheep feces	NA	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+9cf74126-85d2-4636-913d-7ae496caca65	Sheep feces	25	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+cc29dc38-2c5c-408b-9632-400eb8a88344	Sheep feces	NA	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+0f9ad7f3-9e45-4f30-820a-6ac6c55a4978	Sheep feces	8	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+aff0bb97-1c15-44b0-9594-861ce1d60cf1	Sheep feces	NA	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+f3028a04-0d8f-41dd-8747-c6bc40aacde0	Sheep feces	24	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+d6b065e7-139e-4580-8da2-d9294a027998	Sheep feces	NA	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+8705eef2-f40c-4d7c-90a6-a76d4da84cfb	Sheep feces	4	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+c7c16221-6ed3-490b-8f88-24928b066569	Sheep feces	NA	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+28488487-90a2-45f5-94db-d79779e0b087	Sheep feces	3	count	2000-06	line transect	Used as a relative measure of sheep densitiy
+f22d233c-c884-493b-9ae9-49637fcc0c56	Sheep feces	NA	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+e0784bd0-e67b-4b1c-8a51-f93dfa82817f	Sheep feces	5	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+615ac471-d986-4a15-b4ee-e2dfb7736e82	Sheep feces	NA	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+5b89b86a-daf2-4bbe-a548-63395dcc7183	Sheep feces	11	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+fed7d169-221a-4422-998f-bbf013541334	Sheep feces	NA	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+4ef42286-a983-43b7-b40a-0e3d1f4a4fcb	Sheep feces	8	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+2244f234-e07b-4f8a-8a0d-b3c4cea9f330	Sheep feces	NA	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+29a876c4-b1d7-4f58-87ae-cf60f21dd459	Sheep feces	0	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+31975b49-3c12-4b1c-b113-784a0686e355	Sheep feces	NA	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+3a773dfc-7ae7-47ab-8dfe-c0744c5b62fa	Sheep feces	16	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+6aa10196-8680-46a1-9bd6-3b3fc07d0517	Sheep feces	NA	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+9cf74126-85d2-4636-913d-7ae496caca65	Sheep feces	31	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+cc29dc38-2c5c-408b-9632-400eb8a88344	Sheep feces	NA	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+0f9ad7f3-9e45-4f30-820a-6ac6c55a4978	Sheep feces	3	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+aff0bb97-1c15-44b0-9594-861ce1d60cf1	Sheep feces	NA	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+f3028a04-0d8f-41dd-8747-c6bc40aacde0	Sheep feces	9	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+d6b065e7-139e-4580-8da2-d9294a027998	Sheep feces	NA	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+8705eef2-f40c-4d7c-90a6-a76d4da84cfb	Sheep feces	1	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+c7c16221-6ed3-490b-8f88-24928b066569	Sheep feces	NA	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+28488487-90a2-45f5-94db-d79779e0b087	Sheep feces	1	count	2000-07	line transect	Used as a relative measure of sheep densitiy
+f22d233c-c884-493b-9ae9-49637fcc0c56	slope	10	degrees			a measure of steepness (degrees differeing from horizontal)
+e0784bd0-e67b-4b1c-8a51-f93dfa82817f	slope	25	degrees			a measure of steepness (degrees differeing from horizontal)
+615ac471-d986-4a15-b4ee-e2dfb7736e82	slope	18	degrees			a measure of steepness (degrees differeing from horizontal)
+5b89b86a-daf2-4bbe-a548-63395dcc7183	slope	5	degrees			a measure of steepness (degrees differeing from horizontal)
+fed7d169-221a-4422-998f-bbf013541334	slope	12	degrees			a measure of steepness (degrees differeing from horizontal)
+4ef42286-a983-43b7-b40a-0e3d1f4a4fcb	slope	18	degrees			a measure of steepness (degrees differeing from horizontal)
+2244f234-e07b-4f8a-8a0d-b3c4cea9f330	slope	20	degrees			a measure of steepness (degrees differeing from horizontal)
+29a876c4-b1d7-4f58-87ae-cf60f21dd459	slope	35	degrees			a measure of steepness (degrees differeing from horizontal)
+31975b49-3c12-4b1c-b113-784a0686e355	slope	15	degrees			a measure of steepness (degrees differeing from horizontal)
+3a773dfc-7ae7-47ab-8dfe-c0744c5b62fa	slope	5	degrees			a measure of steepness (degrees differeing from horizontal)
+6aa10196-8680-46a1-9bd6-3b3fc07d0517	slope	15	degrees			a measure of steepness (degrees differeing from horizontal)
+9cf74126-85d2-4636-913d-7ae496caca65	slope	25	degrees			a measure of steepness (degrees differeing from horizontal)
+cc29dc38-2c5c-408b-9632-400eb8a88344	slope	22	degrees			a measure of steepness (degrees differeing from horizontal)
+0f9ad7f3-9e45-4f30-820a-6ac6c55a4978	slope	5	degrees			a measure of steepness (degrees differeing from horizontal)
+aff0bb97-1c15-44b0-9594-861ce1d60cf1	slope	15	degrees			a measure of steepness (degrees differeing from horizontal)
+f3028a04-0d8f-41dd-8747-c6bc40aacde0	slope	15	degrees			a measure of steepness (degrees differeing from horizontal)
+d6b065e7-139e-4580-8da2-d9294a027998	slope	25	degrees			a measure of steepness (degrees differeing from horizontal)
+8705eef2-f40c-4d7c-90a6-a76d4da84cfb	slope	30	degrees			a measure of steepness (degrees differeing from horizontal)
+c7c16221-6ed3-490b-8f88-24928b066569	slope	15	degrees			a measure of steepness (degrees differeing from horizontal)
+28488487-90a2-45f5-94db-d79779e0b087	slope	8	degrees			a measure of steepness (degrees differeing from horizontal)
+f22d233c-c884-493b-9ae9-49637fcc0c56	Exposition	202	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+e0784bd0-e67b-4b1c-8a51-f93dfa82817f	Exposition	242	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+615ac471-d986-4a15-b4ee-e2dfb7736e82	Exposition	242	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+5b89b86a-daf2-4bbe-a548-63395dcc7183	Exposition	240	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+fed7d169-221a-4422-998f-bbf013541334	Exposition	194	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+4ef42286-a983-43b7-b40a-0e3d1f4a4fcb	Exposition	314	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+2244f234-e07b-4f8a-8a0d-b3c4cea9f330	Exposition	295	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+29a876c4-b1d7-4f58-87ae-cf60f21dd459	Exposition	180	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+31975b49-3c12-4b1c-b113-784a0686e355	Exposition	276	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+3a773dfc-7ae7-47ab-8dfe-c0744c5b62fa	Exposition	278	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+6aa10196-8680-46a1-9bd6-3b3fc07d0517	Exposition	162	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+9cf74126-85d2-4636-913d-7ae496caca65	Exposition	242	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+cc29dc38-2c5c-408b-9632-400eb8a88344	Exposition	240	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+0f9ad7f3-9e45-4f30-820a-6ac6c55a4978	Exposition	238	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+aff0bb97-1c15-44b0-9594-861ce1d60cf1	Exposition	184	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+f3028a04-0d8f-41dd-8747-c6bc40aacde0	Exposition	282	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+d6b065e7-139e-4580-8da2-d9294a027998	Exposition	278	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+8705eef2-f40c-4d7c-90a6-a76d4da84cfb	Exposition	188	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+c7c16221-6ed3-490b-8f88-24928b066569	Exposition	284	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+28488487-90a2-45f5-94db-d79779e0b087	Exposition	276	degrees			a measure of exposition at a 400 degree scale  (200 = south)
+f22d233c-c884-493b-9ae9-49637fcc0c56	Elevation	900	meters			Meters above sea level at the highest point
+e0784bd0-e67b-4b1c-8a51-f93dfa82817f	Elevation	880	meters			Meters above sea level at the highest point
+615ac471-d986-4a15-b4ee-e2dfb7736e82	Elevation	900	meters			Meters above sea level at the highest point
+5b89b86a-daf2-4bbe-a548-63395dcc7183	Elevation	940	meters			Meters above sea level at the highest point
+fed7d169-221a-4422-998f-bbf013541334	Elevation	960	meters			Meters above sea level at the highest point
+4ef42286-a983-43b7-b40a-0e3d1f4a4fcb	Elevation	1000	meters			Meters above sea level at the highest point
+2244f234-e07b-4f8a-8a0d-b3c4cea9f330	Elevation	980	meters			Meters above sea level at the highest point
+29a876c4-b1d7-4f58-87ae-cf60f21dd459	Elevation	1030	meters			Meters above sea level at the highest point
+31975b49-3c12-4b1c-b113-784a0686e355	Elevation	1020	meters			Meters above sea level at the highest point
+3a773dfc-7ae7-47ab-8dfe-c0744c5b62fa	Elevation	1020	meters			Meters above sea level at the highest point
+6aa10196-8680-46a1-9bd6-3b3fc07d0517	Elevation	900	meters			Meters above sea level at the highest point
+9cf74126-85d2-4636-913d-7ae496caca65	Elevation	860	meters			Meters above sea level at the highest point
+cc29dc38-2c5c-408b-9632-400eb8a88344	Elevation	880	meters			Meters above sea level at the highest point
+0f9ad7f3-9e45-4f30-820a-6ac6c55a4978	Elevation	940	meters			Meters above sea level at the highest point
+aff0bb97-1c15-44b0-9594-861ce1d60cf1	Elevation	960	meters			Meters above sea level at the highest point
+f3028a04-0d8f-41dd-8747-c6bc40aacde0	Elevation	1000	meters			Meters above sea level at the highest point
+d6b065e7-139e-4580-8da2-d9294a027998	Elevation	980	meters			Meters above sea level at the highest point
+8705eef2-f40c-4d7c-90a6-a76d4da84cfb	Elevation	1030	meters			Meters above sea level at the highest point
+c7c16221-6ed3-490b-8f88-24928b066569	Elevation	1020	meters			Meters above sea level at the highest point
+28488487-90a2-45f5-94db-d79779e0b087	Elevation	1020	meters			Meters above sea level at the highest point
+0d69bb70-d755-4bcb-baec-315d3296bf50	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7472a1f0-b04a-4132-9c62-49c56dc4d079	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ef7786a-7761-463b-ad58-9e2efea9dc0c	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ebe0b490-57a2-497c-a927-e8683c1748c6	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+942d3b55-8a42-44e6-9dd1-5a90cc05f6e8	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2374ca45-5ce1-4913-897a-9911b2b7ee77	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9e30631a-5eef-43a3-ad29-2aae2841cf48	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+97e044e4-e8ca-4cfa-8447-0789400f36db	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+139442db-d846-412c-bae0-217de9a8db5f	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6c3708d3-78fa-4132-b1dc-2681adb94bfa	Rodent disturbance	7	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0ec06382-4e5f-433a-b3a6-3dea63e480cd	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+079bc956-880f-4049-b8eb-70dbececd6d3	Rodent disturbance	6	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a7a96da-1273-4511-abc9-f20fe9a883e6	Rodent disturbance	12	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fb4dd07d-9926-4572-b1c8-2ad9f0e6f15c	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fdfadc27-5032-4112-936c-4f4504311cd3	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bfcc1c96-d8cb-42fe-beb6-6960c604f630	Rodent disturbance	4	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9a3e6ff6-7cbd-4997-a383-eeb74101c9dc	Rodent disturbance	7	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ace35ed8-5309-4a8d-ba5c-1724b194d46e	Rodent disturbance	11	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b8b2850b-9b6c-4112-877e-cca5285fcab4	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4b12fbf0-67a1-444e-ae5e-778bf906d14e	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a30021b2-3254-434f-87c4-86ea62a7bc5a	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+af409ce6-0035-4254-bbde-ae2fce92a39f	Rodent disturbance	3	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+17460925-4053-410a-b30c-19dac2ba0600	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9564039b-61ea-4cf9-aa43-5f48ddae763f	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a957ae4d-83b9-4cd0-849d-7f89cff57754	Rodent disturbance	4	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1e5b338f-2bc7-415e-9d73-7bb90cc47588	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e4d8c752-05cd-4947-afbc-d8eef6e23b22	Rodent disturbance	9	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+77962d1f-53ca-4430-8d74-d044374cefe6	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+770d0c13-0168-4c15-a82a-3c07b24b7c4e	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3de7c3aa-544c-438f-8e12-4adb7a753120	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+407f2ed4-2cf7-47a5-9468-e1fb70df028d	Rodent disturbance	10	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4c9d8bf1-007a-4041-acea-f67e49c194c5	Rodent disturbance	6	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bd743cd-224c-4e02-90d0-df479f208e2a	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+46ffc5e0-bfbb-4ce3-8416-d76b3350f7ec	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+acd6613f-9c6f-4ea7-87f0-3bdb117f193b	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+02e3d07a-4bf2-4c42-93ef-806c0a70f1c8	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d10ea9f1-bfa1-4224-9544-9b0db4469c54	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3fa08d5b-1f9c-454c-a1c3-1e877e58238f	Rodent disturbance	4	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f960aa33-5fee-40f4-9b83-b0771c9fbff8	Rodent disturbance	6	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a49c98ae-5742-4dfe-a35a-32ef144a65c2	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dea8567a-a8ea-4f09-b1ff-02983813659f	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bc5a9517-f225-49ab-ba3e-6d79adbb412d	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+af918b05-4c08-4201-b85e-21025a11b37b	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a6412b53-bd6f-44e6-8a8c-5dd23a5280f5	Rodent disturbance	6	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2927f13c-24be-4686-b696-4f8477d04eca	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+062afbf9-08a5-489c-add2-5adab57c7a10	Rodent disturbance	6	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c06c0602-57fc-42c8-bca5-ab279128b05d	Rodent disturbance	10	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d8a59647-6a9f-47b3-bc88-27fda01be324	Rodent disturbance	6	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+104d95a8-28cf-43e9-b623-7eee101f62b9	Rodent disturbance	11	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bf9d8ba-cab7-4084-a351-69b438847962	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+48376e85-ac93-43e3-8178-3da6e68ed78e	Rodent disturbance	6	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+13bb6881-c770-4d78-9487-ef3760100831	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbd1d459-a501-42b1-ad09-ba0cc1494fae	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+051647d7-4959-4b85-8233-4a3fc802ac8a	Rodent disturbance		frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c77cbe11-61b4-4cbf-a9b6-9d6e36540ad6	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7cdf214d-1bea-48b2-a574-c2d81ad2fd3f	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d7393281-8262-4e42-9909-d02e49fa7fc0	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6669191f-d9b0-43b7-b7ad-c9b2b27fff41	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8b599692-1e31-4478-a12c-b875b5673d87	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5e9565b0-f4b2-4d9a-8cd3-270265b08348	Rodent disturbance	13	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+217884e9-db15-4230-adeb-803852d3ee70	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2a3a58e8-94e7-4d63-9329-762dfdb56228	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+40dd6e8b-70a9-4b2f-bc62-d172cd5b9596	Rodent disturbance	3	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bf453178-ab73-46d3-8a05-8304b559a05d	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5366830d-5d2e-475c-8759-9966a67478b6	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7c18fb94-d542-4e30-83b4-e4116f0312f9	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d6600e0d-9ebc-4f54-a67e-ba4b8d961455	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9efbfa91-fffb-41c4-ab35-055007331611	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d61c0cea-3563-4920-ad2d-e04c7fd470ac	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbdaa110-dc55-4011-861c-f9cb4af190d5	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bdf2008-6850-44eb-a8e4-5331d9d6b768	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+725758cd-4352-4608-9502-7446fd6f08e7	Rodent disturbance	4	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4455da9b-f4f3-497e-b4b5-6b708e8ebb86	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ae6d001e-0f22-4df0-b4eb-cf5c4d87ed74	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2d634782-fb8b-4af2-86af-1d1242bf5304	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8264cd24-11ff-4a7b-a897-4c46ec67aead	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ae541e29-0d4b-4a53-8d97-4a7e093d33d0	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6c38dda6-cb4a-4719-97f8-de48aa3d1bff	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a9cba540-da4e-4e5b-95ad-1e72ab866c11	Rodent disturbance	12	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+00087464-0136-4eb6-bb2e-d53e73cae6c5	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d0262062-3f3a-4d94-bc47-4c0db0c7690b	Rodent disturbance	12	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+03f890b3-58ce-44ca-8cf1-c5830f947d67	Rodent disturbance	11	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+48552ec9-8511-4a0c-a04e-df7ccc77778f	Rodent disturbance	9	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4b366653-8be2-4c27-81fe-df9e5ff2bf4f	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6e6a6c9b-ed5e-4fe6-b251-b8dd72ecc8c6	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c773fdd7-8ad8-477c-b087-83c98b976d10	Rodent disturbance	12	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+82d7c758-6d8e-4e7c-863e-015b8fc4e243	Rodent disturbance	8	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1186aaa5-2fef-44c6-9e6d-374a646e6b61	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d88b1b13-ae6d-4ae1-900f-ee38d6022f62	Rodent disturbance	12	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+98195bdf-5e21-4f43-bacf-2c65299e3e6c	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+331425e2-892d-410b-bc95-9dd25f59b4fd	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+36e138ce-5ebd-4ade-87c3-58827ab09ff1	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+12aa461c-4984-4e50-938d-eb236711132f	Rodent disturbance	13	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dceb01db-66cc-4e79-8b30-96d43fb01992	Rodent disturbance	14	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8a08b7b7-85a7-4518-8850-cd753b42b01d	Rodent disturbance	3	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+157d7e8f-d328-4bf3-b7a9-9ec0833de408	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c4475a19-c2ee-4ab4-bbfc-0619a5b6d500	Rodent disturbance	3	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b54992c8-acce-43e6-99f1-a5219fd3c1bb	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+be544696-6130-4929-8e8f-1fb6b20a2e0a	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7dabcf65-d783-4c8e-b05c-47ad72f411b7	Rodent disturbance	3	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+06808ce1-79d6-40a9-b8b8-d8c057a9a9c0	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+695f5a49-4a76-41c0-aa44-8a30410e2072	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+88fcdf09-74a2-4d10-89af-165147e42468	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a16421d5-b369-4c6d-b89e-099b76f2893a	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+348a4b65-aacd-4ab8-8bc4-86ac0b2baea6	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8ba8e2c8-9f9c-43ea-adef-3f1a48512465	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7d2661fc-34c9-48b0-98e8-09a0083bc050	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ba421d4-8d74-4edd-a7ea-40071e759ac0	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1b83d8da-1f3c-4ee1-812b-005b14aa27de	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d6612274-f0a9-4064-9f07-ee1e3d7e3de6	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8f3aaced-3bdb-4db1-8190-2861278aede4	Rodent disturbance	4	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b3d3b526-02f2-4b0b-a200-7a427b44f04a	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bb5e94f6-deb9-4797-b08a-77bac2c2bd53	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+80b68759-3fe3-4e55-994a-fefaf5222f16	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7b93f2a9-eece-4add-b4a4-b6b5f9368d04	Rodent disturbance	6	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3f3e47eb-2269-4b76-a298-a4482c8bd5f1	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9109a9be-e9a4-4e62-972e-0c3d4e844056	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a1924042-aa9a-4ecb-b964-47b665c4e36a	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b9001989-5194-4c42-9744-92823bdf66f9	Rodent disturbance	6	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0673ec75-82d8-41b4-b3f7-b35f6224ee79	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f54f45fb-f9c6-4d1e-83a6-a2b1ba3e029e	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+96575927-304f-44d7-9f7b-ba8fca6011a5	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+efc98cbd-3a6a-4092-8771-93443562a5f4	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+45b29f11-9dfb-4b2f-8af1-5991eca5584f	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bec455ca-4ec0-48be-9ab1-846015ec0258	Rodent disturbance	15	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fdbce70c-6ce9-4b0f-a27c-cf3e990466ec	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6dca25d6-745c-4218-89c9-70c0b1587e4a	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+849b3f29-dc31-4ac3-b15c-6b51ff0e7280	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ff7eb9f-95b0-4be3-bf2d-5a30d2efb05a	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f130a225-70cb-4ea4-85d3-1c4a1f03c1d8	Rodent disturbance	9	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ba28a5ee-0af1-4c4d-ac9a-44f3019b89d2	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+cb39d3db-aee8-4741-944b-0633a14f7927	Rodent disturbance	6	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c5e6fddd-1657-4d1d-b9b4-475c5893a544	Rodent disturbance	14	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1658bed6-e292-40cb-96f7-553c5ae20eca	Rodent disturbance	7	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a48fbe09-d9e9-486f-bb07-d2d09c103933	Rodent disturbance	9	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6da0867a-8a57-4d7e-9466-6cbbefc18e0a	Rodent disturbance	12	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d9abfe8e-db36-461f-a32c-2d82db033b24	Rodent disturbance	16	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+31a72024-9bd5-423f-a1b7-19cee4ddd817	Rodent disturbance	3	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbdeb4d1-548d-460f-abde-b6b63cf5caad	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+191663d5-ada3-47c8-a0af-1d1ffb3f4851	Rodent disturbance	14	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0895a299-7ab6-4bd0-ae97-2b03f5dd36db	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+619a33bf-962e-4efc-8da3-96151b819d33	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+84f2f201-f7c4-4b7a-9e4e-c42db44b8981	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a3f36797-d801-45a9-b1ee-24ec729b0a8b	Rodent disturbance	3	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5674481f-b529-4f9a-8d76-dc8355dbcdaf	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8e14a0bb-9ff1-48fd-9a8d-938336b25ee5	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c8cf552d-e532-4a3b-aae9-7f40ca6e0ec6	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7a87430d-b92e-4f2b-a912-39c4887e2fa5	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+74c37215-59b7-4f8d-90a8-7753c3381a7e	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f1a1b557-bc79-441e-8323-1e7640a8ecd4	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+350696b9-a0d3-4803-9cdf-1d0b51c658fb	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+908ca96b-34ed-4b52-86d1-42ade5fe8939	Rodent disturbance	7	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9438484f-c459-4d66-8dd3-8c678179b2d8	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+65444535-7b83-4876-bffb-af261c637d1f	Rodent disturbance	10	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e342c88d-f6eb-4abf-b658-93de8678a6cb	Rodent disturbance	13	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6cd2332f-4a5d-4405-ad1d-0e86271dab5f	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c353bccf-56c9-464f-896c-8f4405c31730	Rodent disturbance	13	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+795276b9-3cfb-42a1-9064-56051a147cc4	Rodent disturbance	7	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c36ed724-3ff6-4f17-b775-47ee8064e1ec	Rodent disturbance	9	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fa46f6b2-7699-4f59-8844-24267ca67d14	Rodent disturbance	10	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fa5cc512-5348-4f12-a023-03e019109b4e	Rodent disturbance	8	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2e7a3ff8-300a-495d-9c51-69a85e6e3e4d	Rodent disturbance	13	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+53e42d96-a82f-477f-9e33-725b5dea77ac	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+39102e37-2108-4946-b380-6cf50f02e878	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f8eeb66b-26e0-4daf-90a5-e64d01817477	Rodent disturbance	15	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ac1acb3b-e21c-4f63-a389-5f0f77534797	Rodent disturbance	10	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+09b59ba5-2e67-4861-bc33-38d502cdf26a	Rodent disturbance	13	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c94c6c7f-f579-4d7c-88e9-dfbfa49729d9	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a1617b1-ef78-4085-8425-f2eb68edd3d8	Rodent disturbance	4	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f70152bf-5ff5-4f88-ba44-df91ec393ad0	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1f073cf6-686e-405a-9fb4-4b1612a59021	Rodent disturbance	11	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b816cc17-04c2-4fe8-a050-1251e10b5ea9	Rodent disturbance	15	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e1291129-1b4e-4ef2-8285-99e3f4098c8f	Rodent disturbance	9	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+add45529-8c07-482d-a51b-20969f6f144c	Rodent disturbance	8	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b1f146af-6e30-435e-b165-60a59b37f44e	Rodent disturbance	14	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+216898cb-903d-4425-94c5-e2d957f744a3	Rodent disturbance	12	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+34868e49-1f1d-4d0a-94ac-c8d633e7aa67	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbbc42f4-e462-42b2-be84-fc0829bd70d3	Rodent disturbance	3	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a9289aa4-64ae-4eb1-b067-8da521ace5f4	Rodent disturbance	8	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1bf80f89-e5c4-4ca4-ad7b-2ec2ee0e50a9	Rodent disturbance	13	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+55defcf7-6eb0-4c66-84f3-ff9281cee3c3	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+41df77ed-f2a1-49a2-9871-155f2a8f7b28	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a3b1234-2f7a-4037-9e1a-70425dbfd8d2	Rodent disturbance	9	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d35d17da-c838-4b29-b8b6-a5fa64aaf8b4	Rodent disturbance	4	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f6494822-29f9-47a9-b56b-16f6d4bc7422	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d94498e3-db26-49ea-8fed-2dad2baddb41	Rodent disturbance	9	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dc879def-5166-4eba-8115-7eb6d4219989	Rodent disturbance	3	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+46d98ce0-2ef3-4090-8aad-a9ac8d48397a	Rodent disturbance	7	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+84ac4118-4441-4cf5-b1a7-d34ee745bd2e	Rodent disturbance	11	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5da14bb9-3237-41fc-9734-e471bae63316	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f20e5b38-aec2-45c5-b4cb-b1e3f1405e3b	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+017a8b68-56ac-4629-9d36-a19ea9dc3fd5	Rodent disturbance	5	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e3deb3ef-37bb-4ab6-ad32-7d9353fa677f	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8921eb6a-e1ff-4b3d-a85c-6f9d97462073	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a703ff85-10a9-446e-8267-605d6e705d7f	Rodent disturbance	1	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+06bf8c6a-529d-43e1-906a-fad49b204056	Rodent disturbance	7	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1fb82cd7-cd00-472c-9f25-4b8f83b0b445	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d2c2ddca-0862-4a39-adc8-c3e4f830befa	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+20c51e1d-b707-43e5-aff2-db5f87296cb4	Rodent disturbance	2	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+719b5827-acd4-421d-819e-19c941848966	Rodent disturbance	0	frequency	2004		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0d69bb70-d755-4bcb-baec-315d3296bf50	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7472a1f0-b04a-4132-9c62-49c56dc4d079	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ef7786a-7761-463b-ad58-9e2efea9dc0c	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ebe0b490-57a2-497c-a927-e8683c1748c6	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+942d3b55-8a42-44e6-9dd1-5a90cc05f6e8	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2374ca45-5ce1-4913-897a-9911b2b7ee77	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9e30631a-5eef-43a3-ad29-2aae2841cf48	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+97e044e4-e8ca-4cfa-8447-0789400f36db	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+139442db-d846-412c-bae0-217de9a8db5f	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6c3708d3-78fa-4132-b1dc-2681adb94bfa	Rodent disturbance	8	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0ec06382-4e5f-433a-b3a6-3dea63e480cd	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+079bc956-880f-4049-b8eb-70dbececd6d3	Rodent disturbance	5	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a7a96da-1273-4511-abc9-f20fe9a883e6	Rodent disturbance	8	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fb4dd07d-9926-4572-b1c8-2ad9f0e6f15c	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fdfadc27-5032-4112-936c-4f4504311cd3	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bfcc1c96-d8cb-42fe-beb6-6960c604f630	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9a3e6ff6-7cbd-4997-a383-eeb74101c9dc	Rodent disturbance	6	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ace35ed8-5309-4a8d-ba5c-1724b194d46e	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b8b2850b-9b6c-4112-877e-cca5285fcab4	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4b12fbf0-67a1-444e-ae5e-778bf906d14e	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a30021b2-3254-434f-87c4-86ea62a7bc5a	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+af409ce6-0035-4254-bbde-ae2fce92a39f	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+17460925-4053-410a-b30c-19dac2ba0600	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9564039b-61ea-4cf9-aa43-5f48ddae763f	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a957ae4d-83b9-4cd0-849d-7f89cff57754	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1e5b338f-2bc7-415e-9d73-7bb90cc47588	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e4d8c752-05cd-4947-afbc-d8eef6e23b22	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+77962d1f-53ca-4430-8d74-d044374cefe6	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+770d0c13-0168-4c15-a82a-3c07b24b7c4e	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3de7c3aa-544c-438f-8e12-4adb7a753120	Rodent disturbance	8	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+407f2ed4-2cf7-47a5-9468-e1fb70df028d	Rodent disturbance	4	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4c9d8bf1-007a-4041-acea-f67e49c194c5	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bd743cd-224c-4e02-90d0-df479f208e2a	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+46ffc5e0-bfbb-4ce3-8416-d76b3350f7ec	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+acd6613f-9c6f-4ea7-87f0-3bdb117f193b	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+02e3d07a-4bf2-4c42-93ef-806c0a70f1c8	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d10ea9f1-bfa1-4224-9544-9b0db4469c54	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3fa08d5b-1f9c-454c-a1c3-1e877e58238f	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f960aa33-5fee-40f4-9b83-b0771c9fbff8	Rodent disturbance	4	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a49c98ae-5742-4dfe-a35a-32ef144a65c2	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dea8567a-a8ea-4f09-b1ff-02983813659f	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bc5a9517-f225-49ab-ba3e-6d79adbb412d	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+af918b05-4c08-4201-b85e-21025a11b37b	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a6412b53-bd6f-44e6-8a8c-5dd23a5280f5	Rodent disturbance	7	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2927f13c-24be-4686-b696-4f8477d04eca	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+062afbf9-08a5-489c-add2-5adab57c7a10	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c06c0602-57fc-42c8-bca5-ab279128b05d	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d8a59647-6a9f-47b3-bc88-27fda01be324	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+104d95a8-28cf-43e9-b623-7eee101f62b9	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bf9d8ba-cab7-4084-a351-69b438847962	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+48376e85-ac93-43e3-8178-3da6e68ed78e	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+13bb6881-c770-4d78-9487-ef3760100831	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbd1d459-a501-42b1-ad09-ba0cc1494fae	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+051647d7-4959-4b85-8233-4a3fc802ac8a	Rodent disturbance	NA	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c77cbe11-61b4-4cbf-a9b6-9d6e36540ad6	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7cdf214d-1bea-48b2-a574-c2d81ad2fd3f	Rodent disturbance	4	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d7393281-8262-4e42-9909-d02e49fa7fc0	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6669191f-d9b0-43b7-b7ad-c9b2b27fff41	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8b599692-1e31-4478-a12c-b875b5673d87	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5e9565b0-f4b2-4d9a-8cd3-270265b08348	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+217884e9-db15-4230-adeb-803852d3ee70	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2a3a58e8-94e7-4d63-9329-762dfdb56228	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+40dd6e8b-70a9-4b2f-bc62-d172cd5b9596	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bf453178-ab73-46d3-8a05-8304b559a05d	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5366830d-5d2e-475c-8759-9966a67478b6	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7c18fb94-d542-4e30-83b4-e4116f0312f9	Rodent disturbance	7	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d6600e0d-9ebc-4f54-a67e-ba4b8d961455	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9efbfa91-fffb-41c4-ab35-055007331611	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d61c0cea-3563-4920-ad2d-e04c7fd470ac	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbdaa110-dc55-4011-861c-f9cb4af190d5	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bdf2008-6850-44eb-a8e4-5331d9d6b768	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+725758cd-4352-4608-9502-7446fd6f08e7	Rodent disturbance	7	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4455da9b-f4f3-497e-b4b5-6b708e8ebb86	Rodent disturbance	8	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ae6d001e-0f22-4df0-b4eb-cf5c4d87ed74	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2d634782-fb8b-4af2-86af-1d1242bf5304	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8264cd24-11ff-4a7b-a897-4c46ec67aead	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ae541e29-0d4b-4a53-8d97-4a7e093d33d0	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6c38dda6-cb4a-4719-97f8-de48aa3d1bff	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a9cba540-da4e-4e5b-95ad-1e72ab866c11	Rodent disturbance	11	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+00087464-0136-4eb6-bb2e-d53e73cae6c5	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d0262062-3f3a-4d94-bc47-4c0db0c7690b	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+03f890b3-58ce-44ca-8cf1-c5830f947d67	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+48552ec9-8511-4a0c-a04e-df7ccc77778f	Rodent disturbance	7	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4b366653-8be2-4c27-81fe-df9e5ff2bf4f	Rodent disturbance	5	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6e6a6c9b-ed5e-4fe6-b251-b8dd72ecc8c6	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c773fdd7-8ad8-477c-b087-83c98b976d10	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+82d7c758-6d8e-4e7c-863e-015b8fc4e243	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1186aaa5-2fef-44c6-9e6d-374a646e6b61	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d88b1b13-ae6d-4ae1-900f-ee38d6022f62	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+98195bdf-5e21-4f43-bacf-2c65299e3e6c	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+331425e2-892d-410b-bc95-9dd25f59b4fd	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+36e138ce-5ebd-4ade-87c3-58827ab09ff1	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+12aa461c-4984-4e50-938d-eb236711132f	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dceb01db-66cc-4e79-8b30-96d43fb01992	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8a08b7b7-85a7-4518-8850-cd753b42b01d	Rodent disturbance	7	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+157d7e8f-d328-4bf3-b7a9-9ec0833de408	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c4475a19-c2ee-4ab4-bbfc-0619a5b6d500	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b54992c8-acce-43e6-99f1-a5219fd3c1bb	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+be544696-6130-4929-8e8f-1fb6b20a2e0a	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7dabcf65-d783-4c8e-b05c-47ad72f411b7	Rodent disturbance	6	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+06808ce1-79d6-40a9-b8b8-d8c057a9a9c0	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+695f5a49-4a76-41c0-aa44-8a30410e2072	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+88fcdf09-74a2-4d10-89af-165147e42468	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a16421d5-b369-4c6d-b89e-099b76f2893a	Rodent disturbance	16	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+348a4b65-aacd-4ab8-8bc4-86ac0b2baea6	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8ba8e2c8-9f9c-43ea-adef-3f1a48512465	Rodent disturbance	4	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7d2661fc-34c9-48b0-98e8-09a0083bc050	Rodent disturbance	4	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ba421d4-8d74-4edd-a7ea-40071e759ac0	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1b83d8da-1f3c-4ee1-812b-005b14aa27de	Rodent disturbance	8	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d6612274-f0a9-4064-9f07-ee1e3d7e3de6	Rodent disturbance	15	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8f3aaced-3bdb-4db1-8190-2861278aede4	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b3d3b526-02f2-4b0b-a200-7a427b44f04a	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bb5e94f6-deb9-4797-b08a-77bac2c2bd53	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+80b68759-3fe3-4e55-994a-fefaf5222f16	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7b93f2a9-eece-4add-b4a4-b6b5f9368d04	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3f3e47eb-2269-4b76-a298-a4482c8bd5f1	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9109a9be-e9a4-4e62-972e-0c3d4e844056	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a1924042-aa9a-4ecb-b964-47b665c4e36a	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b9001989-5194-4c42-9744-92823bdf66f9	Rodent disturbance	4	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0673ec75-82d8-41b4-b3f7-b35f6224ee79	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f54f45fb-f9c6-4d1e-83a6-a2b1ba3e029e	Rodent disturbance	7	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+96575927-304f-44d7-9f7b-ba8fca6011a5	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+efc98cbd-3a6a-4092-8771-93443562a5f4	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+45b29f11-9dfb-4b2f-8af1-5991eca5584f	Rodent disturbance	8	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bec455ca-4ec0-48be-9ab1-846015ec0258	Rodent disturbance	15	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fdbce70c-6ce9-4b0f-a27c-cf3e990466ec	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6dca25d6-745c-4218-89c9-70c0b1587e4a	Rodent disturbance	6	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+849b3f29-dc31-4ac3-b15c-6b51ff0e7280	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ff7eb9f-95b0-4be3-bf2d-5a30d2efb05a	Rodent disturbance	5	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f130a225-70cb-4ea4-85d3-1c4a1f03c1d8	Rodent disturbance	11	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ba28a5ee-0af1-4c4d-ac9a-44f3019b89d2	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+cb39d3db-aee8-4741-944b-0633a14f7927	Rodent disturbance	8	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c5e6fddd-1657-4d1d-b9b4-475c5893a544	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1658bed6-e292-40cb-96f7-553c5ae20eca	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a48fbe09-d9e9-486f-bb07-d2d09c103933	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6da0867a-8a57-4d7e-9466-6cbbefc18e0a	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d9abfe8e-db36-461f-a32c-2d82db033b24	Rodent disturbance	15	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+31a72024-9bd5-423f-a1b7-19cee4ddd817	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbdeb4d1-548d-460f-abde-b6b63cf5caad	Rodent disturbance	12	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+191663d5-ada3-47c8-a0af-1d1ffb3f4851	Rodent disturbance	10	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0895a299-7ab6-4bd0-ae97-2b03f5dd36db	Rodent disturbance	8	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+619a33bf-962e-4efc-8da3-96151b819d33	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+84f2f201-f7c4-4b7a-9e4e-c42db44b8981	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a3f36797-d801-45a9-b1ee-24ec729b0a8b	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5674481f-b529-4f9a-8d76-dc8355dbcdaf	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8e14a0bb-9ff1-48fd-9a8d-938336b25ee5	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c8cf552d-e532-4a3b-aae9-7f40ca6e0ec6	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7a87430d-b92e-4f2b-a912-39c4887e2fa5	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+74c37215-59b7-4f8d-90a8-7753c3381a7e	Rodent disturbance	5	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f1a1b557-bc79-441e-8323-1e7640a8ecd4	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+350696b9-a0d3-4803-9cdf-1d0b51c658fb	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+908ca96b-34ed-4b52-86d1-42ade5fe8939	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9438484f-c459-4d66-8dd3-8c678179b2d8	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+65444535-7b83-4876-bffb-af261c637d1f	Rodent disturbance	12	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e342c88d-f6eb-4abf-b658-93de8678a6cb	Rodent disturbance	13	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6cd2332f-4a5d-4405-ad1d-0e86271dab5f	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c353bccf-56c9-464f-896c-8f4405c31730	Rodent disturbance	12	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+795276b9-3cfb-42a1-9064-56051a147cc4	Rodent disturbance	13	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c36ed724-3ff6-4f17-b775-47ee8064e1ec	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fa46f6b2-7699-4f59-8844-24267ca67d14	Rodent disturbance	6	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fa5cc512-5348-4f12-a023-03e019109b4e	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2e7a3ff8-300a-495d-9c51-69a85e6e3e4d	Rodent disturbance	11	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+53e42d96-a82f-477f-9e33-725b5dea77ac	Rodent disturbance	4	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+39102e37-2108-4946-b380-6cf50f02e878	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f8eeb66b-26e0-4daf-90a5-e64d01817477	Rodent disturbance	8	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ac1acb3b-e21c-4f63-a389-5f0f77534797	Rodent disturbance	4	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+09b59ba5-2e67-4861-bc33-38d502cdf26a	Rodent disturbance	13	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c94c6c7f-f579-4d7c-88e9-dfbfa49729d9	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a1617b1-ef78-4085-8425-f2eb68edd3d8	Rodent disturbance	7	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f70152bf-5ff5-4f88-ba44-df91ec393ad0	Rodent disturbance	11	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1f073cf6-686e-405a-9fb4-4b1612a59021	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b816cc17-04c2-4fe8-a050-1251e10b5ea9	Rodent disturbance	8	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e1291129-1b4e-4ef2-8285-99e3f4098c8f	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+add45529-8c07-482d-a51b-20969f6f144c	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b1f146af-6e30-435e-b165-60a59b37f44e	Rodent disturbance	6	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+216898cb-903d-4425-94c5-e2d957f744a3	Rodent disturbance	6	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+34868e49-1f1d-4d0a-94ac-c8d633e7aa67	Rodent disturbance	1	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbbc42f4-e462-42b2-be84-fc0829bd70d3	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a9289aa4-64ae-4eb1-b067-8da521ace5f4	Rodent disturbance	7	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1bf80f89-e5c4-4ca4-ad7b-2ec2ee0e50a9	Rodent disturbance	9	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+55defcf7-6eb0-4c66-84f3-ff9281cee3c3	Rodent disturbance	5	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+41df77ed-f2a1-49a2-9871-155f2a8f7b28	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a3b1234-2f7a-4037-9e1a-70425dbfd8d2	Rodent disturbance	9	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d35d17da-c838-4b29-b8b6-a5fa64aaf8b4	Rodent disturbance	2	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f6494822-29f9-47a9-b56b-16f6d4bc7422	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d94498e3-db26-49ea-8fed-2dad2baddb41	Rodent disturbance	3	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dc879def-5166-4eba-8115-7eb6d4219989	Rodent disturbance	4	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+46d98ce0-2ef3-4090-8aad-a9ac8d48397a	Rodent disturbance	7	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+84ac4118-4441-4cf5-b1a7-d34ee745bd2e	Rodent disturbance	9	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5da14bb9-3237-41fc-9734-e471bae63316	Rodent disturbance	7	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f20e5b38-aec2-45c5-b4cb-b1e3f1405e3b	Rodent disturbance	9	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+017a8b68-56ac-4629-9d36-a19ea9dc3fd5	Rodent disturbance	9	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e3deb3ef-37bb-4ab6-ad32-7d9353fa677f	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8921eb6a-e1ff-4b3d-a85c-6f9d97462073	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a703ff85-10a9-446e-8267-605d6e705d7f	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+06bf8c6a-529d-43e1-906a-fad49b204056	Rodent disturbance	5	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1fb82cd7-cd00-472c-9f25-4b8f83b0b445	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d2c2ddca-0862-4a39-adc8-c3e4f830befa	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+20c51e1d-b707-43e5-aff2-db5f87296cb4	Rodent disturbance	4	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+719b5827-acd4-421d-819e-19c941848966	Rodent disturbance	0	frequency	2006		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0d69bb70-d755-4bcb-baec-315d3296bf50	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7472a1f0-b04a-4132-9c62-49c56dc4d079	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ef7786a-7761-463b-ad58-9e2efea9dc0c	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ebe0b490-57a2-497c-a927-e8683c1748c6	Rodent disturbance	8	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+942d3b55-8a42-44e6-9dd1-5a90cc05f6e8	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2374ca45-5ce1-4913-897a-9911b2b7ee77	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9e30631a-5eef-43a3-ad29-2aae2841cf48	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+97e044e4-e8ca-4cfa-8447-0789400f36db	Rodent disturbance	3	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+139442db-d846-412c-bae0-217de9a8db5f	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6c3708d3-78fa-4132-b1dc-2681adb94bfa	Rodent disturbance	9	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0ec06382-4e5f-433a-b3a6-3dea63e480cd	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+079bc956-880f-4049-b8eb-70dbececd6d3	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a7a96da-1273-4511-abc9-f20fe9a883e6	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fb4dd07d-9926-4572-b1c8-2ad9f0e6f15c	Rodent disturbance	2	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fdfadc27-5032-4112-936c-4f4504311cd3	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bfcc1c96-d8cb-42fe-beb6-6960c604f630	Rodent disturbance	15	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9a3e6ff6-7cbd-4997-a383-eeb74101c9dc	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ace35ed8-5309-4a8d-ba5c-1724b194d46e	Rodent disturbance	7	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b8b2850b-9b6c-4112-877e-cca5285fcab4	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4b12fbf0-67a1-444e-ae5e-778bf906d14e	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a30021b2-3254-434f-87c4-86ea62a7bc5a	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+af409ce6-0035-4254-bbde-ae2fce92a39f	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+17460925-4053-410a-b30c-19dac2ba0600	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9564039b-61ea-4cf9-aa43-5f48ddae763f	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a957ae4d-83b9-4cd0-849d-7f89cff57754	Rodent disturbance	7	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1e5b338f-2bc7-415e-9d73-7bb90cc47588	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e4d8c752-05cd-4947-afbc-d8eef6e23b22	Rodent disturbance	5	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+77962d1f-53ca-4430-8d74-d044374cefe6	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+770d0c13-0168-4c15-a82a-3c07b24b7c4e	Rodent disturbance	2	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3de7c3aa-544c-438f-8e12-4adb7a753120	Rodent disturbance	3	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+407f2ed4-2cf7-47a5-9468-e1fb70df028d	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4c9d8bf1-007a-4041-acea-f67e49c194c5	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bd743cd-224c-4e02-90d0-df479f208e2a	Rodent disturbance	2	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+46ffc5e0-bfbb-4ce3-8416-d76b3350f7ec	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+acd6613f-9c6f-4ea7-87f0-3bdb117f193b	Rodent disturbance	8	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+02e3d07a-4bf2-4c42-93ef-806c0a70f1c8	Rodent disturbance	15	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d10ea9f1-bfa1-4224-9544-9b0db4469c54	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3fa08d5b-1f9c-454c-a1c3-1e877e58238f	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f960aa33-5fee-40f4-9b83-b0771c9fbff8	Rodent disturbance	8	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a49c98ae-5742-4dfe-a35a-32ef144a65c2	Rodent disturbance	15	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dea8567a-a8ea-4f09-b1ff-02983813659f	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bc5a9517-f225-49ab-ba3e-6d79adbb412d	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+af918b05-4c08-4201-b85e-21025a11b37b	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a6412b53-bd6f-44e6-8a8c-5dd23a5280f5	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2927f13c-24be-4686-b696-4f8477d04eca	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+062afbf9-08a5-489c-add2-5adab57c7a10	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c06c0602-57fc-42c8-bca5-ab279128b05d	Rodent disturbance	7	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d8a59647-6a9f-47b3-bc88-27fda01be324	Rodent disturbance	12	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+104d95a8-28cf-43e9-b623-7eee101f62b9	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bf9d8ba-cab7-4084-a351-69b438847962	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+48376e85-ac93-43e3-8178-3da6e68ed78e	Rodent disturbance	12	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+13bb6881-c770-4d78-9487-ef3760100831	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbd1d459-a501-42b1-ad09-ba0cc1494fae	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+051647d7-4959-4b85-8233-4a3fc802ac8a	Rodent disturbance	NA	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c77cbe11-61b4-4cbf-a9b6-9d6e36540ad6	Rodent disturbance	12	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7cdf214d-1bea-48b2-a574-c2d81ad2fd3f	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d7393281-8262-4e42-9909-d02e49fa7fc0	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6669191f-d9b0-43b7-b7ad-c9b2b27fff41	Rodent disturbance	2	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8b599692-1e31-4478-a12c-b875b5673d87	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5e9565b0-f4b2-4d9a-8cd3-270265b08348	Rodent disturbance	9	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+217884e9-db15-4230-adeb-803852d3ee70	Rodent disturbance	11	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2a3a58e8-94e7-4d63-9329-762dfdb56228	Rodent disturbance	11	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+40dd6e8b-70a9-4b2f-bc62-d172cd5b9596	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bf453178-ab73-46d3-8a05-8304b559a05d	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5366830d-5d2e-475c-8759-9966a67478b6	Rodent disturbance	9	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7c18fb94-d542-4e30-83b4-e4116f0312f9	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d6600e0d-9ebc-4f54-a67e-ba4b8d961455	Rodent disturbance	8	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9efbfa91-fffb-41c4-ab35-055007331611	Rodent disturbance	1	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d61c0cea-3563-4920-ad2d-e04c7fd470ac	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbdaa110-dc55-4011-861c-f9cb4af190d5	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bdf2008-6850-44eb-a8e4-5331d9d6b768	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+725758cd-4352-4608-9502-7446fd6f08e7	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4455da9b-f4f3-497e-b4b5-6b708e8ebb86	Rodent disturbance	9	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ae6d001e-0f22-4df0-b4eb-cf5c4d87ed74	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2d634782-fb8b-4af2-86af-1d1242bf5304	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8264cd24-11ff-4a7b-a897-4c46ec67aead	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ae541e29-0d4b-4a53-8d97-4a7e093d33d0	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6c38dda6-cb4a-4719-97f8-de48aa3d1bff	Rodent disturbance	1	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a9cba540-da4e-4e5b-95ad-1e72ab866c11	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+00087464-0136-4eb6-bb2e-d53e73cae6c5	Rodent disturbance	7	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d0262062-3f3a-4d94-bc47-4c0db0c7690b	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+03f890b3-58ce-44ca-8cf1-c5830f947d67	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+48552ec9-8511-4a0c-a04e-df7ccc77778f	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4b366653-8be2-4c27-81fe-df9e5ff2bf4f	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6e6a6c9b-ed5e-4fe6-b251-b8dd72ecc8c6	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c773fdd7-8ad8-477c-b087-83c98b976d10	Rodent disturbance	8	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+82d7c758-6d8e-4e7c-863e-015b8fc4e243	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1186aaa5-2fef-44c6-9e6d-374a646e6b61	Rodent disturbance	2	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d88b1b13-ae6d-4ae1-900f-ee38d6022f62	Rodent disturbance	13	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+98195bdf-5e21-4f43-bacf-2c65299e3e6c	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+331425e2-892d-410b-bc95-9dd25f59b4fd	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+36e138ce-5ebd-4ade-87c3-58827ab09ff1	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+12aa461c-4984-4e50-938d-eb236711132f	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dceb01db-66cc-4e79-8b30-96d43fb01992	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8a08b7b7-85a7-4518-8850-cd753b42b01d	Rodent disturbance	15	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+157d7e8f-d328-4bf3-b7a9-9ec0833de408	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c4475a19-c2ee-4ab4-bbfc-0619a5b6d500	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b54992c8-acce-43e6-99f1-a5219fd3c1bb	Rodent disturbance	12	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+be544696-6130-4929-8e8f-1fb6b20a2e0a	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7dabcf65-d783-4c8e-b05c-47ad72f411b7	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+06808ce1-79d6-40a9-b8b8-d8c057a9a9c0	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+695f5a49-4a76-41c0-aa44-8a30410e2072	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+88fcdf09-74a2-4d10-89af-165147e42468	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a16421d5-b369-4c6d-b89e-099b76f2893a	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+348a4b65-aacd-4ab8-8bc4-86ac0b2baea6	Rodent disturbance	9	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8ba8e2c8-9f9c-43ea-adef-3f1a48512465	Rodent disturbance	15	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7d2661fc-34c9-48b0-98e8-09a0083bc050	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ba421d4-8d74-4edd-a7ea-40071e759ac0	Rodent disturbance	2	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1b83d8da-1f3c-4ee1-812b-005b14aa27de	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d6612274-f0a9-4064-9f07-ee1e3d7e3de6	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8f3aaced-3bdb-4db1-8190-2861278aede4	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b3d3b526-02f2-4b0b-a200-7a427b44f04a	Rodent disturbance	2	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bb5e94f6-deb9-4797-b08a-77bac2c2bd53	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+80b68759-3fe3-4e55-994a-fefaf5222f16	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7b93f2a9-eece-4add-b4a4-b6b5f9368d04	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3f3e47eb-2269-4b76-a298-a4482c8bd5f1	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9109a9be-e9a4-4e62-972e-0c3d4e844056	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a1924042-aa9a-4ecb-b964-47b665c4e36a	Rodent disturbance	1	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b9001989-5194-4c42-9744-92823bdf66f9	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0673ec75-82d8-41b4-b3f7-b35f6224ee79	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f54f45fb-f9c6-4d1e-83a6-a2b1ba3e029e	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+96575927-304f-44d7-9f7b-ba8fca6011a5	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+efc98cbd-3a6a-4092-8771-93443562a5f4	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+45b29f11-9dfb-4b2f-8af1-5991eca5584f	Rodent disturbance	13	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bec455ca-4ec0-48be-9ab1-846015ec0258	Rodent disturbance	12	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fdbce70c-6ce9-4b0f-a27c-cf3e990466ec	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6dca25d6-745c-4218-89c9-70c0b1587e4a	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+849b3f29-dc31-4ac3-b15c-6b51ff0e7280	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ff7eb9f-95b0-4be3-bf2d-5a30d2efb05a	Rodent disturbance	9	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f130a225-70cb-4ea4-85d3-1c4a1f03c1d8	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ba28a5ee-0af1-4c4d-ac9a-44f3019b89d2	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+cb39d3db-aee8-4741-944b-0633a14f7927	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c5e6fddd-1657-4d1d-b9b4-475c5893a544	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1658bed6-e292-40cb-96f7-553c5ae20eca	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a48fbe09-d9e9-486f-bb07-d2d09c103933	Rodent disturbance	12	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6da0867a-8a57-4d7e-9466-6cbbefc18e0a	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d9abfe8e-db36-461f-a32c-2d82db033b24	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+31a72024-9bd5-423f-a1b7-19cee4ddd817	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbdeb4d1-548d-460f-abde-b6b63cf5caad	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+191663d5-ada3-47c8-a0af-1d1ffb3f4851	Rodent disturbance	9	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0895a299-7ab6-4bd0-ae97-2b03f5dd36db	Rodent disturbance	8	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+619a33bf-962e-4efc-8da3-96151b819d33	Rodent disturbance	7	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+84f2f201-f7c4-4b7a-9e4e-c42db44b8981	Rodent disturbance	1	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a3f36797-d801-45a9-b1ee-24ec729b0a8b	Rodent disturbance	2	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5674481f-b529-4f9a-8d76-dc8355dbcdaf	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8e14a0bb-9ff1-48fd-9a8d-938336b25ee5	Rodent disturbance	5	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c8cf552d-e532-4a3b-aae9-7f40ca6e0ec6	Rodent disturbance	4	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7a87430d-b92e-4f2b-a912-39c4887e2fa5	Rodent disturbance	7	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+74c37215-59b7-4f8d-90a8-7753c3381a7e	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f1a1b557-bc79-441e-8323-1e7640a8ecd4	Rodent disturbance	8	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+350696b9-a0d3-4803-9cdf-1d0b51c658fb	Rodent disturbance	2	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+908ca96b-34ed-4b52-86d1-42ade5fe8939	Rodent disturbance	11	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9438484f-c459-4d66-8dd3-8c678179b2d8	Rodent disturbance	8	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+65444535-7b83-4876-bffb-af261c637d1f	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e342c88d-f6eb-4abf-b658-93de8678a6cb	Rodent disturbance	7	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6cd2332f-4a5d-4405-ad1d-0e86271dab5f	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c353bccf-56c9-464f-896c-8f4405c31730	Rodent disturbance	15	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+795276b9-3cfb-42a1-9064-56051a147cc4	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c36ed724-3ff6-4f17-b775-47ee8064e1ec	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fa46f6b2-7699-4f59-8844-24267ca67d14	Rodent disturbance	12	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fa5cc512-5348-4f12-a023-03e019109b4e	Rodent disturbance	7	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2e7a3ff8-300a-495d-9c51-69a85e6e3e4d	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+53e42d96-a82f-477f-9e33-725b5dea77ac	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+39102e37-2108-4946-b380-6cf50f02e878	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f8eeb66b-26e0-4daf-90a5-e64d01817477	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ac1acb3b-e21c-4f63-a389-5f0f77534797	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+09b59ba5-2e67-4861-bc33-38d502cdf26a	Rodent disturbance	15	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c94c6c7f-f579-4d7c-88e9-dfbfa49729d9	Rodent disturbance	1	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a1617b1-ef78-4085-8425-f2eb68edd3d8	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f70152bf-5ff5-4f88-ba44-df91ec393ad0	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1f073cf6-686e-405a-9fb4-4b1612a59021	Rodent disturbance	13	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b816cc17-04c2-4fe8-a050-1251e10b5ea9	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e1291129-1b4e-4ef2-8285-99e3f4098c8f	Rodent disturbance	5	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+add45529-8c07-482d-a51b-20969f6f144c	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b1f146af-6e30-435e-b165-60a59b37f44e	Rodent disturbance	14	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+216898cb-903d-4425-94c5-e2d957f744a3	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+34868e49-1f1d-4d0a-94ac-c8d633e7aa67	Rodent disturbance	12	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbbc42f4-e462-42b2-be84-fc0829bd70d3	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a9289aa4-64ae-4eb1-b067-8da521ace5f4	Rodent disturbance	13	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1bf80f89-e5c4-4ca4-ad7b-2ec2ee0e50a9	Rodent disturbance	16	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+55defcf7-6eb0-4c66-84f3-ff9281cee3c3	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+41df77ed-f2a1-49a2-9871-155f2a8f7b28	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a3b1234-2f7a-4037-9e1a-70425dbfd8d2	Rodent disturbance	6	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d35d17da-c838-4b29-b8b6-a5fa64aaf8b4	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f6494822-29f9-47a9-b56b-16f6d4bc7422	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d94498e3-db26-49ea-8fed-2dad2baddb41	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dc879def-5166-4eba-8115-7eb6d4219989	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+46d98ce0-2ef3-4090-8aad-a9ac8d48397a	Rodent disturbance	9	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+84ac4118-4441-4cf5-b1a7-d34ee745bd2e	Rodent disturbance	15	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5da14bb9-3237-41fc-9734-e471bae63316	Rodent disturbance	10	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f20e5b38-aec2-45c5-b4cb-b1e3f1405e3b	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+017a8b68-56ac-4629-9d36-a19ea9dc3fd5	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e3deb3ef-37bb-4ab6-ad32-7d9353fa677f	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8921eb6a-e1ff-4b3d-a85c-6f9d97462073	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a703ff85-10a9-446e-8267-605d6e705d7f	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+06bf8c6a-529d-43e1-906a-fad49b204056	Rodent disturbance	2	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1fb82cd7-cd00-472c-9f25-4b8f83b0b445	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d2c2ddca-0862-4a39-adc8-c3e4f830befa	Rodent disturbance	5	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+20c51e1d-b707-43e5-aff2-db5f87296cb4	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+719b5827-acd4-421d-819e-19c941848966	Rodent disturbance	0	frequency	2008		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0d69bb70-d755-4bcb-baec-315d3296bf50	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7472a1f0-b04a-4132-9c62-49c56dc4d079	Rodent disturbance	7	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ef7786a-7761-463b-ad58-9e2efea9dc0c	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ebe0b490-57a2-497c-a927-e8683c1748c6	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+942d3b55-8a42-44e6-9dd1-5a90cc05f6e8	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2374ca45-5ce1-4913-897a-9911b2b7ee77	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9e30631a-5eef-43a3-ad29-2aae2841cf48	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+97e044e4-e8ca-4cfa-8447-0789400f36db	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+139442db-d846-412c-bae0-217de9a8db5f	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6c3708d3-78fa-4132-b1dc-2681adb94bfa	Rodent disturbance	3	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0ec06382-4e5f-433a-b3a6-3dea63e480cd	Rodent disturbance	3	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+079bc956-880f-4049-b8eb-70dbececd6d3	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a7a96da-1273-4511-abc9-f20fe9a883e6	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fb4dd07d-9926-4572-b1c8-2ad9f0e6f15c	Rodent disturbance	7	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fdfadc27-5032-4112-936c-4f4504311cd3	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bfcc1c96-d8cb-42fe-beb6-6960c604f630	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9a3e6ff6-7cbd-4997-a383-eeb74101c9dc	Rodent disturbance	15	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ace35ed8-5309-4a8d-ba5c-1724b194d46e	Rodent disturbance	7	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b8b2850b-9b6c-4112-877e-cca5285fcab4	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4b12fbf0-67a1-444e-ae5e-778bf906d14e	Rodent disturbance	13	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a30021b2-3254-434f-87c4-86ea62a7bc5a	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+af409ce6-0035-4254-bbde-ae2fce92a39f	Rodent disturbance	14	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+17460925-4053-410a-b30c-19dac2ba0600	Rodent disturbance	15	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9564039b-61ea-4cf9-aa43-5f48ddae763f	Rodent disturbance	9	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a957ae4d-83b9-4cd0-849d-7f89cff57754	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1e5b338f-2bc7-415e-9d73-7bb90cc47588	Rodent disturbance	12	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e4d8c752-05cd-4947-afbc-d8eef6e23b22	Rodent disturbance	2	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+77962d1f-53ca-4430-8d74-d044374cefe6	Rodent disturbance	9	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+770d0c13-0168-4c15-a82a-3c07b24b7c4e	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3de7c3aa-544c-438f-8e12-4adb7a753120	Rodent disturbance	8	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+407f2ed4-2cf7-47a5-9468-e1fb70df028d	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4c9d8bf1-007a-4041-acea-f67e49c194c5	Rodent disturbance	9	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bd743cd-224c-4e02-90d0-df479f208e2a	Rodent disturbance	9	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+46ffc5e0-bfbb-4ce3-8416-d76b3350f7ec	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+acd6613f-9c6f-4ea7-87f0-3bdb117f193b	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+02e3d07a-4bf2-4c42-93ef-806c0a70f1c8	Rodent disturbance	14	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d10ea9f1-bfa1-4224-9544-9b0db4469c54	Rodent disturbance	3	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3fa08d5b-1f9c-454c-a1c3-1e877e58238f	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f960aa33-5fee-40f4-9b83-b0771c9fbff8	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a49c98ae-5742-4dfe-a35a-32ef144a65c2	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dea8567a-a8ea-4f09-b1ff-02983813659f	Rodent disturbance	12	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bc5a9517-f225-49ab-ba3e-6d79adbb412d	Rodent disturbance	15	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+af918b05-4c08-4201-b85e-21025a11b37b	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a6412b53-bd6f-44e6-8a8c-5dd23a5280f5	Rodent disturbance	15	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2927f13c-24be-4686-b696-4f8477d04eca	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+062afbf9-08a5-489c-add2-5adab57c7a10	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c06c0602-57fc-42c8-bca5-ab279128b05d	Rodent disturbance	13	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d8a59647-6a9f-47b3-bc88-27fda01be324	Rodent disturbance	14	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+104d95a8-28cf-43e9-b623-7eee101f62b9	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bf9d8ba-cab7-4084-a351-69b438847962	Rodent disturbance	9	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+48376e85-ac93-43e3-8178-3da6e68ed78e	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+13bb6881-c770-4d78-9487-ef3760100831	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbd1d459-a501-42b1-ad09-ba0cc1494fae	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+051647d7-4959-4b85-8233-4a3fc802ac8a	Rodent disturbance	7	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c77cbe11-61b4-4cbf-a9b6-9d6e36540ad6	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7cdf214d-1bea-48b2-a574-c2d81ad2fd3f	Rodent disturbance	12	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d7393281-8262-4e42-9909-d02e49fa7fc0	Rodent disturbance	6	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6669191f-d9b0-43b7-b7ad-c9b2b27fff41	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8b599692-1e31-4478-a12c-b875b5673d87	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5e9565b0-f4b2-4d9a-8cd3-270265b08348	Rodent disturbance	6	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+217884e9-db15-4230-adeb-803852d3ee70	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2a3a58e8-94e7-4d63-9329-762dfdb56228	Rodent disturbance	8	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+40dd6e8b-70a9-4b2f-bc62-d172cd5b9596	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bf453178-ab73-46d3-8a05-8304b559a05d	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5366830d-5d2e-475c-8759-9966a67478b6	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7c18fb94-d542-4e30-83b4-e4116f0312f9	Rodent disturbance	7	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d6600e0d-9ebc-4f54-a67e-ba4b8d961455	Rodent disturbance	2	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9efbfa91-fffb-41c4-ab35-055007331611	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d61c0cea-3563-4920-ad2d-e04c7fd470ac	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbdaa110-dc55-4011-861c-f9cb4af190d5	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5bdf2008-6850-44eb-a8e4-5331d9d6b768	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+725758cd-4352-4608-9502-7446fd6f08e7	Rodent disturbance	3	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4455da9b-f4f3-497e-b4b5-6b708e8ebb86	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ae6d001e-0f22-4df0-b4eb-cf5c4d87ed74	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2d634782-fb8b-4af2-86af-1d1242bf5304	Rodent disturbance	2	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8264cd24-11ff-4a7b-a897-4c46ec67aead	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ae541e29-0d4b-4a53-8d97-4a7e093d33d0	Rodent disturbance	8	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6c38dda6-cb4a-4719-97f8-de48aa3d1bff	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a9cba540-da4e-4e5b-95ad-1e72ab866c11	Rodent disturbance	12	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+00087464-0136-4eb6-bb2e-d53e73cae6c5	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d0262062-3f3a-4d94-bc47-4c0db0c7690b	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+03f890b3-58ce-44ca-8cf1-c5830f947d67	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+48552ec9-8511-4a0c-a04e-df7ccc77778f	Rodent disturbance	13	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+4b366653-8be2-4c27-81fe-df9e5ff2bf4f	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6e6a6c9b-ed5e-4fe6-b251-b8dd72ecc8c6	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c773fdd7-8ad8-477c-b087-83c98b976d10	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+82d7c758-6d8e-4e7c-863e-015b8fc4e243	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1186aaa5-2fef-44c6-9e6d-374a646e6b61	Rodent disturbance	3	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d88b1b13-ae6d-4ae1-900f-ee38d6022f62	Rodent disturbance	12	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+98195bdf-5e21-4f43-bacf-2c65299e3e6c	Rodent disturbance	6	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+331425e2-892d-410b-bc95-9dd25f59b4fd	Rodent disturbance	3	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+36e138ce-5ebd-4ade-87c3-58827ab09ff1	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+12aa461c-4984-4e50-938d-eb236711132f	Rodent disturbance	13	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dceb01db-66cc-4e79-8b30-96d43fb01992	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8a08b7b7-85a7-4518-8850-cd753b42b01d	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+157d7e8f-d328-4bf3-b7a9-9ec0833de408	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c4475a19-c2ee-4ab4-bbfc-0619a5b6d500	Rodent disturbance	2	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b54992c8-acce-43e6-99f1-a5219fd3c1bb	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+be544696-6130-4929-8e8f-1fb6b20a2e0a	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7dabcf65-d783-4c8e-b05c-47ad72f411b7	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+06808ce1-79d6-40a9-b8b8-d8c057a9a9c0	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+695f5a49-4a76-41c0-aa44-8a30410e2072	Rodent disturbance	7	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+88fcdf09-74a2-4d10-89af-165147e42468	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a16421d5-b369-4c6d-b89e-099b76f2893a	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+348a4b65-aacd-4ab8-8bc4-86ac0b2baea6	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8ba8e2c8-9f9c-43ea-adef-3f1a48512465	Rodent disturbance	9	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7d2661fc-34c9-48b0-98e8-09a0083bc050	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ba421d4-8d74-4edd-a7ea-40071e759ac0	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1b83d8da-1f3c-4ee1-812b-005b14aa27de	Rodent disturbance	8	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d6612274-f0a9-4064-9f07-ee1e3d7e3de6	Rodent disturbance	12	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8f3aaced-3bdb-4db1-8190-2861278aede4	Rodent disturbance	13	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b3d3b526-02f2-4b0b-a200-7a427b44f04a	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bb5e94f6-deb9-4797-b08a-77bac2c2bd53	Rodent disturbance	8	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+80b68759-3fe3-4e55-994a-fefaf5222f16	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7b93f2a9-eece-4add-b4a4-b6b5f9368d04	Rodent disturbance	8	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3f3e47eb-2269-4b76-a298-a4482c8bd5f1	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9109a9be-e9a4-4e62-972e-0c3d4e844056	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a1924042-aa9a-4ecb-b964-47b665c4e36a	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b9001989-5194-4c42-9744-92823bdf66f9	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0673ec75-82d8-41b4-b3f7-b35f6224ee79	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f54f45fb-f9c6-4d1e-83a6-a2b1ba3e029e	Rodent disturbance	9	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+96575927-304f-44d7-9f7b-ba8fca6011a5	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+efc98cbd-3a6a-4092-8771-93443562a5f4	Rodent disturbance	7	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+45b29f11-9dfb-4b2f-8af1-5991eca5584f	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+bec455ca-4ec0-48be-9ab1-846015ec0258	Rodent disturbance	3	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fdbce70c-6ce9-4b0f-a27c-cf3e990466ec	Rodent disturbance	2	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6dca25d6-745c-4218-89c9-70c0b1587e4a	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+849b3f29-dc31-4ac3-b15c-6b51ff0e7280	Rodent disturbance	2	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+3ff7eb9f-95b0-4be3-bf2d-5a30d2efb05a	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f130a225-70cb-4ea4-85d3-1c4a1f03c1d8	Rodent disturbance	9	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ba28a5ee-0af1-4c4d-ac9a-44f3019b89d2	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+cb39d3db-aee8-4741-944b-0633a14f7927	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c5e6fddd-1657-4d1d-b9b4-475c5893a544	Rodent disturbance	15	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1658bed6-e292-40cb-96f7-553c5ae20eca	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a48fbe09-d9e9-486f-bb07-d2d09c103933	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6da0867a-8a57-4d7e-9466-6cbbefc18e0a	Rodent disturbance	8	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d9abfe8e-db36-461f-a32c-2d82db033b24	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+31a72024-9bd5-423f-a1b7-19cee4ddd817	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbdeb4d1-548d-460f-abde-b6b63cf5caad	Rodent disturbance	8	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+191663d5-ada3-47c8-a0af-1d1ffb3f4851	Rodent disturbance	3	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+0895a299-7ab6-4bd0-ae97-2b03f5dd36db	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+619a33bf-962e-4efc-8da3-96151b819d33	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+84f2f201-f7c4-4b7a-9e4e-c42db44b8981	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a3f36797-d801-45a9-b1ee-24ec729b0a8b	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5674481f-b529-4f9a-8d76-dc8355dbcdaf	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8e14a0bb-9ff1-48fd-9a8d-938336b25ee5	Rodent disturbance	3	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c8cf552d-e532-4a3b-aae9-7f40ca6e0ec6	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+7a87430d-b92e-4f2b-a912-39c4887e2fa5	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+74c37215-59b7-4f8d-90a8-7753c3381a7e	Rodent disturbance	15	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f1a1b557-bc79-441e-8323-1e7640a8ecd4	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+350696b9-a0d3-4803-9cdf-1d0b51c658fb	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+908ca96b-34ed-4b52-86d1-42ade5fe8939	Rodent disturbance	14	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+9438484f-c459-4d66-8dd3-8c678179b2d8	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+65444535-7b83-4876-bffb-af261c637d1f	Rodent disturbance	9	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e342c88d-f6eb-4abf-b658-93de8678a6cb	Rodent disturbance	12	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+6cd2332f-4a5d-4405-ad1d-0e86271dab5f	Rodent disturbance	8	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c353bccf-56c9-464f-896c-8f4405c31730	Rodent disturbance	14	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+795276b9-3cfb-42a1-9064-56051a147cc4	Rodent disturbance	15	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c36ed724-3ff6-4f17-b775-47ee8064e1ec	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fa46f6b2-7699-4f59-8844-24267ca67d14	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fa5cc512-5348-4f12-a023-03e019109b4e	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+2e7a3ff8-300a-495d-9c51-69a85e6e3e4d	Rodent disturbance	14	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+53e42d96-a82f-477f-9e33-725b5dea77ac	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+39102e37-2108-4946-b380-6cf50f02e878	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f8eeb66b-26e0-4daf-90a5-e64d01817477	Rodent disturbance	15	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+ac1acb3b-e21c-4f63-a389-5f0f77534797	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+09b59ba5-2e67-4861-bc33-38d502cdf26a	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+c94c6c7f-f579-4d7c-88e9-dfbfa49729d9	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a1617b1-ef78-4085-8425-f2eb68edd3d8	Rodent disturbance	3	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f70152bf-5ff5-4f88-ba44-df91ec393ad0	Rodent disturbance	14	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1f073cf6-686e-405a-9fb4-4b1612a59021	Rodent disturbance	13	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b816cc17-04c2-4fe8-a050-1251e10b5ea9	Rodent disturbance	10	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e1291129-1b4e-4ef2-8285-99e3f4098c8f	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+add45529-8c07-482d-a51b-20969f6f144c	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+b1f146af-6e30-435e-b165-60a59b37f44e	Rodent disturbance	8	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+216898cb-903d-4425-94c5-e2d957f744a3	Rodent disturbance	12	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+34868e49-1f1d-4d0a-94ac-c8d633e7aa67	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+fbbc42f4-e462-42b2-be84-fc0829bd70d3	Rodent disturbance	13	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a9289aa4-64ae-4eb1-b067-8da521ace5f4	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1bf80f89-e5c4-4ca4-ad7b-2ec2ee0e50a9	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+55defcf7-6eb0-4c66-84f3-ff9281cee3c3	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+41df77ed-f2a1-49a2-9871-155f2a8f7b28	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5a3b1234-2f7a-4037-9e1a-70425dbfd8d2	Rodent disturbance	15	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d35d17da-c838-4b29-b8b6-a5fa64aaf8b4	Rodent disturbance	13	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f6494822-29f9-47a9-b56b-16f6d4bc7422	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d94498e3-db26-49ea-8fed-2dad2baddb41	Rodent disturbance	9	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+dc879def-5166-4eba-8115-7eb6d4219989	Rodent disturbance	5	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+46d98ce0-2ef3-4090-8aad-a9ac8d48397a	Rodent disturbance	2	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+84ac4118-4441-4cf5-b1a7-d34ee745bd2e	Rodent disturbance	16	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+5da14bb9-3237-41fc-9734-e471bae63316	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+f20e5b38-aec2-45c5-b4cb-b1e3f1405e3b	Rodent disturbance	11	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+017a8b68-56ac-4629-9d36-a19ea9dc3fd5	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+e3deb3ef-37bb-4ab6-ad32-7d9353fa677f	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+8921eb6a-e1ff-4b3d-a85c-6f9d97462073	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+a703ff85-10a9-446e-8267-605d6e705d7f	Rodent disturbance	4	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+06bf8c6a-529d-43e1-906a-fad49b204056	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+1fb82cd7-cd00-472c-9f25-4b8f83b0b445	Rodent disturbance	1	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+d2c2ddca-0862-4a39-adc8-c3e4f830befa	Rodent disturbance	14	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+20c51e1d-b707-43e5-aff2-db5f87296cb4	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).
+719b5827-acd4-421d-819e-19c941848966	Rodent disturbance	0	frequency	2010		Number of subplot (total 16 subplots) that showed signes of rodents (feces, tunnels, nest etc.).

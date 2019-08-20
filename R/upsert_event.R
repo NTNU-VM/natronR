@@ -8,6 +8,7 @@
 #' @description Upserts event data into natron database.
 #' @param con Database connection object with write permissions.
 #' @param event_data Event data to be upserted.
+#' @family upsert functions
 #' @return Pushes and upserts data to database.
 #' @examples
 #'
