@@ -11,11 +11,11 @@ map_locations(data, zoom, maptype = "hybrid")
 
 \item{zoom}{Determins how far in you want to zoom on the area. Runs from 1 to 15.}
 
-\item{maptype}{Type of map you want to use. Defaults to "hybrid".}
+\item{maptype}{Type of map you want to use. Options available are "terrain", "terrain-background", "satellite", "roadmap", "hybrid" (google maps), "terrain", "watercolor", and "toner" (stamen maps). Defaults to "hybrid".}
 }
 \value{
 Map
 }
 \description{
-Takes all locations from your data and lots them on a map type of your chouce
+\code{map_locations} takes all locations from your data and plots them on a map type of your choice.
 }

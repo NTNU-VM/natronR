@@ -23,3 +23,8 @@ To come.
 
 
 }
+\seealso{
+Other upsert functions: \code{\link{f_upsert_event}},
+  \code{\link{f_upsert_location}}
+}
+\concept{upsert functions}

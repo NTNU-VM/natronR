@@ -4,8 +4,8 @@
 \alias{get_new_loc}
 \title{Generate new locations}
 \usage{
-get_new_loc(matched_localities = NA, new_localities,
-  matched_localities_toimport = NA)
+get_new_loc(matched_localities = NA, new_localities = NA,
+  matched_localities_toimport = NA, matched_localities_technical = NA)
 }
 \arguments{
 \item{matched_localities}{output from location_check - List of localities with pre-matching locality already in database}
