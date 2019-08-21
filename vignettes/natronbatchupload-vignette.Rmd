@@ -18,64 +18,42 @@ knitr::opts_chunk$set(
 
 
 ## Purpose of this package
-The natronbatchupload R-package has been developed to ease and standardize the process of uploading data to the NaTRON database. NaTRON is the internal database of NTNU-VM for natural historical data that is not part of the MUSIT system (i.e. datasets that include more than information about objects in our collections). All natural historical data to be preserved should be uploaded to the NaTRON database, and the database have a generalized structure in order to support most datatypes (bothanical, zoological, collection objects, non-biological environmental data, GIS-data). 
+The ```natronbatchupload``` R-package has been developed for employees at the University Museum of the Norwegian University of Science and Technology (NTNU), and it serves to ease and standardize the process of uploading datasets to the NaTRON database. NaTRON is the internal database for the NTNU University Museum. It stores natural history data, including biodiversity and ecological datasets. NaTRON is therefore different from the MUSIT system which store mostly data on objects in the museum collections. All natural history data to be preserved should be uploaded to the NaTRON database, and the database have a generalized structure in order to support most datatypes (botanical, zoological, collection objects, non-biological environmental data, GIS-data). 
 
-This package is built to import location-event data, and is in its current version not designed for large datasets containing repeated measurements (e.g data from dataloggers, biotelemetric studies etc.).
+This package was built to import location-event data, and is in its current version not designed for large datasets containing repeated measurements (e.g data from dataloggers, biotelemetric studies etc.).
 
-##Workflow when uploading data to NaTRON using natronbatchupload
-###The process of uploading data to NaTRON using natronbatchupload consist of five steps:
+## Workflow
+The process of uploading data to NaTRON using natronbatchupload consist of five steps:
 
-- **Restructure your dataset from wide to long format**
-- **Establish connection to NaTRON database**
-- **Check for pre-existing localities in NaTRON**: This step scans the database for locations that is identical or close by locations in the dataset that is to be uploaded. If the location already excists in the database, this step will let you use the location and unique locality ID that already exist in the database.
-- **Upload new localities to NaTRON**: This step upload new locations that is not pre-existing in the NaTRON database. You will not be able to upload event-data that don't have a corresponding location id in the database.
-- **Structure event data**: This step organize your event data table to be compatible and ready to upload to the NaTRON database.
-- **Upload event data to NaTRONn**: This step uploads your structured event data table to the NaTRON database.
-- **Structure occurence data**: This step organize your occurrence data table to be compatible and ready to upload to the NaTRON database.
-- **Upload occurrence data to NaTron**: This step uploads your structured event data table to the NaTRON database.
+- **Step 1. Restructure your dataset from wide to long format**
+- **Step 2. Establish connection to NaTRON database** 
+- **Step 3. Check for pre-existing localities in NaTRON**: 
+- **Step 4. Upload new locations to NaTRON**: *Locations* are places and this datatable include information about physical places that do not change year to year (typically place names and coordinates). This step uploads new locations that are not pre-existing on NaTRON. All locations must be present on NaTRON before the 'real data' is uploaded and you will not be able to upload event-data that don't have a corresponding *locationID* in the database. The link between the 'real data' (ie event data or occurence data) and the location specific metadata is ensured by the relational nature of NaTRON. 
+- **Step 5. Structure event data**: This step organises your event data table to be compatible and ready to upload to NaTRON. The event data table needs to look just like the NaTRON format, eg the columns in the same order etc. This step include fetching and attaching the correct *locationID* from the locations datatable.
+- **Step 6. Upload event data to NaTRON**: This step uploads your structured event data table to NaTRON. For occurence datasets you may want to skipp this and the preceeding step.
+- **Step 7. Structure occurence data**: This step organises your occurrence data table to be compatible and ready to upload to NaTRON.
+- **Step 8. Upload occurrence data to NaTron**: This step uploads your structured event data table to NaTRON.
 
-##1. Restructure your dataset from wide to long format
-First of, you need to ensure that the format of your data set is compatible with the functions in the natronbatchupload R-package. Wide format is widely used when making excel data sheets, and is a data table that contains an object with two or more variables or responses in seperate columns. In a long format these variables or responses is placed in separate rows instead of coulums (see examples below). **Your data need to be in a long format to work with the functions in natronbatchupload (see also the included example file `flat_data_dummy_std_long.csv`.**
-
-
-###*Example of wide data*
-
-| Sampling site     | Alchemilla alpina   | Agrostis cappilaris | Andromeda polifolia |
-| :-------------:   | :-------------:     |:-------------:      | :-----:             |
-| 1                 | 12                  | 6                   | 2                   |
-| 2                 | 3                   | 17                  | 4                   |
-| 3                 | 15                  | 2                   | 6                   |
-
-
-###*Example of long data*
-
-| Sampling site     | Species              | Quantity            |
-| :-------------:   | :-------------:      |:-------------:      |
-| 1                 | Alchemilla alpina    | 12                  |
-| 1                 | Agrostis cappilaris  | 6                   |
-| 1                 | Andromeda polifolia  | 2                   |
-| 2                 | Alchemilla alpina    | 3                   |
-| 2                 | Agrostis cappilaris  | 17                  |
-| 2                 | Andromeda polifolia  | 4                   |
-| 3                 | Alchemilla alpina    | 15                  |
-| 3                 | Agrostis cappilaris  | 2                   |
-| 3                 | Andromeda polifolia  | 6                   |
+## Step 1. Restructure
+The first step to getting your data on to NaTRON is to restructure the dataset from wide to long format to be compatible with the functions in the ```natronbatchupload``` R-package. Most datasets are punched in Excel in a wide format (ie lots of columns and few rows; see examples at the bottom of this vignette), but NaTRON and most other databases prefer the long format. This step is not covered by this package and must be done manually. We recoment looking into ```reshape2``` and ```dplyr``` for this type of data wrangling. 
 
 
 
 
-##2. Establish connection to NaTRON database
-Using the `natron_connect` function make it easy to connect to NaTRON in R. A pop-up window will appear where you are asked for your NaTRON password.
+## Step 2. Establish a connection to the NaTRON database
+Using the `natron_connect` function makes it easy to connect to NaTRON in R. The functions takes one argument -- your user name. A pop-up window will appear where you are asked for your password. Save your connection to the environment so that it can be used in subsequent functions. Example of use:
 
 ```
 Myconnection <- natron_connect(username)
 Myconnection
 
 ``` 
+Talk to Marc Daverdin about NaTRON access. 
 
-##3. Check for pre-existing localities in Natron:
+## Step 3. Check for pre-existing localities in Natron:
+To prevent duplicate in the NaTRON locality table you are asked to use locations already present in the database if possible.
+This step scans NaTRON for locations that are identical to, or within a given radius if, the locations in the dataset that is to be uploaded. If ```location_check()``` returns matching locations that already exists in NaTRON, ```get_new_loc()```  will let you choose whether to use these preexisting locations and their unique *locationID*. This makes updating time series data much more standardised.
 
-To prevent to store identical locations in dublicates in the NaTRON database, you are requested to use locations already present in the NaTRON database if possible. For the locality check, your dataset must have a standardisted flat and long format (look at the included example dataset `flat_data_dummy_std_long.csv`). Using the `location_check` function, the package will make a locations table based on your dataset, scan the existing  NaTRON locations table and return a list of pre-existing localities that lie within a given radius of the locations in your dataset.
 
 
 ###The `location_check` function have three parameters:
@@ -201,5 +179,74 @@ The `f_upsert_occurrence` function uploads your structured occurence data-frame 
 ```
 f_upsert_occurrence(event_data=My_occurrence_data, con=Myconnection)
 ```
+
+## Examples of stylized data tables
+
+#### *Example of wide data*
+
+| Sampling date    | Sampling locations  | Alchemilla alpina   | Agrostis cappilaris | Andromeda polifolia |
+| :-------------:  | :-------------:     | :-------------:     |:-------------:      | :-----:             |
+| 2010             | A                   | 12                  | 6                   | 2                   |
+| 2011             | A                   | 3                   | 17                  | 4                   |
+| 2011             | B                   | 15                  | 2                   | 6                   |
+
+
+#### *Example of long data*
+
+| Sampling event    | Sampling date        | Sampling location   | Species       |      |  Quantity           |
+| :-------------:   | :-------------:      |:-------------:      | :-------------:      |:-------------:      |
+| 1                 | 2010                 |A                    |Alchemilla alpina    | 12                  |
+| 1                 | 2010                 |A                    |Agrostis cappilaris  | 6                   |
+| 1                 | 2010                 |A                    |Andromeda polifolia  | 2                   |
+| 2                 | 2011                 |A                    |Alchemilla alpina    | 3                   |
+| 2                 | 2011                 |A                    |Agrostis cappilaris  | 17                  |
+| 2                 | 2011                 |A                    |Andromeda polifolia  | 4                   |
+| 3                 | 2011                 |B                    |Alchemilla alpina    | 15                  |
+| 3                 | 2011                 |B                    |Agrostis cappilaris  | 2                   |
+| 3                 | 2011                 |B                    |Andromeda polifolia  | 6                   |
+
+#### *Example of location table*
+
+| locationID        | Sampling location | Coordinates 
+|:-------------:    |:-------------:    |:-------------:
+|a                  |A                  | x.xx 
+|a                  |A                  | x.xx
+|a                  |A                  | x.xx
+|a                  |A                  | x.xx
+|a                  |A                  | x.xx
+|a                  |A                  | x.xx
+|b                  |B                  | x.xx
+|b                  |B                  | x.xx
+|b                  |B                  | x.xx
+
+
+#### *Example of event table*
+
+| eventID    | Sampling event    | Sampling date        | locationID   |     
+| :-------------:   | :-------------:   | :-------------:      |:-------------:     
+| 1*                 | 1                 | 2010                 |a                   
+| 1*                 | 1                 | 2010                 |a                   
+| 1*                 | 1                 | 2010                 |a                   
+| 2*                 | 2                 | 2011                 |a                   
+| 2*                 | 2                 | 2011                 |a                   
+| 2*                 | 2                 | 2011                 |a                   
+| 3*                 | 3                 | 2011                 |b                   
+| 3*                 | 3                 | 2011                 |b                   
+| 3*                 | 3                 | 2011                 |b                   
+
+
+#### *Example of occurence table*
+
+| eventID           | Species       |      |  Quantity           |
+| :-------------:   | :-------------:      |:-------------:      |
+| 1*                |Alchemilla alpina    | 12                  |
+| 1*                |Agrostis cappilaris  | 6                   |
+| 1*                |Andromeda polifolia  | 2                   |
+| 2*                |Alchemilla alpina    | 3                   |
+| 2*                |Agrostis cappilaris  | 17                  |
+| 2*                |Andromeda polifolia  | 4                   |
+| 3*                |Alchemilla alpina    | 15                  |
+| 3*                |Agrostis cappilaris  | 2                   |
+| 3*                |Andromeda polifolia  | 6                   |
 
 
