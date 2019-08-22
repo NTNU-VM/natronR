@@ -1,6 +1,6 @@
+## This is the code that generates the 'Setesdal' dataset
 
 
-# Transposing dummy flat data to become long format
 
 # This script takes a wide dataset as it typically looks originally
 # (after some standardisation of column names). The rows are event and species are
@@ -13,16 +13,13 @@
 library(readxl)
 library(dplyr)
 library(dplR)
+library(reshape2)
 
-
-
-getwd()
 
 wide_data <- read_excel("OldData/flat_data_dummy_std.xlsx",
-                                  sheet = "Sheet1")
-names(wide_data)
+                        sheet = "Sheet1")
 
-#
+
 # create EventIDs
 ug <- dplR::uuid.gen()
 myLength <- nrow(wide_data)
@@ -40,27 +37,28 @@ wide_data$eventID <- uuids
 # special for this dataset is that species absenses are recorded explicitly - so the zeros should be saved!
 # the resulting long format will become very long indeed.
 
-library(reshape2)
-long_data <- melt(wide_data,
-                      id.vars = c(1:5, 67:72),
-                      measure.vars = c(6:68),
-                      variable.name = "scientificName",
-                      value.name = "organismQuantity")
+
+long_data <- reshape2::melt(wide_data,
+                            id.vars = c(1:5, 67:72),
+                            measure.vars = c(6:68),
+                            variable.name = "scientificName",
+                            value.name = "organismQuantity")
 
 
 dim(long_data) # very long - 88.2k rows
 
-
 long_data$organismQuantity <- as.numeric(long_data$organismQuantity)
 long_data$organismQuantity[is.na(long_data$organismQuantity)] <- 0
-
+long_data$organismQuantityType <- "Percentage of sub-quadrats (16) where species was present"
 
 head(long_data)
 
 
-#save example dataset
+#save example dataset with 150 random rows
 setesdal <- long_data[sample(1:nrow(long_data), 150, replace = FALSE),]
-save(setesdal, file = "data/setesdal.RData")
+write_csv(setesdal, "data-raw/setesdal.csv")
 
 
-# write.csv(long_data, file = "flat_data_dummy_std_long.csv", row.names = FALSE)
+
+
+usethis::use_data(setesdal, overwrite = TRUE)

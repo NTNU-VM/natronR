@@ -1,5 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^OldData$
-^dummy_dwca$
 ^Documentation
+^data-raw$

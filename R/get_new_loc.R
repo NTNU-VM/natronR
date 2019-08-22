@@ -13,6 +13,8 @@
 #' @param new_localities output from location_check - List of new localities
 #' @param  matched_localities_toimport:        a vector of the localities which have a match in Natron but you still want to import as new (i.e. new localities, but there is an existing locality within the pre-specified radius)
 #' @return 3 data frames - 1 with localities that did not need changing, 1 with those that did, 1 with all combined
+#' @import dplR
+#' @import plyr
 #' @export
 
 
@@ -51,7 +53,7 @@ get_new_loc <- function(matched_localities = NA, new_localities = NA, matched_lo
 
   # create UUID as locationIDs for the new localities
                     # adding UUID to new locations:
-                    ug <- uuid.gen();
+                    ug <- dplR::uuid.gen();
                     myLength <- nrow(all_new_localities);
                     uuids <- character(myLength);
                     for(i in 1:myLength){
@@ -61,7 +63,7 @@ get_new_loc <- function(matched_localities = NA, new_localities = NA, matched_lo
 
 
           location_table <- rbind(
-              rename(preexisting_localities[,c("newLocality","locationID")],locality=newLocality),
+              plyr::rename(preexisting_localities[,c("newLocality","locationID")],locality=newLocality),
               all_new_localities[,c("locality","locationID")] )
 
                     cat(
