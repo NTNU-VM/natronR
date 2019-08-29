@@ -1,5 +1,22 @@
-# Function for creating database connection
-# creating db connection object
+#************************************#
+# natron_connect                  ####
+#************************************#
+
+
+
+#' @title Connect to NaTRON
+#' @description  \code{natron_connect} establishes a connection between R and NaTRON.
+#'
+#' @param username This is your NaTRON username
+#' @param database What database do you want to connect to? Options are "natron" and "natron_sandbox" (default). OBS: always test your upload to the sandbox before uploading to natron.
+#' @return Formal class PostgreSQLConnection
+#' @examples
+#' myUserName <- "JohnD"
+#' myConnection <- natron_connect(myUserName)
+#'
+#' @import getPass
+#' @import RPostgreSQL
+#' @export
 
 natron_connect <- function(username, database = "natron_sandbox") {
 
@@ -8,7 +25,7 @@ pg_db <- "natron_sandbox"
 pg_host <- "vm-srv-zootron.vm.ntnu.no"
 password=getPass::getPass("Please enter password")
 
-con<-dbConnect(pg_drv,
+con<-RPostgreSQL::dbConnect(pg_drv,
                host=pg_host,
                dbname=pg_db,
                user=username,

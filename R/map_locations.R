@@ -13,6 +13,8 @@
 #' @param zoom Determins how far in you want to zoom on the area. Runs from 1 to 15.
 #' @param  maptype Type of map you want to use. Options available are "terrain", "terrain-background", "satellite", "roadmap", "hybrid" (google maps), "terrain", "watercolor", and "toner" (stamen maps). Defaults to "hybrid".
 #' @return Map
+#' @import ggmap
+#' @import ggplot2
 #' @export
 
 #flat_data_dummy_std_long <- read_csv("flat_data_dummy_std_long.csv")
