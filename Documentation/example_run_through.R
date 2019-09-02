@@ -1,33 +1,29 @@
 # Run through example
 
-require(dplyr)
-require(dbplyr)
-require(dbConnect)
-require(stringr)
-require(tidyr)
-require(RPostgreSQL)
-library(lubridate)
-library(sp)
-library(mapview)
-library(readr)
-library(getPass)
-library( leaflet )
-library( magrittr )
+#require(dplyr)
+#require(dbplyr)
+#require(dbConnect)
+#require(stringr)
+#require(tidyr)
+#require(RPostgreSQL)
+#library(lubridate)
+#library(sp)
+#library(mapview)
+#library(readr)
+#library(getPass)
+#library( leaflet )
+#library( magrittr )
 
-setwd("M:\\Anders L Kolstad\\R\\R_projects\\natronbatchupload")
-source("R\\location_check.R")
-source("R\\natron_connect.R")
-source("R\\get_new_loc.R")
-source("R\\upsert_locations.R")
+#setwd("M:\\Anders L Kolstad\\R\\R_projects\\natronbatchupload")
 
-data <- read_csv("flat_data_dummy_std_long.csv")
+
+devtools::load_all(".")
+data("setesdal")
 conn <- natron_connect("AndersK")
-radius <- 8000
+radius <- 50000000000
 
 
-
-
-MyLocationCheck <- location_check(data, conn, radius)
+myLocationCheck <- location_check(setesdal, conn, radius)
 
 
 matched_localities            <- MyLocationCheck$possible_matches

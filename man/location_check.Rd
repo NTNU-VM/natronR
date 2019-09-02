@@ -7,11 +7,11 @@
 location_check(data, conn, radius)
 }
 \arguments{
-\item{conn}{A connection object with natron (can be easily generated with the natron_connect script)}
+\item{data}{A flattened, long and standardised dataset that you wish to import into NaTron}
+
+\item{conn}{A connection object with NaTRON (see \code{?natron_connect})}
 
 \item{radius}{The radius in meters in which to search for preexisting localitites in naTron}
-
-\item{flatt_data}{A flattened, long and standardised dataset that you wish to import into NaTron}
 }
 \value{
 A list with 2 data frames. possible_matches shows all those which have a match within the radius set by the function. no_matches holds those without a match.
