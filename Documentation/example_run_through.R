@@ -20,10 +20,12 @@
 devtools::load_all(".")
 data("setesdal")
 conn <- natron_connect("AndersK")
-radius <- 50000000000
 
 
-myLocationCheck <- location_check(setesdal, conn, radius)
+myLocTab <- location_table(data = setesdal, conn)
+
+scan <- radius_scan(locationTable = myLocTab, conn, radius = 8000)
+
 
 
 matched_localities            <- MyLocationCheck$possible_matches

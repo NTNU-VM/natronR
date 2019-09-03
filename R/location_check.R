@@ -116,7 +116,7 @@ temp_sql[HEY] <-  paste("SELECT",
 
 
 
-# Combining all positive macthes into one dataframe
+# Combining all positive matches into one dataframe
 locality_check <- dupl_locations3
 
 for(HEY in 1:nrow(local_data_temp_filled)){

@@ -16,7 +16,7 @@ library(dplR)
 library(reshape2)
 
 
-wide_data <- read_excel("OldData/flat_data_dummy_std.xlsx",
+wide_data <- read_excel("OldData/setesdal_flat.xlsx",
                         sheet = "Sheet1")
 
 
@@ -37,22 +37,23 @@ wide_data$eventID <- uuids
 # special for this dataset is that species absenses are recorded explicitly - so the zeros should be saved!
 # the resulting long format will become very long indeed.
 
-
+names(wide_data)
 long_data <- reshape2::melt(wide_data,
                             id.vars = c(1:5, 67:72),
-                            measure.vars = c(6:68),
+                            measure.vars = c(6:66),
                             variable.name = "scientificName",
                             value.name = "organismQuantity")
 
 
-dim(long_data) # very long - 88.2k rows
+dim(long_data) # very long - 85.4k rows
 
 long_data$organismQuantity <- as.numeric(long_data$organismQuantity)
 long_data$organismQuantity[is.na(long_data$organismQuantity)] <- 0
 long_data$organismQuantityType <- "Percentage of sub-quadrats (16) where species was present"
 
 head(long_data)
-
+hist(long_data$organismQuantity) # a lot of zeros
+hist(long_data$organismQuantity[long_data$organismQuantity>0]) # strange u-shape
 
 #save example dataset with 150 random rows
 setesdal <- long_data[sample(1:nrow(long_data), 150, replace = FALSE),]

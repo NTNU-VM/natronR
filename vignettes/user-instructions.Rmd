@@ -25,14 +25,16 @@ This package was built to import location-event data, and is in its current vers
 ## Workflow
 The process of uploading data to NaTRON using natronbatchupload consist of five steps:
 
-- **Step 1. Restructure dataset**
-- **Step 2. Connect** 
-- **Step 3. Check for pre-existing localities**: 
-- **Step 4. Upload new locations to NaTRON**: *Locations* are places and this datatable include information about physical places that do not change year to year (typically place names and coordinates). This step uploads new locations that are not pre-existing on NaTRON. All locations must be present on NaTRON before the 'real data' is uploaded and you will not be able to upload event-data that don't have a corresponding *locationID* in the database. The link between the 'real data' (ie event data or occurence data) and the location specific metadata is ensured by the relational nature of NaTRON. 
-- **Step 5. Structure event data**: This step organises your event data table to be compatible and ready to upload to NaTRON. The event data table needs to look just like the NaTRON format, eg the columns in the same order etc. This step include fetching and attaching the correct *locationID* from the locations datatable.
-- **Step 6. Upload event data to NaTRON**: This step uploads your structured event data table to NaTRON. For occurence datasets you may want to skipp this and the preceeding step.
-- **Step 7. Structure occurence data**: This step organises your occurrence data table to be compatible and ready to upload to NaTRON.
-- **Step 8. Upload occurrence data to NaTron**: This step uploads your structured event data table to NaTRON.
+* **Step 1. Restructure dataset**
+* **Step 2. Connect** 
+* **Step 3. Make location table** 
+  + **Step 3.1. View the locations on a map**
+  + **Step 3.2 (optional). Link to existing NaTRON locations** 
+* **Step 4. Upload new locations to NaTRON**: *Locations* are places and this datatable include information about physical places that do not change year to year (typically place names and coordinates). This step uploads new locations that are not pre-existing on NaTRON. All locations must be present on NaTRON before the 'real data' is uploaded and you will not be able to upload event-data that don't have a corresponding *locationID* in the database. The link between the 'real data' (ie event data or occurence data) and the location specific metadata is ensured by the relational nature of NaTRON. 
+* **Step 5. Structure event data**: This step organises your event data table to be compatible and ready to upload to NaTRON. The event data table needs to look just like the NaTRON format, eg the columns in the same order etc. This step include fetching and attaching the correct *locationID* from the locations datatable.
+* **Step 6. Upload event data to NaTRON**: This step uploads your structured event data table to NaTRON. For occurence datasets you may want to skipp this and the preceeding step.
+* **Step 7. Structure occurence data**: This step organises your occurrence data table to be compatible and ready to upload to NaTRON.
+* **Step 8. Upload occurrence data to NaTron**: This step uploads your structured event data table to NaTRON.
 
 
 ## Step 1. Restructure
@@ -58,7 +60,19 @@ myConnection <- natron_connect(username)
 ``` 
 Talk to Marc Daverdin about NaTRON access. 
 
-## Step 3. Check for pre-existing localities in Natron:
+## Step 3. Create location table
+Make a dataframe with your unique locations (ie unique coordinates) and additional location specific metedata such as elevation, varbatim coordinates and place names. The returned dataset is structure like the NaTRON table 'Locations' so that it can easily be uploaded later.
+```{r, eval=FALSE}
+myLocationTable <- location_check(data = setesdal, conn = MyConnection)
+
+```
+
+This step includes a manual check of correct mapping, ie that all the columns that you want to have in the location table is mapped/matched to the correct NaTRON (DwC) terms. 
+
+### Step 3.1 (optional)
+If you know or suspect that the locations in your data already exists in NaTRON then you probably want to reuse the locations and the unique locationIDs so that you don't break up time series data for example. 
+
+Check for pre-existing localities in Natron:
 To prevent unwanted duplicates in NaTRON, and to ensure your data is correctly linked to any existing data, you are asked to re-use locations already present in the database if possible.
 ```location_check()``` scans NaTRON for locations that are identical to, or within a given radius if, the locations in the dataset that is to be uploaded. Firsrt, set the radius in meters:
 
