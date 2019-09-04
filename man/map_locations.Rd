@@ -2,20 +2,43 @@
 % Please edit documentation in R/map_locations.R
 \name{map_locations}
 \alias{map_locations}
-\title{Map all locations}
+\title{View locations on a map}
 \usage{
-map_locations(data, zoom, maptype = "hybrid")
+map_locations(data, compare, zoom1 = 11, zoom2 = 8, vertical = FALSE)
 }
 \arguments{
-\item{data}{New data you wish to plot}
+\item{data}{Location table with decimal degree coordinates that you wish to plot.}
 
-\item{zoom}{Determins how far in you want to zoom on the area. Runs from 1 to 15.}
+\item{compare}{Location table with decimal degree coordinates that you wish to plot alongside the 'data'.}
 
-\item{maptype}{Type of map you want to use. Options available are "terrain", "terrain-background", "satellite", "roadmap", "hybrid" (google maps), "terrain", "watercolor", and "toner" (stamen maps). Defaults to "hybrid".}
+\item{zoom1}{Resolution of the smallest scale map. Defaults to 11. Increasing the resolutions also increases computation time.}
+
+\item{zoom2}{Resolution of the largest scale map. Defaults to 8. Increasing the resolutions also increases computation time.}
+
+\item{vertical}{Should the plots be arranged vertically (T/F)? Defults to FALSE.}
 }
 \value{
-Map
+A map (gtable)
 }
 \description{
-\code{map_locations} takes all locations from your data and plots them on a map type of your choice.
+\code{map_locations} takes the coordinates from up to two location tables and plots them on two map with different zoom.
+}
+\examples{
+# Plotting coordinates from one dataset:
+
+decimalLatitude <- c(59.02936, 59.03352, 59.04758) #note that the name must be DwC
+decimalLongitude <- c(7.278987, 7.267469, 7.184718)
+myData <- data.frame(decimalLatitude, decimalLongitude)
+map_locations(data = myData)
+map_locations(data = myData, vertical = T)
+
+
+# Add another location table to compare against:
+
+decimalLatitude2 <- c(59.03347)
+decimalLongitude2 <- c(7.268134)
+myData2 <- data.frame(decimalLatitude = decimalLatitude2,
+                      decimalLongitude = decimalLongitude2)
+
+map_locations(data = myData, compare = myData2)
 }

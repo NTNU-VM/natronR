@@ -26,6 +26,25 @@ myLocTab <- location_table(data = setesdal, conn)
 
 scan <- radius_scan(locationTable = myLocTab, conn, radius = 8000)
 
+map_locations(data = myLocTab)
+map_locations(data = myLocTab, compare = scan)
+map_locations(data = myLocTab, compare = scan, vertical = T)
+
+
+decimalLatitude <- c(59.02936, 59.03352, 59.04758)
+decimalLongitude <- c(7.278987, 7.267469, 7.184718)
+myData <- data.frame(decimalLatitude, decimalLongitude)
+map_locations(data = myData)
+map_locations(data = myData, vertical = T)
+
+
+decimalLatitude2 <- c(59.03347)
+decimalLongitude2 <- c(7.268134)
+myData2 <- data.frame(decimalLatitude = decimalLatitude2,decimalLongitude = decimalLongitude2)
+
+map_locations(data = myData)
+
+
 
 
 matched_localities            <- MyLocationCheck$possible_matches
