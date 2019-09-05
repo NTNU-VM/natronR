@@ -7,9 +7,9 @@
 
 
 #' @title View locations on a map
-#' @description  \code{map_locations} takes the coordinates from up to two location tables and plots them on two map with different zoom.
+#' @description  \code{map_locations} takes the coordinates from up to two location tables and plots them on two maps with different zoom.
 
-#' @param data Location table with decimal degree coordinates that you wish to plot.
+#' @param data Location table with decimal degree coordinates that you wish to plot. Only DwC terms are recogniced (decimalLatitude and decimalLongitude)
 #' @param compare Location table with decimal degree coordinates that you wish to plot alongside the 'data'.
 #' @param zoom1 Resolution of the smallest scale map. Defaults to 11. Increasing the resolutions also increases computation time.
 #' @param zoom2 Resolution of the largest scale map. Defaults to 8. Increasing the resolutions also increases computation time.

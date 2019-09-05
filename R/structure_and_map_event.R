@@ -33,7 +33,7 @@
 # location_table <- location_check_flatt_data$location_table
 
 
-f_structure_and_map_event <- function(flatt_data,conn, location_table) {
+f_structure_and_map_event <- function(flatt_data, conn, location_table) {
 
   # Get all terms in one table
   tableinfo <- dbGetQuery(conn,

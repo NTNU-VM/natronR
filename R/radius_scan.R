@@ -5,34 +5,34 @@
 # Find NaTRON locations           ####
 #************************************#
 
-#' @title Find NaTRON lcoations
+#' @title Find NaTRON locations
 #'
 #'
 #'
-#' @description This function
+#' @description This function uses the decimalLatitude and -Longitude columns from a location table to look for existing entries in the NaTRON locations datable within a given radius.
 #'
-#' @param locationTable This is loction table returned by \code{location_table()}
-#' @param conn  A connection object with NaTRON (see \code{?natron_connect})
-#' @param radius The radius in meters in which to search for preexisting localitites in NaTron
+#' @param locationTable A dataset containing at least two columns: decimalLongitude and decimalLatitude. Usually you want to put here the loction table returned by \code{location_table()}.
+#' @param conn  A connection object with NaTRON (see \code{?natron_connect}).
+#' @param radius The radius in meters in which to search for preexisting localitites in NaTron.
 #' @examples
+#' myScan <- radius_scan(myLocationTable, myConnection, 100)
 #'
-#'
-#' @return Returns ...
+#' @return If there are any positive matches the function returns these as a dataframe with 15 columns. The last three columns (starting with 'new') are from the dataset you entered and for which there was found a match in NaTRON. The distance from the entered coordinates and the NaTRON location it is compared to is given in 'distance_km'.
+
+
 #' @import RPostgreSQL
-#' @import dplyr
+#'
+#'
+#'
+
+
+
+
+
 #' @export
-#'
-#'
-#'
-
-
-
-
-temp_sql <- ""
-
 radius_scan <- function(locationTable, conn, radius){
 
-
+  temp_sql <- ""
   #************************************#
   # generate queries                ####
   #************************************#
@@ -67,7 +67,7 @@ emptyDF <- locationTable[-c(1:nrow(locationTable)),]
 
 for(HEY in 1:nrow(locationTable)){
   temp <- ""
-  temp <- dbGetQuery(conn, temp_sql[HEY])
+  temp <- RPostgreSQL::dbGetQuery(conn, temp_sql[HEY])
 
   if(dim(temp)[1] !=0) {
     temp2 <- temp;
@@ -79,10 +79,6 @@ for(HEY in 1:nrow(locationTable)){
 
 }
 
-#if(dim(emptyDF)[1] !=0) {emptyDF2 <- local_data_temp_filled[local_data_temp_filled$locality %in% locality_check$newLocality,]}
-# only return the data frame if it has rows
-
-#no_matches <- local_data_temp_filled[!local_data_temp_filled$locality %in% locality_check$newLocality,]
 
 
 possibleMatches <- emptyDF

@@ -4,5 +4,6 @@
 #'
 #' @details Please see the vigenette for more details.
 #' @docType package
+#'
 #' @name natronbatchupload
 NULL

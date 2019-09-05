@@ -19,6 +19,7 @@
 #' @return Returns the complete location table as a dataframe consistent with the NaTRON formatting.
 #' @import RPostgreSQL
 #' @import dplyr
+#' @import dplR
 #' @export
 
 
@@ -62,6 +63,19 @@ locationTable <- dplyr::bind_rows(
   local_data_temp_blank, local_data_temp_unique
   )
 
+  # create UUID as locationIDs
+
+  ug <- dplR::uuid.gen()
+  myLength <- nrow(locationTable)
+  uuids <- character(myLength)
+
+for(i in 1:myLength){
+  uuids[i] <- ug()
+}
+
+  locationTable$locationID <- as.numeric(locationTable$locationID)
+  locationTable$locationID <- uuids
+
 
 cat(
   "
@@ -81,6 +95,15 @@ location tables are:\n
   "
 )
 print(natron_tableinfo$column_name)
+
+if(anyNA(locationTable$decimalLongitude))       cat("\n*****\nWarning: decimalLongitude contains NAs\n*****")
+if(anyNA(locationTable$decimalLatitude))        cat("\n*****\nWarning: decimalLatitude contains NAs\n*****")
+if(!is.numeric(locationTable$decimalLongitude)) cat("\n*****\nWarning: decimalLongitude contains non-numeric value(s)\n*****")
+if(!is.numeric(locationTable$decimalLatitude))  cat("\n*****\nWarning: decimalLatitude contains non-numeric value(s)\n*****")
+if(any(duplicated(locationTable$locality)))     cat("\n*****\nWarning: there are duplicates in the 'locality' column. This NEEDS TO BE UNIQUE\n*****")
+
+
+
 return(locationTable)
 
 }

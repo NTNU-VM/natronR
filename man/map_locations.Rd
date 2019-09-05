@@ -7,7 +7,7 @@
 map_locations(data, compare, zoom1 = 11, zoom2 = 8, vertical = FALSE)
 }
 \arguments{
-\item{data}{Location table with decimal degree coordinates that you wish to plot.}
+\item{data}{Location table with decimal degree coordinates that you wish to plot. Only DwC terms are recogniced (decimalLatitude and decimalLongitude)}
 
 \item{compare}{Location table with decimal degree coordinates that you wish to plot alongside the 'data'.}
 
@@ -21,7 +21,7 @@ map_locations(data, compare, zoom1 = 11, zoom2 = 8, vertical = FALSE)
 A map (gtable)
 }
 \description{
-\code{map_locations} takes the coordinates from up to two location tables and plots them on two map with different zoom.
+\code{map_locations} takes the coordinates from up to two location tables and plots them on two maps with different zoom.
 }
 \examples{
 # Plotting coordinates from one dataset:

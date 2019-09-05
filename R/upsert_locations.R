@@ -7,8 +7,8 @@
 #' @title Location upsert
 #' @description Upserts location into Natron database
 #'
-#' @param con Database connection object with write permissions
-#' @param locations Location to be upserted.
+#' @param con Database connection object with write permissions (see \code{?natron_connect}). It's the connection object that determines if the data is upserted to the sandbox or not.
+#' @param locations Location table to be upserted/uploaded to NaTRON.
 #' @family upsert functions
 #' @return Pushes and upserts data to database
 #' @examples
