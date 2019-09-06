@@ -36,7 +36,7 @@
 # structure and map occurrence table ----------####
 #-------------------------------------------------#
 
-f_structure_and_map_occurrence <- function(flatt_data,conn, location_table) {
+str_map_occ <- function(flatt_data,conn, location_table) {
 
   tableinfo <- dbGetQuery(con,
                           "select table_name,column_name,data_type

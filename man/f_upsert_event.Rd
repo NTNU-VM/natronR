@@ -24,7 +24,7 @@ To follow.
 
 }
 \seealso{
-Other upsert functions: \code{\link{f_upsert_location}},
-  \code{\link{f_upsert_occurrence}}
+Other upsert functions: \code{\link{f_upsert_occurrence}},
+  \code{\link{upsert_locations}}
 }
 \concept{upsert functions}

@@ -1,40 +1,33 @@
-# UPSERT functions
 
-# takes as input an R object exactly formated to the database table
-# ([tablename]_data, and an RPostgreSQL connetion object with write
-# permissions (conn).
 
 #' @title Location upsert
-#' @description Upserts location into Natron database
+#' @description Upserts location tables to the Natron database.
 #'
 #' @param con Database connection object with write permissions (see \code{?natron_connect}). It's the connection object that determines if the data is upserted to the sandbox or not.
-#' @param locations Location table to be upserted/uploaded to NaTRON.
+#' @param location_data Location table to be upserted/uploaded to NaTRON.
 #' @family upsert functions
-#' @return Pushes and upserts data to database
+#' @return Pushes and upserts data to database. Returns nothing.
 #' @examples
 #'
-#' Still to come
+#' upsert_location(location_data = myLocationTable, conn = myConnection)
 #'
 #'
-#' @import dplyr
-#' @import dbplyr
 #' @import RPostgreSQL
 #'
 #' @export
 #'
 
-# Test data:
-# location_data <- MyLocationData$new_localities
+
 
 # function UPSERT m_dataset----
-f_upsert_location <- function(conn,location_data){
+upsert_locations <- function(location_data, conn){
 
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_location_import;")
-  dbWriteTable(conn, "temp_location_import", append = TRUE,
+  RPostgreSQL::dbSendQuery(conn,"DROP TABLE IF EXISTS temp.temp_location_import;")
+  RPostgreSQL::dbWriteTable(conn, "temp.temp_location_import", append = TRUE,
                value = location_data, row.names = FALSE)
 
   # update or insert m_dataset_data table
-  dbSendQuery(conn,"INSERT INTO data.\"Locations\"(
+  RPostgreSQL::dbSendQuery(conn,"INSERT INTO data.\"Locations\"(
               \"locationID\", locality,
               \"verbatimLocality\", \"stationNumber\", \"verbatimCoordinates\",
               \"coordinateUncertaintyInMeters\", \"geodeticDatum\", \"decimalLatitude\",
@@ -49,7 +42,7 @@ f_upsert_location <- function(conn,location_data){
               CAST(\"locationRemarks\" AS text),
               \"siteNumber\"
 
-        FROM data.temp_location_import
+        FROM temp.temp_location_import
 
         ON CONFLICT (\"locationID\") DO UPDATE SET
               \"locality\"            = EXCLUDED.\"locality\",
@@ -60,10 +53,12 @@ f_upsert_location <- function(conn,location_data){
               \"decimalLatitude\"     = EXCLUDED.\"decimalLatitude\",
               \"decimalLongitude\"    = EXCLUDED.\"decimalLongitude\",
               \"locationRemarks\"     = EXCLUDED.\"locationRemarks\",
-              \"siteNumber\"          = EXCLUDED.\"siteNumber\",
+              \"siteNumber\"          = EXCLUDED.\"siteNumber\"
               ;")
 
 
   # Drop temporary tables
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_location_import;")
+  RPostgreSQL::dbSendQuery(conn,"DROP TABLE IF EXISTS temp_location_import;")
 }
+
+

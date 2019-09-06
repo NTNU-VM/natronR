@@ -1,17 +1,27 @@
 # Run through example
 
-
+#*************************
 devtools::load_all(".")
+#*************************
 ?natronbatchupload
 
+
 ?setesdal
+#*************************
 data("setesdal")
+#*************************
+
 
 ?natron_connect
+#*************************
 conn <- natron_connect("AndersK")
+#*************************
+
 
 ?location_table
+#*************************
 myLocTab <- location_table(data = setesdal, conn)
+#*************************
 
 
 
@@ -50,12 +60,18 @@ rm(myLocTab2, myLocTab3, myLocTab4, myLocTab5, myLocTab6, test)
 
 
 ?radius_scan
+#*************************
 scan <- radius_scan(locationTable = myLocTab, conn, radius = 8000)
+#*************************
+
 
 ?map_locations
+#*************************
 map_locations(data = myLocTab)
 map_locations(data = myLocTab, compare = scan)
 map_locations(data = myLocTab, compare = scan, vertical = T)
+#*************************
+
 
 
 decimalLatitude <- c(59.02936, 59.03352, 59.04758)
@@ -71,6 +87,26 @@ myData2 <- data.frame(decimalLatitude = decimalLatitude2,decimalLongitude = deci
 
 map_locations(data = myData, compare = myData2)
 
+
+
+?upsert_locations
+#*************************
+upsert_locations(location_data = myLocTab, conn = conn)
+#*************************
+# NOT WORKING
+
+
+
+?str_map_events
+#*************************
+myEvents <- str_map_events(data = setesdal, conn = conn, location_table = myLocTab)
+#*************************
+
+myLocTab2 <- myLocTab
+myLocTab2$locality[1] <- myLocTab2$locality[2]
+any(duplicated(myLocTab2$locality))
+# this should give a warning:
+myEvents <- str_map_events(data = setesdal, conn = conn, location_table = myLocTab2)
 
 
 

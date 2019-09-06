@@ -22,7 +22,7 @@ The ```natronbatchupload``` R-package has been developed for employees at the Un
 
 This package was built to import location-event data, and is in its current version not designed for large datasets containing repeated measurements (e.g data from dataloggers, biotelemetric studies etc.).
 
-## Workflow
+## Content
 The process of uploading data to NaTRON using natronbatchupload consist of five steps:
 
 * **Step 1. Restructure dataset**
@@ -32,13 +32,12 @@ The process of uploading data to NaTRON using natronbatchupload consist of five 
   * *Step 3.2 (optional pathway). Find existing NaTRON locations*
     * *Step 3.2.2. Plot NaTRON locations agains original locations*
     * *Step 3.2.3. Modify location table*
-  
 * **Step 4. Upload locations**
-* **Step 5. Structure event data**: This step organises your event data table to be compatible and ready to upload to NaTRON. The event data table needs to look just like the NaTRON format, eg the columns in the same order etc. This step include fetching and attaching the correct *locationID* from the locations datatable.
-* **Step 6. Upload event data to NaTRON**: This step uploads your structured event data table to NaTRON. For occurence datasets you may want to skipp this and the preceeding step.
-* **Step 7. Structure occurence data**: This step organises your occurrence data table to be compatible and ready to upload to NaTRON.
-* **Step 8. Upload occurrence data to NaTron**: This step uploads your structured event data table to NaTRON.
-
+* **Step 5. Structure event data** 
+* **Step 6. Upload event data**
+* **Step 7. Structure occurence data** 
+* **Step 8. Upload occurrence data to NaTron**
+* **Examples of correct data structure**
 
 ## Step 1. Restructure
 The first step to getting your data on to NaTRON is to restructure the dataset from wide to long format to be compatible with the functions in the ```natronbatchupload``` R-package. Most datasets are punched in Excel in a wide format (ie lots of columns and few rows; see examples at the bottom of this vignette), but NaTRON and most other databases prefer the long format. This step is not covered by this package and must be done manually. We recoment looking into ```reshape2``` and ```dplyr``` for this type of data wrangling. Your dataset should look like our example dataset:
@@ -72,7 +71,7 @@ Talk to Marc Daverdin about NaTRON access.
 ## Step 3. Make location table
 Make a dataframe with your unique locations (ie unique coordinates) and additional location specific metedata such as elevation, varbatim coordinates and place names. The returned dataset is structure like the NaTRON table 'Locations' so that it can easily be uploaded later.
 ```{r, eval=FALSE}
-myLocationTable <- location_check(data = setesdal, conn = MyConnection)
+myLocationTable <- location_table(data = setesdal, conn = MyConnection)
 
 ```
 
@@ -128,106 +127,60 @@ If some or all of your locations already exist in NaTRON (typicall for time seri
 All locations must be present on NaTRON before the 'real data' is uploaded and you will not be able to upload event-data that don't have a corresponding *locationID* in the database. The link between the 'real data' (ie event data or occurence data) and the location specific metadata is ensured by the relational nature of NaTRON. 
 
 
-The `f_upsert_location` function will let you upload new locations to the NaTRON database. The format of the data to be uploaded must exactly the same as the NaTRON database table.
+The `upsert_location` function will let you upload new locations to the NaTRON database. The format of the data to be uploaded must exactly the same as the NaTRON database table. Example of use:
 
-
-###The `f_upsert_location` function have two parameters:
-
-- The `locations` specify the data table containing locations to be uploaded to NaTRON.
-- The `con` parameter specify connection object with write permissions.
-
-
+```{r, eval = F}
+upsert_locations(myLocationTable, conn = myConnection)
 
 ```
-#Load dataframe with localities to be uploaded to NaTRON
-library(readr)
-My_updated_location_table <- read_csv("dummy_locationTable.csv")
-View(My_updated_location_table)
-
-#Run the f_upsert_location function
-f_upsert_location(locations=My_updated_location_table, con=Myconnection)
-```
-
-##4. Structure event-data
 
 
-The `f_structure_and_map_event` function takes inn a flattended datatable with both terms/colums and data types corresponding exactly to the database and returns an event dataframe ready to be upserted.
 
-###The `f_structure_and_map_event` function have three parameters:
+## 5. Structure event-data
 
-- The `flatt_data` specify the data table to be structured and prepared for upload to NaTRON.
-- The `conn` parameter specify connection object with write permissions.
-- The `location_table` parameter specify the location table for the flattened data.
+This step organises your event data table to be compatible and ready to upload to NaTRON. The event data table needs to look just like the NaTRON format, eg the columns in the same order etc. 
+This step includes fetching and attaching the correct *locationID* from the locations datatable.
 
+```{r, eval = F}
+myEvents <- str_map_events(data = setesdal, 
+                conn = myConnection, 
+                location_table = myLocationTable)
 
-```
-#Load flattened dataset into R.
-library(readr)
-flat_data_dummy_std_long <- read_csv("flat_data_dummy_std_long.csv")
-View(flat_data_dummy_std_long)
-
-#Load the location table (that have been made and uploadet to NaTron in step 3)
-My_updated_location_table <- read_csv("dummy_locationTable.csv")
-View(My_updated_location_table)
-
-#Run the f_structure_and_map_event function
-My_event_data <- f_structure_and_map_event(flatt_data=flat_data_dummy_std_long, conn=Myconnection, location_table=My_uptdated_location_table)
-View(My_event_data)
-```
-
-##6. Upload structured event data to NaTron:
-
-The `f_upsert_event` function uploads your structured event data-frame from step 5.
-
-###The `f_upsert_event` function have two parameters:
-
-- The `event_data` specify the event data frame to be uploaded to NaTRON.
-- The `con` parameter specify connection object with write permissions.
-
-```
-f_upsert_event(event_data=My_event_data, con=Myconnection)
 ```
 
 
-##7. Structure occurrence-data
 
 
-The `f_structure_and_map_occurence` function takes inn a flattended datatable with both terms/colums and data types corresponding exactly to the database and returns an occyrence dataframe ready to be upserted.
+## 6. Upload structured event data to NaTron
+This step uploads your structured event data table to NaTRON. For occurence datasets you may want to skipp this and the preceeding step.
 
-###The `f_structure_and_map_occurence` function have three parameters:
-
-- The `flatt_data` specify the flattened data table to be structured and prepared for upload to NaTRON.
-- The `conn` parameter specify connection object with write permissions.
-- The `location_table` parameter specify the location table for the flattened data.
-
+```{r, eval = F}
+upsert_events(myEvents, myConnection)
 
 ```
-#Load flattened dataset into R.
-library(readr)
-flat_data_dummy_std_long <- read_csv("flat_data_dummy_std_long.csv")
-View(flat_data_dummy_std_long)
 
-#Load the location table (that have been made and uploadet to NaTRON in step 3)
-My_updated_location_table <- read_csv("dummy_locationTable.csv")
-View(My_updated_location_table)
 
-#Run the f_structure_and_map_event function
-My_occurrence_data <- f_structure_and_map_occurrence(flatt_data=flat_data_dummy_std_long, conn=Myconnection, location_table=My_uptdated_location_table)
-View(My_occurence_data)
-```
 
-##8. Upload structured event data to NaTRON:
+## 7. Structure occurrence-data
+This step organises your occurrence data table to be compatible and ready to upload to NaTRON.
 
-The `f_upsert_occurrence` function uploads your structured occurence data-frame from step 7.
-
-###The `f_upsert_occurrence` function have two parameters:
-
-- The `occurrence_data` specify the event data frame to be uploaded to NaTRON.
-- The `con` parameter specify connection object with write permissions.
+```{r, eval = FALSE}
+myOccurences <- str_map_occ(setesdal, myConnection)
 
 ```
-f_upsert_occurrence(event_data=My_occurrence_data, con=Myconnection)
+
+
+## 8. Upload structured occurence table to NaTRON
+This step uploads your structured occurence table (step 7) to NaTRON.
+
+```{r, eval=FALSE}
+upsert_occ(myOccurences, myConnection)
+
 ```
+
+
+
+
 
 ## Examples of stylized data tables
 
