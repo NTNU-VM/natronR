@@ -1,36 +1,32 @@
-# UPSERT event
-
-# takes as input an R object exactly formated to the database table
-# ([tablename]_data, and an RPostgreSQL connetion object with write
-# permissions (conn).
+# ----------------------------------------------#
+# Upsert event table                         ####
+# ----------------------------------------------#
 
 #' @title Event data upsert
-#' @description Upserts event data into natron database.
+#' @description Upserts event data into Natron database.
 #' @param con Database connection object with write permissions.
-#' @param event_data Event data to be upserted.
+#' @param data Structured and mapped event table to be upserted.
 #' @family upsert functions
-#' @return Pushes and upserts data to database.
+#' @return Pushes and upserts data to database. Returns nothings
 #' @examples
 #'
-#' To follow.
+#' upsert_events(data = myEvents, conn = conn)
 #'
 #'
-#' @import dplyr
-#' @import dbplyr
 #' @import RPostgreSQL
 #'
 #' @export
 #'
 
-f_upsert_event <- function(conn,event_data){
+upsert_event <- function(data, conn){
   # write to tables to 'temporary' schema
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_event_import;")
-  dbWriteTable(conn, "temp_event_import",
+  RPostgreSQL::dbSendQuery(conn,"DROP TABLE IF EXISTS temp_event_import;")
+  RPostgreSQL::dbWriteTable(conn, "temp_event_import",
                value = event_data, row.names = FALSE)
 
   # UPSERT event table
   # some extra comments.....
-  dbSendQuery(conn,"INSERT INTO data.\"Events\"(
+  RPostgreSQL::dbSendQuery(conn,"INSERT INTO data.\"Events\"(
               \"eventID\", \"dataSchemaID\", \"collectionID\", \"NaTron_datasetID\", \"locationID\",
               \"samplingProtocolID\", \"samplingEffort\", \"eventDate\", \"dateQualifier\",
               \"samplingDuration\", \"sampleNumber\", \"recordedBy\", \"sampleSizeUnit\",
@@ -80,6 +76,6 @@ f_upsert_event <- function(conn,event_data){
               experiment= EXCLUDED.experiment
               ;")
   # Drop temporary tables
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_event_import;")
+  RPostgreSQL::dbSendQuery(conn,"DROP TABLE IF EXISTS temp_event_import;")
 }# UPSERT functions
 

@@ -7,7 +7,7 @@
 str_map_events(data, conn, location_table)
 }
 \arguments{
-\item{data}{Flat data to be structured.}
+\item{data}{Flat data to be structured. The column names need to match the NaTRON terms (DwC).}
 
 \item{conn}{NaTRON connection object with access permission (see \code{?natron_connect}).}
 
@@ -17,7 +17,7 @@ str_map_events(data, conn, location_table)
 Dataframe: event table, mapped to the location table and ready to be upserted to Natron.
 }
 \description{
-Function takes inn a flattended datatable with both terms/colums corresponding exactly to the database columns and datatypes and returns an event dataframe ready to be upserted.
+This function takes a flattended datatable and returns an event dataframe ready to be upserted.
 }
 \examples{
 data("setesdal")

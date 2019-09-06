@@ -1,4 +1,6 @@
-
+# ----------------------------------------------#
+# Upsert location table                      ####
+# ----------------------------------------------#
 
 #' @title Location upsert
 #' @description Upserts location tables to the Natron database.

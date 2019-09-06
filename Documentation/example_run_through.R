@@ -110,6 +110,14 @@ myEvents <- str_map_events(data = setesdal, conn = conn, location_table = myLocT
 
 
 
+?str_map_events
+#*************************
+myEvents <- str_map_events(data = setesdal,
+                    conn = conn,
+                    location_table = myLocTab)
+#*************************
+
+
 matched_localities            <- MyLocationCheck$possible_matches
 matched_localities_technical  <- MyLocationCheck$possible_matches_technical   # added this as output from location_check. It contains all info for matched cases (Natron formatted)
 definately_brand_new_localities                <- MyLocationCheck$no_matches

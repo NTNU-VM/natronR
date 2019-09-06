@@ -1,12 +1,12 @@
 
 # ----------------------------------------------#
-# Structure and map                          ####
+# Structure and map event table              ####
 # ----------------------------------------------#
 
 
 #' @title Structure and map event table
-#' @description Function takes inn a flattended datatable with both terms/colums corresponding exactly to the database columns and datatypes and returns an event dataframe ready to be upserted.
-#' @param data Flat data to be structured.
+#' @description This function takes a flattended datatable and returns an event dataframe ready to be upserted.
+#' @param data Flat data to be structured. The column names need to match the NaTRON terms (DwC).
 #' @param conn NaTRON connection object with access permission (see \code{?natron_connect}).
 #' @param location_table location table for flattened data (needs to contain UUIDs as locationIDs).
 #' @return Dataframe: event table, mapped to the location table and ready to be upserted to Natron.

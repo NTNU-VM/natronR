@@ -24,7 +24,7 @@ To come.
 
 }
 \seealso{
-Other upsert functions: \code{\link{f_upsert_event}},
+Other upsert functions: \code{\link{upsert_event}},
   \code{\link{upsert_locations}}
 }
 \concept{upsert functions}
