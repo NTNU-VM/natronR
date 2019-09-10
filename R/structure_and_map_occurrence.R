@@ -3,12 +3,16 @@
 # Structure and map                          ####
 # ----------------------------------------------#
 
-#' Function takes inn a flattended datatable with both terms/colums corresponding exactly to the database columns and datatypes and returns an occurrence dataframe ready to be upserted.
-#' @param flatt_data Flatenned data to be structured
-#' @param conn DB connection with access permission, can easily be produced using natron_connect script
-#' @param location_table location table for flattened data (needs to be run through location_check and get_new_loc).
-#' @return Occurrence data that is ready to be upserted to Natron.
+#' @title Structure and map occurence table
+#' @description Function takes inn a flattended datatable with both terms/colums corresponding exactly to the database columns and datatypes and returns an occurrence dataframe ready to be upserted.
+#' @param data Data (flat structure) to be structured.
+#' @param conn DB connection with access permission (see \code{natron_connect()}).
+#' @param location_table location table for the flattened data (see \code{location_table()}).
+
+#' @return Occurrence data (dataframe) that is ready to be upserted to Natron.
+
 #' @import RPostgreSQL
+#' @import dplyr
 
 #' @export
 
@@ -19,9 +23,9 @@
 # structure and map occurrence table ----------####
 #-------------------------------------------------#
 
-str_map_occ <- function(flatt_data,conn, location_table) {
+str_map_occ <- function(data, conn, location_table) {
 
-  tableinfo <- RPostgreSQL::dbGetQuery(con,
+  tableinfo <- RPostgreSQL::dbGetQuery(conn,
                           "select table_name,column_name,data_type
                         from information_schema.columns
                         where table_name = 'Events' OR
@@ -32,9 +36,9 @@ str_map_occ <- function(flatt_data,conn, location_table) {
 
    # select terms for occurrence table
   occurrence_db_terms <- tableinfo$column_name[tableinfo$table_name=="Occurrences"]
-  occurrence_terms <- names(flatt_data)[names(flatt_data) %in% occurrence_db_terms]
+  occurrence_terms <- names(data)[names(data) %in% occurrence_db_terms]
   occurrence_terms[length(occurrence_terms)+1] <- "locality"
-  occurrence_data_temp <- flatt_data[occurrence_terms]
+  occurrence_data_temp <- data[occurrence_terms]
 
 
   # create empty dataframe with all event table terms
@@ -56,8 +60,47 @@ str_map_occ <- function(flatt_data,conn, location_table) {
                                      as.character(Sys.Date()),
                                      occurrence_data$modified)
   # remove locality column
-  occurrence_data <- occurrence_data[,-36]
+  dplyr::select(occurrence_data,-locality)
 
+
+
+
+  #******************************************************************************
+  # Warnings ect:
+  cat(
+    "
+  ************************************************************\n
+  The following columns have been transferred to the occurence table\n
+
+    ")
+
+  print(occurrence_terms)
+
+
+  cat(
+    "
+  ************************************************************\n
+  The following columns have been cut away\nfrom the original dataset to whan making the occurence table.\n")
+
+  print(names(data)[!names(data) %in% occurrence_terms])
+
+  cat(
+    "\n
+  ***Please check that this is correct.***\n \n
+  If you think one of these should be in the occurence table,\n
+  then edit that column name in 'data' to match the corresponding \n
+  NaTRON column name. The available NaTRON columns for\n
+  occurence tables are:\n" )
+
+  print(occurrence_db_terms)
+
+
+
+  if(any(duplicated(location_table$locality)))     cat("\n*****\nWarning: the location table has duplicates in the 'locality' column. This NEEDS TO BE UNIQUE. Don't upsert this occurence table as it is now!\n*****")
+
+  if(anyNA(occurrence_data$locationID))    cat("\n*****\nWarning: Not all rows have assigned locationIDs\n*****")
+
+  if(anyNA(occurrence_data$occurenceID))    cat("\n*****\nWarning: Not all rows have assigned occurenceIDs\n*****")
 
   return(occurrence_data)
 

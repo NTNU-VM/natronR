@@ -12,7 +12,6 @@ Description: a package to facilitate the uploading of datasets to NaTRON.
 Depends: R (>= 3.4.2)
 Imports: 
     dbplyr,
-    dplyr,
     dplR,
     postGIStools,
     RPostgreSQL (>= 0.6.2),
@@ -20,7 +19,8 @@ Imports:
     ggplot2,
     plyr,
     getPass (>= 0.2.2),
-    gridExtra
+    gridExtra,
+    dplyr
 License: CC0
 Date: 2019-08-23
 Encoding: UTF-8

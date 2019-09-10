@@ -168,6 +168,13 @@ This step organises your occurrence data table to be compatible and ready to upl
 myOccurences <- str_map_occ(setesdal, myConnection)
 
 ```
+As of 10.09.2019 this produces a silent warning that *scientificName* has not been copied to the occurence table. Thta because it is not a column name in NaTRON. To fix this, or similar problems, modify the column name in the original data:
+```{r, eval=FALSE}
+colnames(setesdal)[colnames(setesdal) == "scientificName"] <- "organimsName"
+myOccurences <- str_map_occ(setesdal, myConnection)
+
+
+```
 
 
 ## 8. Upload structured occurence table to NaTRON

@@ -3,14 +3,19 @@
 # ----------------------------------------------#
 
 #' @title Event data upsert
-#' @description Upserts event data into Natron database.
-#' @param con Database connection object with write permissions.
-#' @param data Structured and mapped event table to be upserted.
+
+#' @description Upserts event data to Natron.
+
+#' @param data Structured and mapped event table to be upserted (see \code{?str_map_events()}).
+#' @param con Database connection object with write permissions (see \code{?natron_connect}).
+
 #' @family upsert functions
-#' @return Pushes and upserts data to database. Returns nothings
+
+#' @return Pushes and upserts data to database. Returns nothing.
+
 #' @examples
 #'
-#' upsert_events(data = myEvents, conn = conn)
+#' upsert_events(data = myEvents, conn = myConnection)
 #'
 #'
 #' @import RPostgreSQL
@@ -18,11 +23,11 @@
 #' @export
 #'
 
-upsert_event <- function(data, conn){
+upsert_events <- function(data, conn){
   # write to tables to 'temporary' schema
   RPostgreSQL::dbSendQuery(conn,"DROP TABLE IF EXISTS temp_event_import;")
   RPostgreSQL::dbWriteTable(conn, "temp_event_import",
-               value = event_data, row.names = FALSE)
+               value = data, row.names = FALSE)
 
   # UPSERT event table
   # some extra comments.....
@@ -72,10 +77,10 @@ upsert_event <- function(data, conn){
               \"maximumDistanceAboveSurfaceInMeters\" = EXCLUDED.\"maximumDistanceAboveSurfaceInMeters\",
               \"roundNumber\" = EXCLUDED.\"roundNumber\",
               \"seasonNumber\" = EXCLUDED.\"seasonNumber\",
-              \"periodNumber\" = EXCLUDED.\"periodNumber\",,
+              \"periodNumber\" = EXCLUDED.\"periodNumber\",
               experiment= EXCLUDED.experiment
               ;")
   # Drop temporary tables
   RPostgreSQL::dbSendQuery(conn,"DROP TABLE IF EXISTS temp_event_import;")
-}# UPSERT functions
+}
 

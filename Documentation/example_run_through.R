@@ -106,36 +106,27 @@ myLocTab2 <- myLocTab
 myLocTab2$locality[1] <- myLocTab2$locality[2]
 any(duplicated(myLocTab2$locality))
 # this should give a warning:
-myEvents <- str_map_events(data = setesdal, conn = conn, location_table = myLocTab2)
+myEvents2 <- str_map_events(data = setesdal, conn = conn, location_table = myLocTab2)
 
 
 
-?str_map_events
+?upsert_event
 #*************************
-myEvents <- str_map_events(data = setesdal,
-                    conn = conn,
-                    location_table = myLocTab)
+upsert_events(data = myEvents, conn = conn)
 #*************************
 
-
-matched_localities            <- MyLocationCheck$possible_matches
-matched_localities_technical  <- MyLocationCheck$possible_matches_technical   # added this as output from location_check. It contains all info for matched cases (Natron formatted)
-definately_brand_new_localities                <- MyLocationCheck$no_matches
-matched_localities_toimport   <- MyLocationCheck$possible_matches[1:10,1]
- # Comment: with this many dataframes, it could be an idea to have them assigned to the environment automatically in the location_check-function
-
-
-
+?str_map_occ
+#*************************
+myOccurence <- str_map_occ(data = setesdal, conn = conn, location_table = myLocTab)
+#*************************
+setesdal2 <- setesdal
+colnames(setesdal2)[colnames(setesdal2) == "scientificName"] <- "organimsName"
+myOccurence <- str_map_occ(data = setesdal, conn = conn, location_table = myLocTab)
 
 
 
-MyLocationData <- get_new_loc(matched_localities,
-                              definately_brand_new_localities,
-                              matched_localities_toimport,
-                              matched_localities_technical)
+#*************************
+?upsert_occ
+upsert_occ(myOccurence, conn)
 
 
-location_data <- MyLocationData$new_localities
-
-f_upsert_location(conn,location_data)
-# I get stuck here...

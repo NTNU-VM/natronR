@@ -1,38 +1,36 @@
-# UPSERT functions
+# ----------------------------------------------#
+# Upsert occurence table                         ####
+# ----------------------------------------------#
 
-# takes as input an R object exactly formated to the database table
-# ([tablename]_data, and an RPostgreSQL connetion object with write
-# permissions (conn).
+#' @title Occurence data upsert
 
-#' @title Occurrence upsert
-#' @description Upsert occurrence into Natron database.
+#' @description Upserts occurence data to Natron.
+
+#' @param data Structured and mapped occurence table to be upserted (see \code{?str_map_occ()}).
+#' @param con Database connection object with write permissions (see \code{?natron_connect}).
+
 #' @family upsert functions
-#' @param con Database connection object with write permissions.
-#' @param occurrence_data Occurrence data to be upserted.
-#' @return Pushes and upserts data to database.
+
+#' @return Pushes and upserts data to database. Returns nothing.
+
 #' @examples
+#' upsert_occ(data = myOccurences, conn = myConnection)
 #'
-#' To come.
-#'
-#'
-#' @import dplyr
-#' @import dbplyr
 #' @import RPostgreSQL
 #'
 #' @export
-#'
-# takes as input an R object exactly formated to the database table
-# ([tablename]_data, and an RPostgreSQL connetion object with write
-# permissions (conn).
 
 
-# function UPSERT occurrences----
-f_upsert_occurrence <- function(conn,occurrence_data){
-  dbSendQuery(conn,"DROP TABLE IF EXISTS temp_occurrence_import;")
-  dbWriteTable(conn, "temp_occurrence_import", append = TRUE,
-               value = occurrence_data, row.names = FALSE)
+
+
+upsert_occ <- function(data, conn){
+  RPostgreSQL::dbSendQuery(conn,"DROP TABLE IF EXISTS temp_occurrence_import;")
+
+  RPostgreSQL::dbWriteTable(conn, "temp_occurrence_import", append = TRUE,
+               value = data, row.names = FALSE)
+
   # update or insert occurrence table
-  dbSendQuery(conn,"INSERT INTO data.\"Occurrences\"(
+  RPostgreSQL::dbSendQuery(conn,"INSERT INTO data.\"Occurrences\"(
               \"occurrenceID\", \"occurrenceStatus\",
               \"eventID\", \"catalogNumber\", \"recordNumber\", \"taxonID\",
               \"typeStatus\", \"identificationQualifier\", preparations,

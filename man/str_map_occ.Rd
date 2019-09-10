@@ -2,19 +2,19 @@
 % Please edit documentation in R/structure_and_map_occurrence.R
 \name{str_map_occ}
 \alias{str_map_occ}
-\title{Function takes inn a flattended datatable with both terms/colums corresponding exactly to the database columns and datatypes and returns an occurrence dataframe ready to be upserted.}
+\title{Structure and map occurence table}
 \usage{
-str_map_occ(flatt_data, conn, location_table)
+str_map_occ(data, conn, location_table)
 }
 \arguments{
-\item{flatt_data}{Flatenned data to be structured}
+\item{data}{Data (flat structure) to be structured.}
 
-\item{conn}{DB connection with access permission, can easily be produced using natron_connect script}
+\item{conn}{DB connection with access permission (see \code{natron_connect()}).}
 
-\item{location_table}{location table for flattened data (needs to be run through location_check and get_new_loc).}
+\item{location_table}{location table for the flattened data (see \code{location_table()}).}
 }
 \value{
-Occurrence data that is ready to be upserted to Natron.
+Occurrence data (dataframe) that is ready to be upserted to Natron.
 }
 \description{
 Function takes inn a flattended datatable with both terms/colums corresponding exactly to the database columns and datatypes and returns an occurrence dataframe ready to be upserted.

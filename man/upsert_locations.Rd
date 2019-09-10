@@ -24,7 +24,7 @@ upsert_location(location_data = myLocationTable, conn = myConnection)
 
 }
 \seealso{
-Other upsert functions: \code{\link{f_upsert_occurrence}},
-  \code{\link{upsert_event}}
+Other upsert functions: \code{\link{upsert_events}},
+  \code{\link{upsert_occ}}
 }
 \concept{upsert functions}

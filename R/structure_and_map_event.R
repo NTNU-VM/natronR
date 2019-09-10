@@ -106,9 +106,11 @@ str_map_events <- function(data, conn, location_table) {
 
 
 
-  if(any(duplicated(location_table$locality)))     cat("\n*****\nWarning: there are duplicates in the 'locality' column. This NEEDS TO BE UNIQUE. Don't upsert this event table as it is now!\n*****")
+  if(any(duplicated(location_table$locality)))     cat("\n*****\nWarning: the location table has duplicates in the 'locality' column . This NEEDS TO BE UNIQUE. Don't upsert this event table as it is now!\n*****")
 
   if(anyNA(event_data$locationID))    cat("\n*****\nWarning: Not all rows have assigned locationIDs\n*****")
+
+  if(anyNA(event_data$eventID))    cat("\n*****\nWarning: Not all rows have assigned eventIDs\n*****")
 
 
   return(event_data)
