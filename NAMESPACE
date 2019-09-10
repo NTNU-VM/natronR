@@ -2,7 +2,6 @@
 
 export(f_upsert_occurrence)
 export(get_new_loc)
-export(location_check)
 export(location_table)
 export(map_locations)
 export(natron_connect)

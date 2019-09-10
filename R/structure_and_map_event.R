@@ -77,6 +77,15 @@ str_map_events <- function(data, conn, location_table) {
   event_data <- dplyr::select(event_data,-locality)
 
 
+  cat(
+    "
+  ************************************************************\n
+  The following columns have been transferred to the events table\n
+
+    ")
+
+  print(event_terms)
+
 
   cat(
     "

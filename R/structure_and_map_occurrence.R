@@ -8,29 +8,12 @@
 #' @param conn DB connection with access permission, can easily be produced using natron_connect script
 #' @param location_table location table for flattened data (needs to be run through location_check and get_new_loc).
 #' @return Occurrence data that is ready to be upserted to Natron.
+#' @import RPostgreSQL
 
 #' @export
 
-# library(dbplyr)
-# library(dplyr)
-# library(dplR)   # uuid.gen()
-# library(postGIStools)
-# library(lubridate)
-# library(sp)
-# library(RPostgreSQL)
-# library(tidyverse)
 
 
-
-
-# dummy data:
-
-# newLocalitySub <- c(1:5, 8:20)
-# library(readr)
-# flatt_data <- read_csv("flat_data_dummy_std_long.csv")
-# location_check_flatt_data <- location_check(flatt_data,con,8000)
-# location_check_flatt_data <- get_new_loc(location_check_flatt_data$possible_matches, location_check_flatt_data$no_matches, newLocalitySub)
-# location_table <- location_check_flatt_data$all_locations
 
 #-------------------------------------------------#
 # structure and map occurrence table ----------####
@@ -38,7 +21,7 @@
 
 str_map_occ <- function(flatt_data,conn, location_table) {
 
-  tableinfo <- dbGetQuery(con,
+  tableinfo <- RPostgreSQL::dbGetQuery(con,
                           "select table_name,column_name,data_type
                         from information_schema.columns
                         where table_name = 'Events' OR

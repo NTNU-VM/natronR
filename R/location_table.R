@@ -76,6 +76,15 @@ for(i in 1:myLength){
   locationTable$locationID <- as.numeric(locationTable$locationID)
   locationTable$locationID <- uuids
 
+  cat(
+    "
+************************************************************\n
+The following columns have been transferred to the events table:
+
+
+")
+  print(local_terms)
+
 
 cat(
   "

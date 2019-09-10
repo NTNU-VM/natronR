@@ -15,14 +15,12 @@ Imports:
     dplyr,
     dplR,
     postGIStools,
-    lubridate,
-    sp,
     RPostgreSQL (>= 0.6.2),
-    tidyverse,
     ggmap,
     ggplot2,
     plyr,
-    getPass (>= 0.2.2)
+    getPass (>= 0.2.2),
+    gridExtra
 License: CC0
 Date: 2019-08-23
 Encoding: UTF-8
