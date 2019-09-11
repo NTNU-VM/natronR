@@ -9,7 +9,7 @@ upsert_locations(location_data, conn)
 \arguments{
 \item{location_data}{Location table to be upserted/uploaded to NaTRON.}
 
-\item{con}{Database connection object with write permissions (see \code{?natron_connect}). It's the connection object that determines if the data is upserted to the sandbox or not.}
+\item{conn}{Database connection object with write permissions (see \code{?natron_connect}). It's the connection object that determines if the data is upserted to the sandbox or not.}
 }
 \value{
 Pushes and upserts data to database. Returns nothing.

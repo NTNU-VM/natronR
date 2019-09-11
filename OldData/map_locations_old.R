@@ -12,17 +12,27 @@
 #' @param data New data you wish to plot
 #' @param zoom Resolution. 10-12 is a good range. Higher numbers creates long handeling times.
 #' @param  maptype Type of map you want to use. Options available are "terrain", "terrain-background", "satellite", "roadmap", "hybrid" (google maps), "terrain", "watercolor", and "toner" (stamen maps). Defaults to "hybrid".
+
 #' @return Map
+
 #' @import ggmap
 #' @import ggplot2
+#'
+#' @examples
+#' map_locations(data = myLocationTable)
+
+#' #Or plot it vertically like this:
+#' map_locations(data = myLocationTable, vertical = T)
+#'
+#' #Compare coordinates from twp datasets:
+#' scan <- radius_scan(locationTable = myLocationTable, conn = conn, radius = 8000)
+#' map_locations(data = myLocationTable, compare = scan)
+
 #' @export
 
-#flat_data_dummy_std_long <- read_csv("flat_data_dummy_std_long.csv")
-#data <- flat_data_dummy_std_long
 
-#map_locations(data,8,"hybrid")
 
-map_locations <- function(data, zoom, maptype = "hybrid") {
+map_locations_old <- function(data, zoom, maptype = "hybrid") {
 
 width <- max(data$decimalLongitude)-min(data$decimalLongitude)+0.1
 depth <- max(data$decimalLatitude)-min(data$decimalLatitude)+0.1

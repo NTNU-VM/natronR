@@ -28,15 +28,19 @@ The process of uploading data to NaTRON using natronbatchupload consist of five 
 * **Step 1. Restructure dataset**
 * **Step 2. Connect to NaTRON** 
 * **Step 3. Make location table** 
-  * **Step 3.1. View the locations on a map**
+  * *Step 3.1. View the locations on a map*
   * *Step 3.2 (optional pathway). Find existing NaTRON locations*
     * *Step 3.2.2. Plot NaTRON locations agains original locations*
     * *Step 3.2.3. Modify location table*
 * **Step 4. Upload locations**
 * **Step 5. Structure event data** 
 * **Step 6. Upload event data**
-* **Step 7. Structure occurence data** 
-* **Step 8. Upload occurrence data to NaTron**
+* **Step 7. Check scientific names** 
+  * *Step 7.1 ...compare against Artsdatabanken (navnevask)*
+  * *Step 7.2 ...compare agains NaTRON*
+  * *Step 7.3 Retrieve taxonIDs from NaTRON*
+* **Step 8. Structure occurence data** 
+* **Step 9. Upload occurrence data to NaTron**
 * **Examples of correct data structure**
 
 ## Step 1. Restructure
@@ -79,7 +83,7 @@ This step includes a manual check of correct mapping, ie that all the columns th
 
 
 
-## Step 3.1. View the locations on a map
+### Step 3.1. View the locations on a map
 Plotting the coordinates an a map help us check that they are correctly entered. 
 ```{r, eval=FALSE}
 map_locations(data = myLocationTable)
@@ -160,8 +164,25 @@ upsert_events(myEvents, myConnection)
 ```
 
 
+## 7. Check scientific names
+NaTRON has a _Taxa_ table with information about most of the species you can encunter in Norway. The occurence table needs to link to this table via the _taxonID_ field. To accomplish this the species names in your dataset needs to be spellt correctly and to be an accepted name for that species according to Artsdatabanken. 
 
-## 7. Structure occurrence-data
+### 7.1 Compare against Artsdatabanken (navnevask)
+Save yourself a lot of time by runing the scientificNames column in your dataset through the _navnevask_function on Artsdatabanken:
+https://www.artsdatabanken.no/Pages/225532/Navnevask?Key=14
+Update your dataset occoringly and import it again.
+
+### 7.2 Compare against NaTRON
+*This function is not yet available*
+but it will include comparing your species names with those in NaTRON _lib.Taxa_ table to ensure they all exist there.
+
+### 7.3 Retrieve taxonIDs from NaTRON
+*This function is not yet available*
+
+
+
+
+## 8. Structure occurrence-data
 This step organises your occurrence data table to be compatible and ready to upload to NaTRON.
 
 ```{r, eval = FALSE}
@@ -177,7 +198,7 @@ myOccurences <- str_map_occ(setesdal, myConnection)
 ```
 
 
-## 8. Upload structured occurence table to NaTRON
+## 9. Upload structured occurence table to NaTRON
 This step uploads your structured occurence table (step 7) to NaTRON.
 
 ```{r, eval=FALSE}

@@ -10,12 +10,14 @@
 #'
 #' @param data A flattened, long and standardised dataset that you wish to import into NaTron
 #' @param conn  A connection object with NaTRON (see \code{?natron_connect})
+#' @param username Your NaTron user name. This name will appear in the modifiedBy if this value is missing.
 #' @examples
+#' \dontrun{
 #' data("setesdal")
 #' myConnection <- natron_connect(myUserName)
 #' myLocationTable <- location_table(setesdal, myConnection)
 #' View(myLocationTable)
-#'
+#' }
 #' @return Returns the complete location table as a dataframe consistent with the NaTRON formatting.
 #' @import RPostgreSQL
 #' @import dplyr
@@ -23,7 +25,7 @@
 #' @export
 
 
-location_table <- function(data,conn) {
+location_table <- function(data,conn,username) {
 
   # -----------------------------------------------#
   # Get db table info---------------------------####
@@ -31,7 +33,7 @@ location_table <- function(data,conn) {
   # this functions fetches the column names from the NaTRON locations table
 
   natron_tableinfo <- RPostgreSQL::dbGetQuery(conn,
-                                              "select table_name,column_name,data_type
+                       "select table_name,column_name,data_type
                         from information_schema.columns
                         where table_name =  'Locations'
                         ;")
@@ -76,10 +78,23 @@ for(i in 1:myLength){
   locationTable$locationID <- as.numeric(locationTable$locationID)
   locationTable$locationID <- uuids
 
+  locationTable$modified <- as.character(locationTable$modified)
+
+for(i in 1:myLength){
+  if(is.na(locationTable$modified[i]))   locationTable$modified[i]    <- as.character(Sys.time())
+  if(is.na(locationTable$modifiedBy[i])) locationTable$modifiedBy[i]  <- username
+}
+
+
+  # NOTE! Empty columns turns out as bolean (logical data type).
+  # Need to convert these to character before db import
+  is_character <- as.character(lapply(locationTable,mode))=="logical"
+  locationTable[is_character] <- lapply(locationTable[,is_character], as.character)
+
   cat(
     "
 ************************************************************\n
-The following columns have been transferred to the events table:
+The following columns have been transferred to the location table:
 
 
 ")

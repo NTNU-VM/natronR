@@ -9,7 +9,7 @@ upsert_occ(data, conn)
 \arguments{
 \item{data}{Structured and mapped occurence table to be upserted (see \code{?str_map_occ()}).}
 
-\item{con}{Database connection object with write permissions (see \code{?natron_connect}).}
+\item{conn}{Database connection object with write permissions (see \code{?natron_connect}).}
 }
 \value{
 Pushes and upserts data to database. Returns nothing.

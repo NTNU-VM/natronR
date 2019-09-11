@@ -18,9 +18,10 @@ Returns the complete location table as a dataframe consistent with the NaTRON fo
 This function takes as input a standardised flat and long (as opposed to wide formated) dataset and makes the locations table for it, mirroring the structure of the NaTRON locations table.
 }
 \examples{
+\dontrun{
 data("setesdal")
 myConnection <- natron_connect(myUserName)
 myLocationTable <- location_table(setesdal, myConnection)
 View(myLocationTable)
-
+}
 }

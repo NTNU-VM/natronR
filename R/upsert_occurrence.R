@@ -7,7 +7,7 @@
 #' @description Upserts occurence data to Natron.
 
 #' @param data Structured and mapped occurence table to be upserted (see \code{?str_map_occ()}).
-#' @param con Database connection object with write permissions (see \code{?natron_connect}).
+#' @param conn Database connection object with write permissions (see \code{?natron_connect}).
 
 #' @family upsert functions
 

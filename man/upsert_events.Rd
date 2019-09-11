@@ -9,7 +9,7 @@ upsert_events(data, conn)
 \arguments{
 \item{data}{Structured and mapped event table to be upserted (see \code{?str_map_events()}).}
 
-\item{con}{Database connection object with write permissions (see \code{?natron_connect}).}
+\item{conn}{Database connection object with write permissions (see \code{?natron_connect}).}
 }
 \value{
 Pushes and upserts data to database. Returns nothing.

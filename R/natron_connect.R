@@ -11,9 +11,10 @@
 #' @param database What database do you want to connect to? Options are "natron" and "natron_sandbox" (default). OBS: always test your upload to the sandbox before uploading to natron.
 #' @return Formal class PostgreSQLConnection
 #' @examples
+#' \dontrun{
 #' myUserName <- "JohnD"
 #' myConnection <- natron_connect(myUserName)
-#'
+#' }
 #' @import getPass
 #' @import RPostgreSQL
 #' @export

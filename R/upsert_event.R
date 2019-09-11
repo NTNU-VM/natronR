@@ -7,7 +7,7 @@
 #' @description Upserts event data to Natron.
 
 #' @param data Structured and mapped event table to be upserted (see \code{?str_map_events()}).
-#' @param con Database connection object with write permissions (see \code{?natron_connect}).
+#' @param conn Database connection object with write permissions (see \code{?natron_connect}).
 
 #' @family upsert functions
 
@@ -56,8 +56,11 @@ upsert_events <- function(data, conn){
               CAST(\"seasonNumber\" AS character varying),
               CAST(\"periodNumber\" AS character varying),
               CAST(\"experiment\" AS character varying)
+
               FROM temp.temp_event_import
-              ON CONFLICT (\"eventID\") DO UPDATE SET
+
+              ON CONFLICT
+              (\"eventID\") DO UPDATE SET
               \"dataSchemaID\" = EXCLUDED.\"dataSchemaID\",
               \"collectionID\" = EXCLUDED.\"collectionID\",
               \"NaTron_datasetID\" = EXCLUDED.\"NaTron_datasetID\",
@@ -80,6 +83,7 @@ upsert_events <- function(data, conn){
               \"periodNumber\" = EXCLUDED.\"periodNumber\",
               experiment= EXCLUDED.experiment
               ;")
+
   # Drop temporary tables
   RPostgreSQL::dbSendQuery(conn,"DROP TABLE IF EXISTS temp_event_import;")
 }

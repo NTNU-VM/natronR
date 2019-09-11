@@ -20,7 +20,7 @@ conn <- natron_connect("AndersK")
 
 ?location_table
 #*************************
-myLocTab <- location_table(data = setesdal, conn)
+myLocTab <- location_table(data = setesdal, conn, "AndersK")
 #*************************
 
 
