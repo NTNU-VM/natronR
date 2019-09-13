@@ -18,9 +18,9 @@ Pushes and upserts data to database. Returns nothing.
 Upserts location tables to the Natron database.
 }
 \examples{
-
+\dontrun{
 upsert_location(location_data = myLocationTable, conn = myConnection)
-
+}
 
 }
 \seealso{

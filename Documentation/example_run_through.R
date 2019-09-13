@@ -24,7 +24,7 @@ myLocTab <- location_table(data = setesdal, conn, "AndersK")
 #*************************
 
 
-
+# testing ####
 anyDuplicated(myLocTab$decimalLatitude)
 anyDuplicated(myLocTab$decimalLongitude)
 # and they are all unique.
@@ -56,7 +56,7 @@ any(duplicated(myLocTab6$locality))
 test <- location_table(data = myLocTab6, conn)
 rm(myLocTab2, myLocTab3, myLocTab4, myLocTab5, myLocTab6, test)
 
-
+# end testing ####
 
 
 ?radius_scan
@@ -73,7 +73,7 @@ map_locations(data = myLocTab, compare = scan, vertical = T)
 #*************************
 
 
-
+# map testing ####
 decimalLatitude <- c(59.02936, 59.03352, 59.04758)
 decimalLongitude <- c(7.278987, 7.267469, 7.184718)
 myData <- data.frame(decimalLatitude, decimalLongitude)
@@ -87,6 +87,7 @@ myData2 <- data.frame(decimalLatitude = decimalLatitude2,decimalLongitude = deci
 
 map_locations(data = myData, compare = myData2)
 
+# end map testing ####
 
 
 ?upsert_locations
@@ -120,9 +121,14 @@ upsert_events(data = myEvents, conn = conn)
 myOccurence <- str_map_occ(data = setesdal, conn = conn, location_table = myLocTab)
 #*************************
 setesdal2 <- setesdal
-colnames(setesdal2)[colnames(setesdal2) == "scientificName"] <- "organimsName"
-myOccurence <- str_map_occ(data = setesdal, conn = conn, location_table = myLocTab)
+colnames(setesdal2)[colnames(setesdal2) == "scientificName"] <- "organismName"
+myOccurence <- str_map_occ(data = setesdal2, conn = conn, location_table = myLocTab)
 
+
+?comp_names
+#*************************
+myComp <- comp_names(myOccurence, conn = conn, scientificName = "organismName")
+#*************************
 
 
 #*************************

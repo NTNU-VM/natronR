@@ -20,6 +20,7 @@ If there are any positive matches the function returns these as a dataframe with
 This function uses the decimalLatitude and -Longitude columns from a location table to look for existing entries in the NaTRON locations datable within a given radius.
 }
 \examples{
+\dontrun{
 myScan <- radius_scan(myLocationTable, myConnection, 100)
-
+}
 }

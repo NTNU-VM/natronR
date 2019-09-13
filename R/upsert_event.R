@@ -14,9 +14,9 @@
 #' @return Pushes and upserts data to database. Returns nothing.
 
 #' @examples
-#'
+#'\dontrun{
 #' upsert_events(data = myEvents, conn = myConnection)
-#'
+#'}
 #'
 #' @import RPostgreSQL
 #'

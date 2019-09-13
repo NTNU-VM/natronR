@@ -24,6 +24,8 @@ A map (gtable)
 \code{map_locations} takes the coordinates from up to two location tables and plots them on two maps with different zoom.
 }
 \examples{
+\dontrun{
+
 # Plotting coordinates from one dataset:
 
 decimalLatitude <- c(59.02936, 59.03352, 59.04758) #note that the name must be DwC
@@ -41,4 +43,5 @@ myData2 <- data.frame(decimalLatitude = decimalLatitude2,
                       decimalLongitude = decimalLongitude2)
 
 map_locations(data = myData, compare = myData2)
+}
 }

@@ -18,7 +18,8 @@ Formal class PostgreSQLConnection
 \code{natron_connect} establishes a connection between R and NaTRON.
 }
 \examples{
+\dontrun{
 myUserName <- "JohnD"
 myConnection <- natron_connect(myUserName)
-
+}
 }

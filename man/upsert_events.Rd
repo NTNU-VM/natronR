@@ -18,9 +18,9 @@ Pushes and upserts data to database. Returns nothing.
 Upserts event data to Natron.
 }
 \examples{
-
+\dontrun{
 upsert_events(data = myEvents, conn = myConnection)
-
+}
 
 }
 \seealso{

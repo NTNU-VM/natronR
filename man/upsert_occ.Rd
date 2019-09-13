@@ -18,7 +18,9 @@ Pushes and upserts data to database. Returns nothing.
 Upserts occurence data to Natron.
 }
 \examples{
+\dontrun{
 upsert_occ(data = myOccurences, conn = myConnection)
+}
 
 }
 \seealso{

@@ -13,11 +13,13 @@
 #' @import RPostgreSQL
 #' @import dplyr
 #' @examples
+#' \dontrun{
 #' data("setesdal")
 #' myConnection <- natron_connect("myUserName")
 #' myLocationTable(data = setesdal, conn = myConnection)
 #' #map_location(myLocationTable)
 #' myEvents <- str_map_events(data = setesdal, conn = myConnection, location_table = myLocationTable)
+#' }
 
 #' @export
 

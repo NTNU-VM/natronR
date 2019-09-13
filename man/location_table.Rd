@@ -4,12 +4,14 @@
 \alias{location_table}
 \title{Create locations table}
 \usage{
-location_table(data, conn)
+location_table(data, conn, username)
 }
 \arguments{
 \item{data}{A flattened, long and standardised dataset that you wish to import into NaTron}
 
 \item{conn}{A connection object with NaTRON (see \code{?natron_connect})}
+
+\item{username}{Your NaTron user name. This name will appear in the modifiedBy if this value is missing.}
 }
 \value{
 Returns the complete location table as a dataframe consistent with the NaTRON formatting.

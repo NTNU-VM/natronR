@@ -173,8 +173,15 @@ https://www.artsdatabanken.no/Pages/225532/Navnevask?Key=14
 Update your dataset occoringly and import it again.
 
 ### 7.2 Compare against NaTRON
-*This function is not yet available*
-but it will include comparing your species names with those in NaTRON _lib.Taxa_ table to ensure they all exist there.
+This final check will compare your scientific species names against the NaTron taxa register and perform a fuzzy match to return both perfect and im-perfect matches. Look through the dataframe to find mistakes and change the species names in the raw data if needed. If a good match for your species cannot be found you need to add it to NaTron. This is for now done manually here: https://natron.vm.ntnu.no/datacollection/ 
+
+```{r, eval=FALSE}
+myComp <- comp_names(myOccurence, conn = conn, scientificName = "organismName")
+View(myComp)
+
+```
+
+
 
 ### 7.3 Retrieve taxonIDs from NaTRON
 *This function is not yet available*

@@ -14,7 +14,9 @@
 #' @return Pushes and upserts data to database. Returns nothing.
 
 #' @examples
+#' \dontrun{
 #' upsert_occ(data = myOccurences, conn = myConnection)
+#' }
 #'
 #' @import RPostgreSQL
 #'

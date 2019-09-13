@@ -13,6 +13,14 @@
 
 #' @import RPostgreSQL
 #' @import dplyr
+#'
+#' #' \dontrun{
+#' data("setesdal")
+#' myConnection <- natron_connect("myUserName")
+#' myLocationTable(data = setesdal, conn = myConnection)
+#' #map_location(myLocationTable)
+#' myOccurences <- str_map_occ(data = setesdal, conn = myConnection, location_table = myLocationTable)
+#' }
 
 #' @export
 

@@ -10,9 +10,9 @@
 #' @family upsert functions
 #' @return Pushes and upserts data to database. Returns nothing.
 #' @examples
-#'
+#' \dontrun{
 #' upsert_location(location_data = myLocationTable, conn = myConnection)
-#'
+#' }
 #'
 #' @import RPostgreSQL
 #'
