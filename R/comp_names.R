@@ -26,6 +26,7 @@
 # Start                              ----------####
 #-------------------------------------------------#
 
+
 comp_names <- function(data, conn, scientificName = "scientificName") {
 
   # get species list
@@ -42,7 +43,7 @@ comp_names <- function(data, conn, scientificName = "scientificName") {
 
   # now get imperfect matches
   missing <- spList$mySpeciesList[is.na(spList$perfectMatch)]
-  d <- expand.grid(missing, fullTaxaList$scientificName) # all pairwise comparisons
+  d <- expand.grid(missing, fullTaxaList$scientificName)
   names(d) <- c("myMissingNames","natronNames")
   d$dist <- stringdist::stringdist(d$myMissingNames,d$natronNames, method="jw")
 

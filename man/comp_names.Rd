@@ -14,7 +14,7 @@ comp_names(data, conn, scientificName = "scientificName")
 \item{scientificName}{The column name which contains the scientific names (defults to 'scientificName')}
 }
 \value{
-Returns a dataframe with your species list alongside the three best guesses for taxon in NaTron
+Returns a dataframe with your species list alongside the three best gueses for taxon in NaTron
 }
 \description{
 This functions checks the scientificNames column in your dataset against the Taxa register in NaTron and return a wrning when there are species not in the register (either due to misspelling, synonyms, etc.)

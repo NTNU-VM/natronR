@@ -182,7 +182,6 @@ View(myComp)
 ```
 
 
-
 ### 7.3 Retrieve taxonIDs from NaTRON
 *This function is not yet available*
 

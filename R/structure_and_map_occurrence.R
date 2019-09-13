@@ -4,17 +4,18 @@
 # ----------------------------------------------#
 
 #' @title Structure and map occurence table
-#' @description Function takes inn a flattended datatable with both terms/colums corresponding exactly to the database columns and datatypes and returns an occurrence dataframe ready to be upserted.
-#' @param data Data (flat structure) to be structured.
+#' @description Function takes inn a datatable with terms/colums corresponding exactly to the database columns and datatypes and returns an occurrence dataframe ready to be upserted.
+#' @param data Data to be structured.
 #' @param conn DB connection with access permission (see \code{natron_connect()}).
-#' @param location_table location table for the flattened data (see \code{location_table()}).
+#' @param location_table location table (see \code{location_table()}).
 
 #' @return Occurrence data (dataframe) that is ready to be upserted to Natron.
 
 #' @import RPostgreSQL
 #' @import dplyr
 #'
-#' #' \dontrun{
+#' @examples
+#' \dontrun{
 #' data("setesdal")
 #' myConnection <- natron_connect("myUserName")
 #' myLocationTable(data = setesdal, conn = myConnection)
