@@ -3,3 +3,5 @@
 ^OldData$
 ^Documentation
 ^data-raw$
+^doc$
+^Meta$
