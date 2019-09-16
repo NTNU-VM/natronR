@@ -17,6 +17,9 @@ Formal class PostgreSQLConnection
 \description{
 \code{natron_connect} establishes a connection between R and NaTRON.
 }
+\details{
+You need to be connected via the NTNU network, either through eduroam or a vpn.
+}
 \examples{
 \dontrun{
 myUserName <- "JohnD"

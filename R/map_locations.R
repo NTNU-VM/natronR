@@ -46,7 +46,7 @@
 
 #' @import ggmap
 #' @import ggplot2
-#' @import gridExtra
+#' @importFrom gridExtra grid.arrange
 
 #' @export
 

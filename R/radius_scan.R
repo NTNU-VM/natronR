@@ -9,7 +9,7 @@
 #'
 #'
 #'
-#' @description This function uses the decimalLatitude and -Longitude columns from a location table to look for existing entries in the NaTRON locations datable within a given radius.
+#' @description This function uses the decimalLatitude and -Longitude columns from a location table and find the closest existing entries in the NaTRON locations datable (within a given radius).
 #'
 
 

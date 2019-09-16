@@ -17,7 +17,7 @@ radius_scan(locationTable, conn, radius)
 If there are any positive matches the function returns these as a dataframe with 15 columns. The last three columns (starting with 'new') are from the dataset you entered and for which there was found a match in NaTRON. The distance from the entered coordinates and the NaTRON location it is compared to is given in 'distance_km'.
 }
 \description{
-This function uses the decimalLatitude and -Longitude columns from a location table to look for existing entries in the NaTRON locations datable within a given radius.
+This function uses the decimalLatitude and -Longitude columns from a location table and find the closest existing entries in the NaTRON locations datable (within a given radius).
 }
 \examples{
 \dontrun{

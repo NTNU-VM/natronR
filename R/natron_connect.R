@@ -15,6 +15,7 @@
 #' myUserName <- "JohnD"
 #' myConnection <- natron_connect(myUserName)
 #' }
+#' @details You need to be connected via the NTNU network, either through eduroam or a vpn.
 #' @import getPass
 #' @import RPostgreSQL
 #' @export

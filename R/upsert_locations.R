@@ -6,7 +6,7 @@
 #' @description Upserts location tables to the Natron database.
 #'
 #' @param conn Database connection object with write permissions (see \code{?natron_connect}). It's the connection object that determines if the data is upserted to the sandbox or not.
-#' @param location_data Location table to be upserted/uploaded to NaTRON.
+#' @param location_data Location table to be upserted/uploaded to NaTRON (see \code{?location_table})
 #' @family upsert functions
 #' @return Pushes and upserts data to database. Returns nothing.
 #' @examples
@@ -40,11 +40,15 @@ upsert_locations <- function(location_data, conn){
                         where table_name = 'Locations'
                         ;")
 
+
+  # The temp file needs (I think) the columns to be of the same class as the real table. One option is to change them in the temp schema:
   RPostgreSQL::dbSendQuery(conn,"ALTER TABLE temp.temp_location_import
                            ALTER COLUMN \"locationID\" SET DATA TYPE uuid
                            ;")
+  # and so on...
 
-  ### PICK UP HERE
+  # or to change them whilst upserting (more typing...)
+
 
 
   # update or insert m_dataset_data table
