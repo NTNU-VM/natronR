@@ -13,7 +13,6 @@ Depends: R (>= 3.4.0)
 Imports: 
     dbplyr,
     dplR,
-    postGIStools,
     RPostgreSQL (>= 0.6.2),
     ggmap,
     ggplot2,
