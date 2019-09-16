@@ -14,7 +14,6 @@ Imports:
     dbplyr,
     dplR,
     RPostgreSQL (>= 0.6.2),
-    ggmap,
     ggplot2,
     plyr,
     getPass (>= 0.2.2),
@@ -28,6 +27,7 @@ LazyData: true
 RoxygenNote: 6.1.1
 Suggests: 
     testthat,
-    knitr
+    knitr,
+    ggmap
 VignetteBuilder:
     knitr
