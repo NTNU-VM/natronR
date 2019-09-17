@@ -8,7 +8,7 @@
 #'
 #' @description This function takes as input a standardised flat and long (as opposed to wide formated) dataset and makes the locations table for it, mirroring the structure of the NaTRON locations table.
 #'
-#' @param data A flattened, long and standardised dataset that you wish to import into NaTron
+#' @param data A dataset (long, standardised) that you wish to import into NaTron
 #' @param conn  A connection object with NaTRON (see \code{?natron_connect})
 #' @param username Your NaTron user name. This name will appear in the modifiedBy if this value is missing.
 #' @examples

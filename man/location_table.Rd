@@ -7,7 +7,7 @@
 location_table(data, conn, username)
 }
 \arguments{
-\item{data}{A flattened, long and standardised dataset that you wish to import into NaTron}
+\item{data}{A dataset (long, standardised) that you wish to import into NaTron}
 
 \item{conn}{A connection object with NaTRON (see \code{?natron_connect})}
 

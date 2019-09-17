@@ -189,7 +189,9 @@ Update your dataset occoringly and import it again.
 This final check will compare your scientific species names against the NaTron taxa register and perform a fuzzy match to return both perfect and non-perfect matches. Look through the dataframe to find mistakes and change the species names in the raw data if needed. For this example, the scientific names (ie *Picea abies*) are in a column named *scientificName*.
 
 ```{r, eval=FALSE}
-myNames <- comp_names(myOccurence, conn = conn, scientificName = "scientificName")
+myNames <- comp_names(myOccurence, 
+                      conn = myConnection, 
+                      scientificName = "scientificName")
 View(myNames)
 
 ```
@@ -197,7 +199,13 @@ View(myNames)
 If a good match for your species cannot be found then you need to add it to NaTron. This is for now done manually here: https://natron.vm.ntnu.no/datacollection/.
 
 ### 7.3 Retrieve taxonIDs from NaTRON
-*This function is not yet available*
+Put these UUIDs into your dataframe like so:
+```{r, eval=FALSE}
+setesdal$taxonID <- get_taxonID(
+                    names = setesdal$scientificName, 
+                    conn = myConnection)
+
+```
 
 
 

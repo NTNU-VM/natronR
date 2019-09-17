@@ -19,7 +19,8 @@ Imports:
     getPass (>= 0.2.2),
     gridExtra,
     stringdist,
-    dplyr
+    dplyr,
+    ggmap
 License: CC0
 Date: 2019-08-23
 Encoding: UTF-8
@@ -27,7 +28,6 @@ LazyData: true
 RoxygenNote: 6.1.1
 Suggests: 
     testthat,
-    knitr,
-    ggmap
+    knitr
 VignetteBuilder:
     knitr
