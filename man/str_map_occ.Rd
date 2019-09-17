@@ -17,7 +17,7 @@ str_map_occ(data, conn, location_table)
 Occurrence data (dataframe) that is ready to be upserted to Natron.
 }
 \description{
-Function takes inn a datatable with terms/colums corresponding exactly to the database columns and datatypes and returns an occurrence dataframe ready to be upserted.
+Function takes inn a datatable where the columns correspond exactly to the database columns and returns an occurrence dataframe ready to be upserted.
 }
 \examples{
 \dontrun{
@@ -25,6 +25,8 @@ data("setesdal")
 myConnection <- natron_connect("myUserName")
 myLocationTable(data = setesdal, conn = myConnection)
 #map_location(myLocationTable)
-myOccurences <- str_map_occ(data = setesdal, conn = myConnection, location_table = myLocationTable)
+myOccurences <- str_map_occ(data = setesdal,
+                            conn = myConnection,
+                            location_table = myLocationTable)
 }
 }

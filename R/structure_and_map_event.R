@@ -5,20 +5,22 @@
 
 
 #' @title Structure and map event table
-#' @description This function takes a flattended datatable and returns an event dataframe ready to be upserted.
-#' @param data Flat data to be structured. The column names need to match the NaTRON terms (DwC).
-#' @param conn NaTRON connection object with access permission (see \code{?natron_connect}).
-#' @param location_table location table for flattened data (needs to contain UUIDs as locationIDs).
+#' @description This function takes your event-based dataset and returns an event dataframe ready to be upserted.
+#' @param data Dataframe to be structured. The column names need to match the NaTron terms (DwC).
+#' @param conn NaTron connection object with access permission (see \code{?natron_connect}).
+#' @param location_table location table for your data (see \code{?location_table()}).
 #' @return Dataframe: event table, mapped to the location table and ready to be upserted to Natron.
 #' @import RPostgreSQL
 #' @import dplyr
 #' @examples
 #' \dontrun{
 #' data("setesdal")
-#' myConnection <- natron_connect("myUserName")
+#' myConnection <- natron_connect("YOUR-USERNAME")
 #' myLocationTable(data = setesdal, conn = myConnection)
 #' #map_location(myLocationTable)
-#' myEvents <- str_map_events(data = setesdal, conn = myConnection, location_table = myLocationTable)
+#' myEvents <- str_map_events(data = setesdal,
+#'                            conn = myConnection,
+#'                            location_table = myLocationTable)
 #' }
 
 #' @export

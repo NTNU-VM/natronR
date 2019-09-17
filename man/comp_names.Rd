@@ -4,18 +4,28 @@
 \alias{comp_names}
 \title{Compare scientific names against NaTron}
 \usage{
-comp_names(data, conn, scientificName = "scientificName")
+comp_names(names, conn)
 }
 \arguments{
-\item{data}{Dataset containing a column with scientific names.}
+\item{names}{A vector of scientific species names.}
 
 \item{conn}{DB connection with access permission (see \code{natron_connect()}).}
-
-\item{scientificName}{The column name which contains the scientific names (defults to 'scientificName')}
 }
 \value{
 Returns a dataframe with your species list alongside the three best gueses for taxon in NaTron
 }
 \description{
-This functions checks the scientificNames column in your dataset against the Taxa register in NaTron and return a wrning when there are species not in the register (either due to misspelling, synonyms, etc.)
+This functions checks the scientificNames column in your dataset against the Taxa register in NaTron and return a warning when there are species not in the register (either due to misspelling, synonyms, etc.)
+}
+\examples{
+\dontrun{
+data("setesdal")
+myConnection <- natron_connect("YOUR-USERNAME-HERE")
+
+myNames <- comp_names(
+    names = setesdal$scientificName,
+    conn = myConnection)
+
+View(myNames)
+}
 }

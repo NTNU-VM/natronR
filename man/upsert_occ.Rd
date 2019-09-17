@@ -15,7 +15,7 @@ upsert_occ(data, conn)
 Pushes and upserts data to database. Returns nothing.
 }
 \description{
-Upserts occurence data to Natron.
+Upserts occurence data to NaTron.
 }
 \examples{
 \dontrun{

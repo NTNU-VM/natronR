@@ -46,8 +46,14 @@ The process of uploading data to NaTRON using natronbatchupload consist of five 
 ## Step 1. Restructure
 The first step to getting your data on to NaTRON is to restructure the dataset from wide to long format to be compatible with the functions in the ```natronbatchupload``` R-package. Most datasets are punched in Excel in a wide format (ie lots of columns and few rows; see examples at the bottom of this vignette), but NaTRON and most other databases prefer the long format. This step is not covered by this package and must be done manually. We recoment looking into ```reshape2``` and ```dplyr``` for this type of data wrangling. Your dataset should look like our example dataset:
 ```{r, eval=FALSE}
+# load data
 data("setesdal")
+
+# inspect data
 head(setesdal)
+
+# see descriptio of the data
+?setesdal
 
 ```
 
@@ -189,17 +195,17 @@ Update your dataset occoringly and import it again.
 This final check will compare your scientific species names against the NaTron taxa register and perform a fuzzy match to return both perfect and non-perfect matches. Look through the dataframe to find mistakes and change the species names in the raw data if needed. For this example, the scientific names (ie *Picea abies*) are in a column named *scientificName*.
 
 ```{r, eval=FALSE}
-myNames <- comp_names(myOccurence, 
-                      conn = myConnection, 
-                      scientificName = "scientificName")
+myNames <- comp_names(
+           names = setesdal$scientificName, 
+           conn = myConnection)
 View(myNames)
 
 ```
 
-If a good match for your species cannot be found then you need to add it to NaTron. This is for now done manually here: https://natron.vm.ntnu.no/datacollection/.
+If a good match for your species cannot be found then you need to add it to NaTron. This is for now done manually here: https://natron.vm.ntnu.no/datacollection/, or if your working on the sandbox: https://natron.vm.ntnu.no/sandbox/
 
 ### 7.3 Retrieve taxonIDs from NaTRON
-Put these UUIDs into your dataframe like so:
+When you are sure the species names are all in order, you can then use the ```get-taxonID``` function to retrieve the taxonIDs from NaTron and put these UUIDs into your dataframe, like so:
 ```{r, eval=FALSE}
 setesdal$taxonID <- get_taxonID(
                     names = setesdal$scientificName, 
@@ -207,7 +213,7 @@ setesdal$taxonID <- get_taxonID(
 
 ```
 
-
+Note the warning this produces -- because this example data has not been cleaned properly that means there are some entries in the *scientificName* column in *setesdal* which do not have perfect matches in the NaTron taxa register and therefore the function returns NA for taxonID. You do not want to see this warning.
 
 
 ## 8. Structure occurrence-data

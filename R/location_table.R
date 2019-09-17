@@ -6,7 +6,7 @@
 #'
 #'
 #'
-#' @description This function takes as input a standardised flat and long (as opposed to wide formated) dataset and makes the locations table for it, mirroring the structure of the NaTRON locations table.
+#' @description This function takes as input a standardised and long (as opposed to wide formated) dataset and makes the locations table for it, mirroring the structure of the NaTRON locations table.
 #'
 #' @param data A dataset (long, standardised) that you wish to import into NaTron
 #' @param conn  A connection object with NaTRON (see \code{?natron_connect})

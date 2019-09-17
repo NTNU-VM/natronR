@@ -9,24 +9,25 @@
 #'
 #'
 #'
-#' @description This function uses the decimalLatitude and -Longitude columns from a location table and find the closest existing entries in the NaTRON locations datable (within a given radius).
+#' @description This function uses the decimalLatitude and -Longitude columns from a location table and find the closest existing entries in the NaTron locations datable (within a given radius).
 #'
 
 
 #' @param locationTable A dataset containing at least two columns: decimalLongitude and decimalLatitude. Usually you want to put here the loction table returned by \code{location_table()}.
-#' @param conn  A connection object with NaTRON (see \code{?natron_connect}).
+#' @param conn  A connection object with NaTron (see \code{?natron_connect}).
 #' @param radius The radius in meters in which to search for preexisting localitites in NaTron.
 
 
 
 #' @examples
 #' \dontrun{
-#' myScan <- radius_scan(myLocationTable, myConnection, 100)
+#' myScan <- radius_scan(myLocationTable, myConnection, 8000)
+#' # that's a large radius, 8000 m
 #' }
 
 
 
-#' @return If there are any positive matches the function returns these as a dataframe with 15 columns. The last three columns (starting with 'new') are from the dataset you entered and for which there was found a match in NaTRON. The distance from the entered coordinates and the NaTRON location it is compared to is given in 'distance_km'.
+#' @return If there are any positive matches the function returns these as a dataframe with 15 columns. The last three columns (starting with 'new') are from the dataset you entered and for which there was found a match in NaTron. The distance from the entered coordinates and the NaTron location it is compared to is given in 'distance_km'.
 
 
 #' @import RPostgreSQL

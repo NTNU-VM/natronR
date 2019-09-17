@@ -1,6 +1,6 @@
 # NaTron batch upload
 
-This is a aollection of functions to batch-upload data to [NaTron](https://wiki.vm.ntnu.no/display/INH/NaTron). 
+This is a collection of functions to batch-upload data to [NaTron](https://wiki.vm.ntnu.no/display/INH/NaTron). 
 
 All the documentation and instructions are found in the vignette called 'user-instructions'. First, doenload the source package from Github (remember to build vignette):
 

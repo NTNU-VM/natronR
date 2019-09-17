@@ -4,7 +4,7 @@
 # ----------------------------------------------#
 
 #' @title Structure and map occurence table
-#' @description Function takes inn a datatable with terms/colums corresponding exactly to the database columns and datatypes and returns an occurrence dataframe ready to be upserted.
+#' @description Function takes inn a datatable where the columns correspond exactly to the database columns and returns an occurrence dataframe ready to be upserted.
 #' @param data Data to be structured.
 #' @param conn DB connection with access permission (see \code{natron_connect()}).
 #' @param location_table location table (see \code{location_table()}).
@@ -20,7 +20,9 @@
 #' myConnection <- natron_connect("myUserName")
 #' myLocationTable(data = setesdal, conn = myConnection)
 #' #map_location(myLocationTable)
-#' myOccurences <- str_map_occ(data = setesdal, conn = myConnection, location_table = myLocationTable)
+#' myOccurences <- str_map_occ(data = setesdal,
+#'                             conn = myConnection,
+#'                             location_table = myLocationTable)
 #' }
 
 #' @export

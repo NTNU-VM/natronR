@@ -7,24 +7,26 @@
 str_map_events(data, conn, location_table)
 }
 \arguments{
-\item{data}{Flat data to be structured. The column names need to match the NaTRON terms (DwC).}
+\item{data}{Dataframe to be structured. The column names need to match the NaTron terms (DwC).}
 
-\item{conn}{NaTRON connection object with access permission (see \code{?natron_connect}).}
+\item{conn}{NaTron connection object with access permission (see \code{?natron_connect}).}
 
-\item{location_table}{location table for flattened data (needs to contain UUIDs as locationIDs).}
+\item{location_table}{location table for your data (see \code{?location_table()}).}
 }
 \value{
 Dataframe: event table, mapped to the location table and ready to be upserted to Natron.
 }
 \description{
-This function takes a flattended datatable and returns an event dataframe ready to be upserted.
+This function takes your event-based dataset and returns an event dataframe ready to be upserted.
 }
 \examples{
 \dontrun{
 data("setesdal")
-myConnection <- natron_connect("myUserName")
+myConnection <- natron_connect("YOUR-USERNAME")
 myLocationTable(data = setesdal, conn = myConnection)
 #map_location(myLocationTable)
-myEvents <- str_map_events(data = setesdal, conn = myConnection, location_table = myLocationTable)
+myEvents <- str_map_events(data = setesdal,
+                           conn = myConnection,
+                           location_table = myLocationTable)
 }
 }

@@ -1,12 +1,14 @@
 .onAttach <- function(libname, pkgname){
   packageStartupMessage(
-    '\n ******************\n
+    '\n***************************\n
     Welcome to the package that lets you\n
-    upload datasets to NaTRON.\n
-    ***************************\n'
+    upload datasets to NaTron.\n\n
+    Type vignette("user-instructions", package = "natronbatchupload") to learn more.\n
+
+***************************\n'
   )
 }
 
 
-# future add-on. "Type vignette(package = "natronbatchupload") to learn more.\n"
+
 

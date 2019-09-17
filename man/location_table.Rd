@@ -17,7 +17,7 @@ location_table(data, conn, username)
 Returns the complete location table as a dataframe consistent with the NaTRON formatting.
 }
 \description{
-This function takes as input a standardised flat and long (as opposed to wide formated) dataset and makes the locations table for it, mirroring the structure of the NaTRON locations table.
+This function takes as input a standardised and long (as opposed to wide formated) dataset and makes the locations table for it, mirroring the structure of the NaTRON locations table.
 }
 \examples{
 \dontrun{

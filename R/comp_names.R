@@ -5,17 +5,28 @@
 
 #' @title Compare scientific names against NaTron
 #'
-#' @description This functions checks the scientificNames column in your dataset against the Taxa register in NaTron and return a wrning when there are species not in the register (either due to misspelling, synonyms, etc.)
+#' @description This functions checks the scientificNames column in your dataset against the Taxa register in NaTron and return a warning when there are species not in the register (either due to misspelling, synonyms, etc.)
 
-#' @param data Dataset containing a column with scientific names.
+#' @param names A vector of scientific species names.
 #' @param conn DB connection with access permission (see \code{natron_connect()}).
-#' @param scientificName The column name which contains the scientific names (defults to 'scientificName')
 #'
 
 #' @return Returns a dataframe with your species list alongside the three best gueses for taxon in NaTron
 
 #' @import RPostgreSQL
 #' @import stringdist
+#'
+#' @examples
+#' \dontrun{
+#' data("setesdal")
+#' myConnection <- natron_connect("YOUR-USERNAME-HERE")
+#'
+#' myNames <- comp_names(
+#'     names = setesdal$scientificName,
+#'     conn = myConnection)
+#'
+#' View(myNames)
+#' }
 
 #' @export
 
@@ -27,11 +38,11 @@
 #-------------------------------------------------#
 
 
-comp_names <- function(data, conn, scientificName = "scientificName") {
+comp_names <- function(names, conn) {
 
   # get species list
     spList <- data.frame(
-    mySpeciesList = unique(data[, scientificName]))
+    mySpeciesList = unique(names))
 
   # get the Taxa list from NaTron.
   fullTaxaList <- RPostgreSQL::dbGetQuery(conn,
@@ -39,7 +50,9 @@ comp_names <- function(data, conn, scientificName = "scientificName") {
                         from lib.\"Taxa\"
                         ;")
 
-  spList$perfectMatch <- fullTaxaList$scientificName[match(spList$mySpeciesList, fullTaxaList$scientificName)]
+  spList$perfectMatch <- fullTaxaList$scientificName[match(
+                                 spList$mySpeciesList,
+                                 fullTaxaList$scientificName)]
 
   # now get imperfect matches
   missing <- spList$mySpeciesList[is.na(spList$perfectMatch)]
