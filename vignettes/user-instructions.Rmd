@@ -61,7 +61,7 @@ head(setesdal)
 Next you need to establish a connection to the NaTRON database. Using the `natron_connect` function makes it easy to connect to NaTRON in R. The functions takes two arguments -- your user name and the database (defults to the sandbox). A pop-up window will appear where you are asked for your password. Save your connection to the environment so that it can be used in subsequent functions. Example of use:
 
 ```{r, eval=FALSE}
-myConnection <- natron_connect(username)
+myConnection <- natron_connect("YOUR-USERNAME-HERE")
 
 ``` 
 Talk to Marc Daverdin about NaTRON access. 
@@ -75,17 +75,22 @@ Talk to Marc Daverdin about NaTRON access.
 ## Step 3. Make location table
 Make a dataframe with your unique locations (ie unique coordinates) and additional location specific metedata such as elevation, varbatim coordinates and place names. The returned dataset is structure like the NaTRON table 'Locations' so that it can easily be uploaded later.
 ```{r, eval=FALSE}
-myLocationTable <- location_table(data = setesdal, conn = MyConnection)
+myLocationTable <- location_table(data = setesdal, 
+                                  conn = myConnection,
+                                  username = "YOUR-USERNAME-HERE")
 
 ```
 
-This step includes a manual check of correct mapping, ie that all the columns that you want to have in the location table is mapped/matched to the correct NaTRON (DwC) terms. 
+This step includes a manual check of correct mapping, ie that all the columns that you want to have in the location table is mapped/matched to the correct NaTRON (DwC) terms. Read the textual output from the function carefully. 
+
+Note that all you locations have also been given a UUID (unique machine readable identifier) in the locationID column. 
 
 
 
 ### Step 3.1. View the locations on a map
 Plotting the coordinates an a map help us check that they are correctly entered. 
 ```{r, eval=FALSE}
+library(ggmap)
 map_locations(data = myLocationTable)
 
 # Or plot it vertically like this:
@@ -104,15 +109,19 @@ If you know or suspect that the locations in your data already exists in NaTRON 
 
 ```{r, eval=FALSE}
 radius <- 8000 #setting it very high here just to make a point
-scan <- radius_scan(locationTable = myLocationTable, conn = conn, radius = radius)
 
+# this may take a little while:
+scan <- radius_scan(locationTable = myLocationTable, conn = myConnection, radius = radius) 
+
+# If you get a return then you may want to investigate it:
+View(scan)
 
 ``` 
 
 
 #### Step 3.2.2. Plot NaTRON locations agains original locations
 
-If you have done step 3.2 you can also use \code{map_locations()} to visually check the proximity of your locations and the existing NaTRON locations:
+If you have done step 3.2 you can also use `map_locations()` to visually check the proximity of your locations and the existing NaTRON locations:
 
 ```{r, eval=FALSE}
 # Use the 'compare' argument:
@@ -124,10 +133,12 @@ map_locations(data = myLocationTable, compare = scan)
 #### Step 3.2.3. Modify location table
 *THIS FUNCTIONALITY IS NOT YET AVAILABLE*
 
-If some or all of your locations already exist in NaTRON (typicall for time series data) then you should idealy not upload them again to NaTRON. Thats a waste of storage space and it makes it harder to join together data from the same locations. However, the following functions that create event and occurence tables needs to link to the NaTRON locations somehow. One term (column) that could be used  to link these tables together is *locationID* which consists of UUIDs. These are not human friendly values and so we need an automated but safe way of harnessing them from NaTRON . \code{radius_scan()} is one way perhaps, but it has proven difficult to make it reliable.
+If some or all of your locations already exist in NaTRON (typicall for time series data) then you should idealy not upload them again to NaTRON. Thats a waste of storage space and it makes it harder to join together data from the same locations. However, the following functions that create event and occurence tables needs to link to the NaTRON locations somehow. One term (column) that could be used  to link these tables together is *locationID* which consists of UUIDs. These are not human friendly values and so we need an automated but safe way of harnessing them from NaTRON . `radius_scan()` is one way perhaps, but it has proven difficult to make it reliable.
 
 
 ## Step 4. Upload locations 
+*THIS FUNCTIONALITY IS NOT YET AVAILABLE*
+
 All locations must be present on NaTRON before the 'real data' is uploaded and you will not be able to upload event-data that don't have a corresponding *locationID* in the database. The link between the 'real data' (ie event data or occurence data) and the location specific metadata is ensured by the relational nature of NaTRON. 
 
 
@@ -152,10 +163,12 @@ myEvents <- str_map_events(data = setesdal,
 
 ```
 
-
+Read the output carefully to make sure you have kept all the columns you wanted.
 
 
 ## 6. Upload structured event data to NaTron
+*THIS FUNCTIONALITY IS NOT YET AVAILABLE*
+
 This step uploads your structured event data table to NaTRON. For occurence datasets you may want to skipp this and the preceeding step.
 
 ```{r, eval = F}
@@ -165,7 +178,7 @@ upsert_events(myEvents, myConnection)
 
 
 ## 7. Check scientific names
-NaTRON has a _Taxa_ table with information about most of the species you can encunter in Norway. The occurence table needs to link to this table via the _taxonID_ field. To accomplish this the species names in your dataset needs to be spellt correctly and to be an accepted name for that species according to Artsdatabanken. 
+NaTRON has a _Taxa_ table with information for most of the species you can encunter in Norway. The occurence table needs to link to this table via the _taxonID_ field. To accomplish this the species names in your dataset needs to be spelt correctly and to be an accepted name for that species according to Artsdatabanken. 
 
 ### 7.1 Compare against Artsdatabanken (navnevask)
 Save yourself a lot of time by runing the scientificNames column in your dataset through the _navnevask_function on Artsdatabanken:
@@ -173,14 +186,15 @@ https://www.artsdatabanken.no/Pages/225532/Navnevask?Key=14
 Update your dataset occoringly and import it again.
 
 ### 7.2 Compare against NaTRON
-This final check will compare your scientific species names against the NaTron taxa register and perform a fuzzy match to return both perfect and im-perfect matches. Look through the dataframe to find mistakes and change the species names in the raw data if needed. If a good match for your species cannot be found you need to add it to NaTron. This is for now done manually here: https://natron.vm.ntnu.no/datacollection/ 
+This final check will compare your scientific species names against the NaTron taxa register and perform a fuzzy match to return both perfect and non-perfect matches. Look through the dataframe to find mistakes and change the species names in the raw data if needed. For this example, the scientific names (ie *Picea abies*) are in a column named *scientificName*.
 
 ```{r, eval=FALSE}
-myComp <- comp_names(myOccurence, conn = conn, scientificName = "organismName")
-View(myComp)
+myNames <- comp_names(myOccurence, conn = conn, scientificName = "scientificName")
+View(myNames)
 
 ```
 
+If a good match for your species cannot be found then you need to add it to NaTron. This is for now done manually here: https://natron.vm.ntnu.no/datacollection/.
 
 ### 7.3 Retrieve taxonIDs from NaTRON
 *This function is not yet available*
@@ -192,20 +206,23 @@ View(myComp)
 This step organises your occurrence data table to be compatible and ready to upload to NaTRON.
 
 ```{r, eval = FALSE}
-myOccurences <- str_map_occ(setesdal, myConnection)
+myOccurences <- str_map_occ(setesdal, myConnection, myLocationTable)
 
 ```
-As of 10.09.2019 this produces a silent warning that *scientificName* has not been copied to the occurence table. Thta because it is not a column name in NaTRON. To fix this, or similar problems, modify the column name in the original data:
+
+This produces a silent warning that *scientificName* has not been copied to the occurence table. That's because it is not a column name in NaTRON. If you want to keep the written names in this table you can for example use the *organismName* term. 
 ```{r, eval=FALSE}
 colnames(setesdal)[colnames(setesdal) == "scientificName"] <- "organimsName"
 myOccurences <- str_map_occ(setesdal, myConnection)
 
 
 ```
-
+But remember, it's the *taxonID* term that actually documents the species identities in NaTron, so make sure this is included in the occurence atble before proceeding.
 
 ## 9. Upload structured occurence table to NaTRON
-This step uploads your structured occurence table (step 7) to NaTRON.
+*THIS FUNCTIONALITY IS NOT YET AVAILABLE*
+
+This step uploads your structured occurence table to NaTRON.
 
 ```{r, eval=FALSE}
 upsert_occ(myOccurences, myConnection)
@@ -273,8 +290,8 @@ upsert_occ(myOccurences, myConnection)
 
 #### *Example of occurence table*
 
-| eventID           | Species       |      |  Quantity           |
-| :-------------:   | :-------------:      |:-------------:      |
+| eventID           | Species             | Quantity            |
+| :-------------:   | :-------------:     |:-------------:      |
 | 1*                |Alchemilla alpina    | 12                  |
 | 1*                |Agrostis cappilaris  | 6                   |
 | 1*                |Andromeda polifolia  | 2                   |
