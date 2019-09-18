@@ -23,7 +23,7 @@
 natron_connect <- function(username, database = "natron_sandbox") {
 
 pg_drv <- "PostgreSQL"
-pg_db <- "natron_sandbox"
+pg_db <- database
 pg_host <- "vm-srv-zootron.vm.ntnu.no"
 password=getPass::getPass("Please enter password")
 
