@@ -57,7 +57,7 @@ upsert_events <- function(data, conn){
               CAST(\"periodNumber\" AS character varying),
               CAST(\"experiment\" AS character varying)
 
-              FROM temp.temp_event_import
+              FROM temp_event_import
 
               ON CONFLICT
               (\"eventID\") DO UPDATE SET
