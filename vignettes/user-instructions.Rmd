@@ -64,10 +64,13 @@ head(setesdal)
 
 
 ## Step 2. Connect
-Next you need to establish a connection to the NaTRON database. Using the `natron_connect` function makes it easy to connect to NaTRON in R. The functions takes two arguments -- your user name and the database (defults to the sandbox). A pop-up window will appear where you are asked for your password. Save your connection to the environment so that it can be used in subsequent functions. Example of use:
+Next you need to establish a connection to the NaTRON database. Using the `natron_connect` function makes it easy to connect to NaTRON in R. The functions takes two arguments -- your user name and the database (defults to the sandbox). A pop-up window will appear where you are asked for your password. Save your connection to the environment so that it can be used in subsequent functions. The default is to connect to the NaTRON-sandbox (test-environment). Always test uploads to the sandbox and satisfy yourself with the result before running uploads to the production database. For connecting to the production environment use the argument "database='natron'". Example of use:
 
 ```{r, eval=FALSE}
 myConnection <- natron_connect("YOUR-USERNAME-HERE")
+
+# connect to production database
+myConnection <- natron_connect("YOUR-USERNAME-HERE", database="natron")
 
 ``` 
 Talk to Marc Daverdin about NaTRON access. 
