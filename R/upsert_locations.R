@@ -26,19 +26,38 @@ upsert_locations <- function(location_data, conn){
 
 
 
-  RPostgreSQL::dbSendQuery(conn,"DROP TABLE IF EXISTS temp.temp_location_import;")
+  #RPostgreSQL::dbSendQuery(conn,"DROP TABLE IF EXISTS temp.temp_location_import;")
+
+  # get column names from NaTron
+  tableinfo <- RPostgreSQL::dbGetQuery(conn,
+                                       "select column_name
+                        from information_schema.columns
+                        where table_name = 'Locations'
+                        ;")
+
+  # check that they are equal
+  if(!identical(tableinfo$column_name, colnames(location_data))) stop("The column in your data don't perfectly match those in NaTron")
+
+  RPostgreSQL::dbWriteTable(conn, c("data", "Locations"),
+                            value = myLocTab,
+                            row.names = FALSE,
+                            append = T)
+
+
+  # end function here?
+
+  RPostgreSQL::dbWriteTable(conn, c("temp", "temp_location_import"),
+                            value = myLocTab,
+                            row.names = FALSE,
+                            append = T)
+
 
 
   RPostgreSQL::dbWriteTable(conn, c("temp", "temp_location_import"),
                                   value = myLocTab,
                             row.names = FALSE)
 
-  # get datatype
-  tableinfo <- RPostgreSQL::dbGetQuery(conn,
-                                       "select table_name,column_name,data_type
-                        from information_schema.columns
-                        where table_name = 'Locations'
-                        ;")
+
 
 
   # The temp file needs (I think) the columns to be of the same class as the real table. One option is to change them in the temp schema:
