@@ -21,7 +21,11 @@
 #' @import RPostgreSQL
 #'
 #' @export
-#'
+
+
+
+
+
 
 upsert_events <- function(data, conn){
   # write to tables to 'temporary' schema

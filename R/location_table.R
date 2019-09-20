@@ -65,8 +65,9 @@ locationTable <- dplyr::bind_rows(
   local_data_temp_blank, local_data_temp_unique
   )
 
-  # create UUID as locationIDs
 
+
+  # create UUID as locationIDs
   ug <- dplR::uuid.gen()
   myLength <- nrow(locationTable)
   uuids <- character(myLength)
