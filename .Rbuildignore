@@ -1,6 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^OldData$
+^misc$
 ^Documentation
 ^data-raw$
 ^doc$
