@@ -18,12 +18,12 @@ knitr::opts_chunk$set(
 
 
 ## Purpose of this package
-The ```natronbatchupload``` R-package has been developed for employees at the University Museum of the Norwegian University of Science and Technology (NTNU), and it serves to ease and standardize the process of uploading datasets to the NaTRON database. NaTRON is the internal database for the NTNU University Museum. It stores natural history data, including biodiversity and ecological datasets. NaTRON is therefore different from the MUSIT system which store mostly data on objects in the museum collections. All natural history data to be preserved should be uploaded to the NaTRON database, and the database have a generalized structure in order to support most datatypes (botanical, zoological, collection objects, non-biological environmental data, GIS-data). 
+The ```natronR``` R-package has been developed for employees at the University Museum of the Norwegian University of Science and Technology (NTNU), and it serves to ease and standardize the process of uploading datasets to the NaTRON database. NaTRON is the internal database for the NTNU University Museum. It stores natural history data, including biodiversity and ecological datasets. NaTRON is therefore different from the MUSIT system which store mostly data on objects in the museum collections. All natural history data to be preserved should be uploaded to the NaTRON database, and the database have a generalized structure in order to support most datatypes (botanical, zoological, collection objects, non-biological environmental data, GIS-data). 
 
 This package was built to import location-event data, and is in its current version not designed for large datasets containing repeated measurements (e.g data from dataloggers, biotelemetric studies etc.).
 
 ## Content
-The process of uploading data to NaTRON using natronbatchupload consist of five steps:
+The process of uploading data to NaTRON using natronR consist of several steps:
 
 * **Step 1. Restructure dataset**
 * **Step 2. Connect to NaTRON** 
@@ -44,7 +44,7 @@ The process of uploading data to NaTRON using natronbatchupload consist of five 
 * **Examples of correct data structure**
 
 ## Step 1. Restructure
-The first step to getting your data on to NaTRON is to restructure the dataset from wide to long format to be compatible with the functions in the ```natronbatchupload``` R-package. Most datasets are punched in Excel in a wide format (ie lots of columns and few rows; see examples at the bottom of this vignette), but NaTRON and most other databases prefer the long format. This step is not covered by this package and must be done manually. We recoment looking into ```reshape2``` and ```dplyr``` for this type of data wrangling. Your dataset should look like our example dataset:
+The first step to getting your data on to NaTRON is to restructure the dataset from wide to long format to be compatible with the functions in the ```natronR``` R-package. Most datasets are punched in Excel in a wide format (ie lots of columns and few rows; see examples at the bottom of this vignette), but NaTRON and most other databases prefer the long format. This step is not covered by this package and must be done manually. We recoment looking into ```reshape2``` and ```dplyr``` for this type of data wrangling. Your dataset should look like our example dataset:
 ```{r, eval=FALSE}
 # load data
 data("setesdal")

@@ -1,5 +1,5 @@
-Package: natronbatchupload
-Title: a package to facilitate the uploading of datasets to NaTRON
+Package: natronR
+Title: a package to facilitate the uploading of datasets to NaTron
 Version: 0.0.0.9000
 Authors@R: c(
     person("Anders L.", "Kolstad", email = "anders.kolstad@ntnu.no", role = c("aut", "cre")),
@@ -8,7 +8,7 @@ Authors@R: c(
     person("Marc A. F.", "Daverdin", email = "marc.daverdin@ntnu.no", role = "aut"),
     person("Anders G.", "Finstad", email = "anders.finstad@ntnu.no", role = "aut")
     )
-Description: a package to facilitate the uploading of datasets to NaTRON.
+Description: a package to facilitate the uploading of datasets to NaTron.
 Depends: R (>= 3.4.0)
 Imports: 
     dbplyr,
