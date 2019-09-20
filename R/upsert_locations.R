@@ -39,7 +39,7 @@
 
   # append to tha NaTron table
   RPostgreSQL::dbWriteTable(conn, c("data", "Locations"),
-                            value = myLocTab,
+                            value = location_data,
                             row.names = FALSE,
                             append = T)
 
