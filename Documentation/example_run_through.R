@@ -1,8 +1,17 @@
 # Run through example
 
+install.packages("devtools")
+devtools::install_github("NTNU-VM/natronR", build_vignettes = T)
+vignette("user-instructions", package = "natronR")
+library(natronR)
+
+# alternatively
 #*************************
 devtools::load_all(".")
 #*************************
+
+
+
 ?natronbatchupload
 
 
@@ -14,13 +23,13 @@ data("setesdal")
 
 ?natron_connect
 #*************************
-conn <- natron_connect("AndersK")
+myConnection  <- natron_connect("AndersK")
 #*************************
 
 
 ?location_table
 #*************************
-myLocTab <- location_table(data = setesdal, conn, "AndersK")
+myLocationTable  <- location_table(data = setesdal, conn, "AndersK")
 #*************************
 
 
@@ -61,15 +70,15 @@ rm(myLocTab2, myLocTab3, myLocTab4, myLocTab5, myLocTab6, test)
 
 ?radius_scan
 #*************************
-scan <- radius_scan(locationTable = myLocTab, conn, radius = 8000)
+scan <- radius_scan(locationTable = myLocationTable, myConnection, radius = 8000)
 #*************************
 
 
 ?map_locations
 #*************************
-map_locations(data = myLocTab)
-map_locations(data = myLocTab, compare = scan)
-map_locations(data = myLocTab, compare = scan, vertical = T)
+map_locations(data = myLocationTable)
+map_locations(data = myLocationTable, compare = scan)
+map_locations(data = myLocationTable, compare = scan, vertical = T)
 #*************************
 
 
@@ -89,13 +98,17 @@ map_locations(data = myData, compare = myData2)
 
 # end map testing ####
 
+#make a smaller dataset for test upsert:
+myLocationTable <- myLocationTable[1:10,]
+
 
 ?upsert_locations
 #*************************
-upsert_locations(location_data = myLocTab, conn = conn)
+upsert_locations(location_data = myLocationTable, conn = myConnection)
 #*************************
-# NOT WORKING
-
+# verbatimCoordinateSystem has max 15 symbols
+myLocationTable$verbatimCoordinateSystem <- "UTM"
+upsert_locations(location_data = myLocationTable, conn = myConnection)
 
 
 ?str_map_events
