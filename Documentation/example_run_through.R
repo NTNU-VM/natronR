@@ -112,20 +112,24 @@ upsert_locations(location_data = myLocationTable, conn = myConnection)
 
 ?str_map_events
 #*************************
-myEvents <- str_map_events(data = setesdal, conn = conn, location_table = myLocTab)
+myEvents <- str_map_events(data = setesdal,
+                           conn = myConnection,
+                           location_table = myLocationTable)
 #*************************
 
+
+# testing ####
 myLocTab2 <- myLocTab
 myLocTab2$locality[1] <- myLocTab2$locality[2]
 any(duplicated(myLocTab2$locality))
 # this should give a warning:
 myEvents2 <- str_map_events(data = setesdal, conn = conn, location_table = myLocTab2)
+# END testing ####
 
-
-
+myEvents$eventDate <- as.character(myEvents$eventDate)
 ?upsert_event
 #*************************
-upsert_events(data = myEvents, conn = conn)
+upsert_events(data = myEvents, conn = myConnection)
 #*************************
 
 ?str_map_occ
