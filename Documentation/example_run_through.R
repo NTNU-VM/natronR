@@ -29,7 +29,7 @@ myConnection  <- natron_connect("AndersK")
 
 ?location_table
 #*************************
-myLocationTable  <- location_table(data = setesdal, conn, "AndersK")
+myLocationTable  <- location_table(data = setesdal, myConnection, "AndersK")
 #*************************
 
 
@@ -100,15 +100,14 @@ map_locations(data = myData, compare = myData2)
 
 #make a smaller dataset for test upsert:
 myLocationTable <- myLocationTable[1:10,]
-
+# verbatimCoordinateSystem has max 15 symbols
+myLocationTable$verbatimCoordinateSystem <- "UTM"
 
 ?upsert_locations
 #*************************
 upsert_locations(location_data = myLocationTable, conn = myConnection)
 #*************************
-# verbatimCoordinateSystem has max 15 symbols
-myLocationTable$verbatimCoordinateSystem <- "UTM"
-upsert_locations(location_data = myLocationTable, conn = myConnection)
+
 
 
 ?str_map_events

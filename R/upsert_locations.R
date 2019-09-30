@@ -15,6 +15,7 @@
 #' }
 #'
 #' @import RPostgreSQL
+#' @import dplyr
 #'
 #' @export
 #'
@@ -34,12 +35,16 @@
                         where table_name = 'Locations'
                         ;")
 
+
   # check that they are equal
   if(!identical(tableinfo$column_name, colnames(location_data))) stop("The column in your data don't perfectly match those in NaTron")
 
+  #remove the gid column as these values are created in natron. Mapping of columns to the right of gid is automatic.
+  location_data2 <- dplyr::select(location_data, -gid)
+
   # append to tha NaTron table
   RPostgreSQL::dbWriteTable(conn, c("data", "Locations"),
-                            value = location_data,
+                            value = location_data2,
                             row.names = FALSE,
                             append = T)
 
