@@ -19,6 +19,9 @@ Dataframe: event table, mapped to the location table and ready to be upserted to
 \description{
 This function takes your event-based dataset and returns an event dataframe ready to be upserted.
 }
+\details{
+\code{data} needs to contain a column called dateQualifierstating the resolution of the eventDate. Options are "Only year", "Only month-year", "Complete date", "0-No date", or "Doubtful day/month". Discrepancies returns an error.
+}
 \examples{
 \dontrun{
 data("setesdal")

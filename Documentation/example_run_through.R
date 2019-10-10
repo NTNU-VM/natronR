@@ -115,7 +115,19 @@ upsert_locations(location_data = myLocationTable, conn = myConnection)
 myEvents <- str_map_events(data = setesdal,
                            conn = myConnection,
                            location_table = myLocationTable)
+
+# ERROR.
+# Need to add dateQualifier...:
+setesdal2 <- setesdal
+setesdal2$dateQualifier <- "Only year"
+
+myEvents <- str_map_events(data = setesdal2,
+                           conn = myConnection,
+                           location_table = myLocationTable)
+
 #*************************
+
+
 
 
 # testing ####

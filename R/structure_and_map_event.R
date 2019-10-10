@@ -12,6 +12,7 @@
 #' @return Dataframe: event table, mapped to the location table and ready to be upserted to Natron.
 #' @import RPostgreSQL
 #' @import dplyr
+#' @details \code{data} needs to contain a column called dateQualifierstating the resolution of the eventDate. Options are "Only year", "Only month-year", "Complete date", "0-No date", or "Doubtful day/month". Discrepancies returns an error.
 #' @examples
 #' \dontrun{
 #' data("setesdal")
@@ -82,7 +83,15 @@ str_map_events <- function(data, conn, location_table) {
 
 
 
+
+
+
   # DATES #
+  # check for correctly entered dataQualifyer
+  if(sum(event_data$dateQualifier %in% c("Only year", "Only month-year", "Complete date", "0-No date", "Doubtful day/month")) < nrow(event_data)) stop("ERROR: dateQualifyer contains entries that differ from the standardised format. See ?str_map_events")
+
+
+
   # Standardise date formats to ISO8601
   event_data$eventDate <- format_iso_8601(parse_iso_8601(event_data$eventDate))
 
