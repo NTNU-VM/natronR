@@ -81,6 +81,22 @@ str_map_events <- function(data, conn, location_table) {
   event_data <- dplyr::select(event_data,-locality)
 
 
+
+  # DATES #
+  # Standardise date formats to ISO8601
+  event_data$eventDate <- format_iso_8601(parse_iso_8601(event_data$eventDate))
+
+    # remove the end
+  event_data$eventDate <- gsub(pattern = "+00:00",
+                               replacement = "",
+                               x = event_data$eventDate,
+                               fixed = T)
+    # remove the T
+  event_data$eventDate <- gsub(pattern = "T",
+                               replacement = " ",
+                               x = event_data$eventDate,
+                               fixed = T)
+
   cat(
     "
   ************************************************************\n
